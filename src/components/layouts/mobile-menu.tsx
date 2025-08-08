@@ -6,6 +6,8 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
+import { Button } from "@/components/ui/button";
+import { Menu } from "lucide-react";
 
 type NavLink = {
   to: string;
@@ -19,7 +21,11 @@ type MobileMenuProps = {
 export default function MobileMenu({ links }: MobileMenuProps) {
   return (
     <Sheet>
-      <SheetTrigger>Open</SheetTrigger>
+      <SheetTrigger asChild>
+        <Button variant={"ghost"} size={"lg"} className="has-[>svg]:p-0">
+          <Menu className="size-8" />
+        </Button>
+      </SheetTrigger>
       <SheetContent aria-describedby={undefined}>
         <VisuallyHidden>
           <SheetTitle />
