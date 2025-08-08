@@ -1,5 +1,3 @@
-import { ToggleTheme } from "@/components/theme/toggle-theme";
-
 type NavLink = {
   to: string;
   label: string;

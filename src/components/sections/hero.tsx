@@ -9,7 +9,7 @@ export default function Hero() {
                 Driving a Greener Indonesia: The Diesel Replacement Program
               </h1>
               <p className="text-lg text-pretty">
-                Transforming Indonesia's energy landscape through renewable
+                Transforming Indonesia&apos;s energy landscape through renewable
                 solar PV <br className="hidden lg:block" /> and battery energy
                 storage systems
               </p>

@@ -3,7 +3,6 @@ import { Zap } from "lucide-react";
 import MobileMenu from "@/components/layouts/mobile-menu";
 import DesktopMenu from "@/components/layouts/desktop-menu";
 import HeaderAction from "@/components/layouts/header-action";
-import { ToggleTheme } from "@/components/theme/toggle-theme";
 
 export default function Header() {
   return (
