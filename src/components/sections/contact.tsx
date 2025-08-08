@@ -1,6 +1,6 @@
 export default function Contact() {
   return (
-    <section className="py-12 bg-accent">
+    <section className="py-12 bg-accent lg:py-20">
       <div className="container-wrapper">
         <div className="max-w-md space-y-4">
           <h2 className="text-4xl font-semibold">Register for Access</h2>
