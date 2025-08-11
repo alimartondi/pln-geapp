@@ -1,10 +1,11 @@
+import ScrollWrapper from "@/components/layouts/scroll-wrapper";
 import ClusterDetailSheetWrapper from "./cluster-detail-sheet-wrapper";
 import { clusters } from "@/data/cluster";
 
 export default function ClusterSection() {
   return (
     <section className="py-12 lg:py-20">
-      <div className="container-wrapper space-y-10">
+      <ScrollWrapper name="cluster" className="container-wrapper space-y-10">
         <div className="max-w-md space-y-4">
           <h2 className="text-4xl lg:text-5xl font-semibold">
             Regional Clusters
@@ -18,7 +19,7 @@ export default function ClusterSection() {
         <div>
           <ClusterDetailSheetWrapper cluster={clusters} />
         </div>
-      </div>
+      </ScrollWrapper>
     </section>
   );
 }

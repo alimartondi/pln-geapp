@@ -17,22 +17,25 @@ type Props = {
 };
 
 export default function ClusterDetailSheet({ cluster, onClose }: Props) {
-  const currentClusterTableData = useMemo(() => {
-    return clusterDetails
-      .filter((d) => d.clusterId === cluster.id)
-      .flatMap((d) => d.table); // <== gunakan flatMap di sini
-  }, [cluster.id]);
+  // Ambil semua data, biar DataTable yang filter
+  const allClusterTableData = useMemo(() => {
+    return clusterDetails.flatMap((d) =>
+      d.table.map((project) => ({
+        clusterId: d.clusterId,
+        ...project,
+      }))
+    );
+  }, []);
 
   return (
     <Sheet open={true} onOpenChange={(open) => !open && onClose()}>
-      <SheetContent
-        side="bottom"
-        className="rounded-t-xl h-[95vh] overflow-y-auto"
-      >
-        <SheetHeader>
+      <SheetContent side="bottom" className="rounded-t-xl h-[95dvh]">
+        <SheetHeader className="shrink-0">
           <SheetTitle>{cluster.name}</SheetTitle>
         </SheetHeader>
-        <div className="px-4 lg:px-12 pb-4 grid grid-cols-1 gap-6">
+
+        <div className="px-4 pb-4 space-y-6 overflow-y-auto">
+          {/* Statistik */}
           <div className="space-y-4 p-4 lg:p-6 border rounded-md">
             <h3>Statistic</h3>
             <div className="flex flex-col lg:flex-row gap-4 lg:gap-6">
@@ -72,9 +75,11 @@ export default function ClusterDetailSheet({ cluster, onClose }: Props) {
             </div>
           </div>
 
+          {/* Data Table */}
           <DataTable<ClusterTableRow, unknown>
             columns={columns}
-            data={currentClusterTableData}
+            data={allClusterTableData}
+            defaultClusterId={String(cluster.id)} // default pilih cluster yang diklik
           />
         </div>
       </SheetContent>

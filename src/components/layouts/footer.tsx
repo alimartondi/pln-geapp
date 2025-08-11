@@ -1,5 +1,8 @@
+"use client";
+
 import { Zap } from "lucide-react";
 import Link from "next/link";
+import { Link as ScrollTo } from "react-scroll";
 
 export default function Footer() {
   return (
@@ -17,12 +20,16 @@ export default function Footer() {
           <ul className="flex justify-between gap-6">
             {footerLinks.map((link, i) => (
               <li key={i}>
-                <a
-                  className="text-white/75 hover:underline hover:text-white transition-all duration-300"
-                  href={link.to}
+                <ScrollTo
+                  className="text-white/75 hover:underline hover:text-white transition-all duration-300 cursor-pointer"
+                  to={link.to}
+                  spy={true}
+                  smooth={true}
+                  offset={-130}
+                  duration={500}
                 >
                   {link.label}
-                </a>
+                </ScrollTo>
               </li>
             ))}
           </ul>
@@ -38,13 +45,13 @@ export default function Footer() {
 
         <div className="flex justify-between gap-4 items-center text-gray-500">
           <div>
-            <small className="text-accent">
+            <small className="text-gray-300">
               &copy; {new Date().getFullYear()} Company
             </small>
           </div>
           <div className="flex-1 flex gap-2 justify-end">
-            <small className="text-accent">Privacy Policy</small>
-            <small className="text-accent">Terms & Conditions</small>
+            <small className="text-gray-300">Privacy Policy</small>
+            <small className="text-gray-300">Terms & Conditions</small>
           </div>
         </div>
       </div>
@@ -54,19 +61,19 @@ export default function Footer() {
 
 const footerLinks = [
   {
-    to: "/",
+    to: "about",
     label: "Overview",
   },
   {
-    to: "/",
+    to: "location",
     label: "Locations",
   },
   {
-    to: "/",
+    to: "cluster",
     label: "Clusters",
   },
   {
-    to: "/",
+    to: "register",
     label: "Register",
   },
 ];

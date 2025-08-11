@@ -5,16 +5,29 @@ import { ClusterTableRow } from "@/types/cluster.type";
 
 export const columns: ColumnDef<ClusterTableRow>[] = [
   {
+    id: "clusterId",
+    accessorKey: "clusterId",
+    header: () => null,
+    cell: () => null,
+    enableSorting: false,
+    enableHiding: true,
+    size: 0,
+    minSize: 0,
+    maxSize: 0,
+  },
+
+  {
+    accessorKey: "cluster",
+    header: "Province",
+  },
+  {
+    accessorKey: "projectName",
+    header: "Project Name",
+  },
+
+  {
     header: "Location",
     columns: [
-      {
-        accessorKey: "projectName",
-        header: "Project Name",
-      },
-      {
-        accessorKey: "geographic",
-        header: "Geographic Cluster",
-      },
       {
         accessorKey: "coordinates",
         header: "Coordinates",

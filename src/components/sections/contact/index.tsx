@@ -1,7 +1,13 @@
+import ContactForm from "./contact-form";
+import ScrollWrapper from "@/components/layouts/scroll-wrapper";
+
 export default function Contact() {
   return (
     <section className="py-12 bg-accent lg:py-20">
-      <div className="container-wrapper">
+      <ScrollWrapper
+        name="contact"
+        className="container-wrapper flex flex-col md:flex-row gap-6 justify-between"
+      >
         <div className="max-w-md space-y-4">
           <h2 className="text-4xl font-semibold">Register for Access</h2>
           <p className="text-pretty">
@@ -12,7 +18,7 @@ export default function Contact() {
 
           <div className="space-y-3">
             <h3 className="text-lg font-semibold">Contact Detail</h3>
-            <div className="space-y-2 text-gray-600">
+            <div className="space-y-2 text-gray-600 dark:text-gray-300">
               <h6 className="font-semibold">Office address:</h6>
               <p>
                 Sed ut perspiciatis unde omnis iste,
@@ -22,12 +28,14 @@ export default function Contact() {
             </div>
           </div>
 
-          <div className="text-gray-600">
+          <div className="text-gray-600 dark:text-gray-300">
             <span className="block">Tel: 021 3345 3310</span>
             <a>Email: info@company.com</a>
           </div>
         </div>
-      </div>
+
+        <ContactForm />
+      </ScrollWrapper>
     </section>
   );
 }

@@ -1,3 +1,6 @@
+"use client";
+
+import { Link as ScrollTo } from "react-scroll";
 type NavLink = {
   to: string;
   label: string;
@@ -12,12 +15,16 @@ export default function DesktopMenu({ links }: MobileMenuProps) {
     <ul className="flex gap-6">
       {links.map((link, i) => (
         <li key={i}>
-          <a
-            className="font-semibold hover:underline transition-all duration-300"
-            href={link.to}
+          <ScrollTo
+            className="font-semibold hover:underline transition-all duration-300 cursor-pointer"
+            to={link.to}
+            spy={true}
+            smooth={true}
+            offset={-130}
+            duration={500}
           >
             {link.label}
-          </a>
+          </ScrollTo>
         </li>
       ))}
     </ul>

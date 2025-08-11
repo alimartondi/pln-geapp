@@ -1,6 +1,7 @@
 export type Cluster = {
   id: number;
   name: string;
+  shortName: string;
   alias: string;
 };
 
@@ -10,7 +11,7 @@ export type ClusterDetail = {
   clusterId: number;
   table: {
     projectName: string;
-    geographic: string;
+    cluster: string;
     coordinates: string;
     capacity: number;
     landSize: number;
@@ -42,8 +43,9 @@ export type ClusterDetail = {
 };
 
 export type ClusterTableRow = {
+  clusterId: number;
   projectName: string;
-  geographic: string;
+  cluster: string;
   coordinates: string;
   capacity: number;
   landSize: number;
