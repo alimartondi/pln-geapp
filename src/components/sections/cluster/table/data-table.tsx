@@ -32,7 +32,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 import clsx from "clsx";
-import { Settings2, RotateCcw, Search } from "lucide-react";
+import { Settings2, Search } from "lucide-react";
 
 import { MultiSelect } from "@/components/ui/multi-select";
 import { clusters } from "@/data/cluster";

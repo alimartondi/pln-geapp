@@ -58,6 +58,8 @@ const formSchema = z.object({
   // }),
 });
 
+type FormValues = z.infer<typeof formSchema>;
+
 export default function ContactForm() {
   const form = useForm({
     resolver: zodResolver(formSchema),
@@ -70,7 +72,7 @@ export default function ContactForm() {
     },
   });
 
-  function onSubmit(values: any) {
+  function onSubmit(values: FormValues) {
     // Do something with the form values.
     console.log(values);
     alert("Form submitted.");
