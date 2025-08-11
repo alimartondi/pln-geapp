@@ -78,7 +78,7 @@ export default function ContactForm() {
   }
 
   return (
-    <div className="bg-transparent border px-6 py-8 rounded-lg max-w-lg w-sm shadow-xs">
+    <div className="bg-transparent border px-4 lg:px-6 py-6 lg:py-8 rounded-lg w-full max-w-lg lg:w-sm shadow-xs">
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
           <FormField

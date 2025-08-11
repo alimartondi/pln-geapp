@@ -40,7 +40,7 @@ export default function Header() {
       )}
     >
       <div className="container-wrapper">
-        <nav className="flex justify-between py-3 items-center lg:py-6">
+        <nav className="flex justify-between py-2 items-center lg:py-6">
           <div
             className="flex gap-2 items-center cursor-pointer"
             onClick={scrollToTop}
