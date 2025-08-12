@@ -29,7 +29,11 @@ export default function MobileMenu({ links }: MobileMenuProps) {
   return (
     <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger asChild>
-        <Button variant={"ghost"} size={"lg"} className="has-[>svg]:p-0">
+        <Button
+          variant={"ghost"}
+          size={"lg"}
+          className="has-[>svg]:p-0 hover:bg-transparent"
+        >
           <Menu className="size-8 text-muted-foreground" />
         </Button>
       </SheetTrigger>

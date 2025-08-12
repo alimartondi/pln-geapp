@@ -1,3 +1,4 @@
+import * as React from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import {
@@ -28,6 +29,17 @@ export function MultiSelect({
   onChange,
   label,
 }: MultiSelectFilterProps) {
+  const [isMobile, setIsMobile] = React.useState(false);
+
+  React.useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 1024); // <1024px dianggap mobile/tablet
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const toggleValue = (value: string) => {
     if (value === "all") {
       onChange([]);
@@ -39,30 +51,38 @@ export function MultiSelect({
   };
 
   let badgeText = "";
-  if (selected.length === 0) {
-    badgeText = "All Clusters";
-  } else if (selected.length === 1) {
-    badgeText =
-      options.find((opt) => opt.value === selected[0])?.label || selected[0];
+  if (isMobile) {
+    // 📱 Mobile / Tablet
+    if (selected.length === 0) {
+      badgeText = "All Clusters";
+    } else {
+      badgeText = `${selected.length} Selected`;
+    }
   } else {
-    badgeText = `${selected.length} Selected`;
+    // 💻 Desktop (logika lama)
+    if (selected.length === 0) {
+      badgeText = "All Clusters";
+    } else if (selected.length === 1) {
+      badgeText =
+        options.find((opt) => opt.value === selected[0])?.label || selected[0];
+    } else {
+      badgeText = `${selected.length} Selected`;
+    }
   }
 
   return (
     <Popover>
       <PopoverTrigger asChild>
         <Button
-          size={"lg"}
-          variant={"outline"}
+          size="lg"
+          variant="outline"
           className="justify-between h-12 px-4 gap-4 w-full"
         >
           {label}
-
           <Separator
             orientation="vertical"
             className="data-[orientation=vertical]:h-8"
           />
-
           <Badge variant="info" className="px-2 py-1 rounded-full truncate">
             {badgeText}
           </Badge>
@@ -72,7 +92,6 @@ export function MultiSelect({
       <PopoverContent className="w-full p-0" align="start">
         <Command>
           <CommandInput placeholder="Search clusters..." />
-
           <CommandEmpty>No options found.</CommandEmpty>
 
           <CommandGroup>

@@ -42,8 +42,14 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+  --color-info-background: var(--info-background);
+  --color-info-foreground: var(--info-foreground);
   --color-success-background: var(--success-background);
   --color-success-foreground: var(--success-foreground);
+  --color-warning-background: var(--warning-background);
+  --color-warning-foreground: var(--warning-foreground);
+  --color-error-background: var(--error-background);
+  --color-error-foreground: var(--error-foreground);
 }
 
 :root {
@@ -80,13 +86,19 @@
   --sidebar-accent-foreground: oklch(0.21 0.034 264.665);
   --sidebar-border: oklch(0.928 0.006 264.531);
   --sidebar-ring: oklch(0.707 0.022 261.325);
+  --info-background: #f0f9ff;
+  --info-foreground: #0ba5ec;
   --success-background: #ecfdf3;
-  --success-foreground: #12b76a;
+  --success-foreground: #039855;
+  --warning-background: #fffaec;
+  --warning-foreground: #dc6803;
+  --error-background: #fef2f2;
+  --error-foreground: #d34036;
 }
 
 .dark {
-  --background: oklch(0.13 0.028 261.692);
-  --foreground: oklch(0.985 0.002 247.839);
+  --background: oklch(0.141 0.005 285.823);
+  --foreground: oklch(0.985 0 0);
   --card: oklch(0.21 0.034 264.665);
   --card-foreground: oklch(0.985 0.002 247.839);
   --popover: oklch(0.21 0.034 264.665);
@@ -95,8 +107,8 @@
   --primary-foreground: oklch(0.985 0.002 247.839);
   --secondary: oklch(44.525% 0.0761 221.99);
   --secondary-foreground: oklch(0.985 0.002 247.839);
-  --muted: oklch(0.278 0.033 256.848);
-  --muted-foreground: oklch(0.707 0.022 261.325);
+  --muted: oklch(0.274 0.006 286.033);
+  --muted-foreground: oklch(0.705 0.015 286.067);
   --accent: oklch(0.278 0.033 256.848);
   --accent-foreground: oklch(0.985 0.002 247.839);
   --destructive: oklch(0.704 0.191 22.216);
@@ -116,6 +128,14 @@
   --sidebar-accent-foreground: oklch(0.985 0.002 247.839);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.551 0.027 264.364);
+  --info-background: #17334b;
+  --info-foreground: #0ba5ec;
+  --success-background: #173438;
+  --success-foreground: #12b76a;
+  --warning-background: #393029;
+  --warning-foreground: #fd853a;
+  --error-background: #382430;
+  --error-foreground: #f04438;
 }
 
 @layer base {
@@ -131,4 +151,28 @@
   .container-wrapper {
     @apply w-full max-w-[1512px] mx-auto px-4 lg:px-20;
   }
+}
+
+/* Pastikan map di bawah header */
+.leaflet-pane,
+.leaflet-top,
+.leaflet-bottom {
+  z-index: 1 !important;
+}
+
+.map-popup > .leaflet-popup-content-wrapper {
+  border-radius: 8px;
+}
+
+.leaflet-popup-content-wrapper > .leaflet-popup-content {
+  margin: 0;
+  width: 100%;
+  min-width: 250px;
+  max-width: 280px;
+}
+
+.leaflet-container a.leaflet-popup-close-button {
+  right: 8 !important;
+  top: 8 !important;
+  font-size: 20px !important;
 }

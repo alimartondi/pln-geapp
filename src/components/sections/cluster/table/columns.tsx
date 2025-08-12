@@ -17,157 +17,55 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
   },
 
   {
-    accessorKey: "cluster",
-    header: "Province",
-  },
-  {
-    accessorKey: "projectName",
-    header: "Project Name",
-  },
-
-  {
-    header: "Location",
+    header: "Identification",
     columns: [
-      {
-        accessorKey: "coordinates",
-        header: "Coordinates",
-      },
+      { accessorKey: "siteName", header: "Site Name" },
+      { accessorKey: "province", header: "Province" },
+      { accessorKey: "lat", header: "Lat" },
+      { accessorKey: "lng", header: "Long" },
     ],
   },
-
   {
-    header: "Project Overview",
+    header: "Business & Economic",
     columns: [
-      {
-        accessorKey: "capacity",
-        header: "Capacity",
-      },
-      {
-        accessorKey: "landSize",
-        header: "Land Size",
-      },
-      {
-        accessorKey: "pltdDistance",
-        header: "PLTD Distance",
-      },
+      { accessorKey: "bpp", header: "BPP $/kWh" },
+      { accessorKey: "ace", header: "ACE MWh/yr" },
+      { accessorKey: "solarKw", header: "Solar kW" },
+      { accessorKey: "pltdKw", header: "PLTD kW" },
+      { accessorKey: "genMwh", header: "Gen MWh" },
+      { accessorKey: "solarPercent", header: "Solar %" },
     ],
   },
-
   {
-    header: "Energy & Economics",
+    header: "Technical",
     columns: [
-      {
-        accessorKey: "bpp",
-        header: "BPP",
-      },
-      {
-        accessorKey: "ace",
-        header: "ACE",
-      },
-      {
-        accessorKey: "peakLoad",
-        header: "Peak Load",
-      },
-      {
-        accessorKey: "meanLoad",
-        header: "Mean Load",
-      },
-      {
-        accessorKey: "existingSolar",
-        header: "Existing Solar",
-      },
-      {
-        accessorKey: "renewablePenetration",
-        header: "Renewable Penetration",
-      },
-      {
-        accessorKey: "connectionVoltage",
-        header: "Connection Voltage",
-      },
+      { accessorKey: "resource", header: "Resource" },
+      { accessorKey: "areaHa", header: "Area ha" },
+      { accessorKey: "gradientPercent", header: "Gradient %" },
+      { accessorKey: "voltageKv", header: "Voltage kV" },
+      { accessorKey: "distKm", header: "Dist km" },
+      { accessorKey: "existKw", header: "Exist kW" },
+      { accessorKey: "generator", header: "Generator" },
     ],
   },
-
   {
-    header: "Siting Suaitability",
+    header: "Logistics",
     columns: [
-      {
-        accessorKey: "averageSlope",
-        header: "Average Slope",
-      },
-      {
-        accessorKey: "slopeAspect",
-        header: "Slope Aspect",
-      },
-      {
-        accessorKey: "offsiteShading",
-        header: "Off-site Shading",
-      },
-      {
-        accessorKey: "distanceRoad",
-        header: "Distance Road",
-      },
-      {
-        accessorKey: "distanceCoast",
-        header: "Distance Coast",
-      },
-      {
-        accessorKey: "landSensitivity",
-        header: "Land Use Sensitivity",
-      },
-      {
-        accessorKey: "registeredLandPercent",
-        header: "Registered Land (%)",
-      },
-      {
-        accessorKey: "stateForest",
-        header: "State Forest",
-      },
-      {
-        accessorKey: "registeredLand",
-        header: "Registered Land",
-      },
-      {
-        accessorKey: "disputedLands",
-        header: "Disputed Lands",
-      },
+      { accessorKey: "roadM", header: "Road m" },
+      { accessorKey: "portKm", header: "Port km" },
+      { accessorKey: "portCap", header: "Port Cap" },
+      { accessorKey: "complex", header: "Complex" },
     ],
   },
-
   {
-    header: "Physical Hazards",
+    header: "Regulatory & Risk",
     columns: [
-      {
-        accessorKey: "keyHazards",
-        header: "Key Hazards",
-      },
-    ],
-  },
-
-  {
-    header: "Climate Risk",
-    columns: [
-      {
-        accessorKey: "preliminaryRisk",
-        header: "Preliminary Climate Risk",
-      },
-    ],
-  },
-
-  {
-    header: "Execution Pathway",
-    columns: [
-      {
-        accessorKey: "ifcCategory",
-        header: "IFC Category",
-      },
-      {
-        accessorKey: "keyEAndSManagementPlans",
-        header: "Key E&S Management Plans",
-      },
-      {
-        accessorKey: "environmentalLicensingPathway",
-        header: "Environmental Licensing Pathway",
-      },
+      { accessorKey: "ifcCat", header: "IFC Cat" },
+      { accessorKey: "esia", header: "ESIA" },
+      { accessorKey: "uklUpl", header: "UKL/UPL" },
+      { accessorKey: "hazards", header: "Hazards" },
+      { accessorKey: "climate", header: "Climate" },
+      { accessorKey: "esPlans", header: "E&S Plans" },
     ],
   },
 ];

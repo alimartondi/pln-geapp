@@ -92,9 +92,9 @@ export function DataTable<TData extends { clusterId: number }, TValue>({
   return (
     <div className="border rounded-md p-4 lg:p-6">
       {/* Top toolbar */}
-      <div className="flex flex-col lg:flex-row gap-4 items-center justify-between sticky top-0 z-50 bg-background pb-4">
-        <div className="flex flex-col gap-4 w-full">
-          <div className="hidden lg:block">
+      <div className="flex flex-col md:flex-row gap-4 items-center justify-between sticky top-0 z-50 bg-background pb-4">
+        <div className="flex flex-col md:flex-row gap-4 w-full">
+          <div className="hidden md:block">
             <MultiSelect
               options={clusters.map((c) => ({
                 label: c.shortName,
@@ -115,13 +115,10 @@ export function DataTable<TData extends { clusterId: number }, TValue>({
               type="search"
               placeholder="Find project name..."
               value={
-                (table.getColumn("projectName")?.getFilterValue() as string) ??
-                ""
+                (table.getColumn("siteName")?.getFilterValue() as string) ?? ""
               }
               onChange={(event) =>
-                table
-                  .getColumn("projectName")
-                  ?.setFilterValue(event.target.value)
+                table.getColumn("siteName")?.setFilterValue(event.target.value)
               }
               className="min-w-[260px] max-w-full pl-9"
             />
@@ -129,7 +126,7 @@ export function DataTable<TData extends { clusterId: number }, TValue>({
         </div>
 
         <div className="flex items-center gap-4 max-w-full w-full lg:justify-end justify-between">
-          <div className="lg:hidden flex-1 overflow-hidden">
+          <div className="md:hidden flex-1 overflow-hidden">
             <MultiSelect
               options={clusters.map((c) => ({
                 label: c.shortName,
@@ -195,13 +192,9 @@ export function DataTable<TData extends { clusterId: number }, TValue>({
                     colSpan={header.colSpan}
                     className={clsx(
                       header.colSpan > 1 &&
-                        "text-center border-r last:border-r-0 uppercase font-semibold",
-                      (header.column.columnDef.header === "Physical Hazards" ||
-                        header.column.columnDef.header === "Climate Risk" ||
-                        header.column.columnDef.header === "Location") &&
-                        "text-center border-r last:border-r-0 uppercase font-semibold",
-                      header.column.columnDef.header === "Project Name" &&
-                        "first:sticky first:left-0 first:bg-accent"
+                        "text-center border-r last:border-r-0 uppercase font-semibold first:sticky first:left-0 first:bg-accent",
+                      "first:sticky first:bg-accent first:left-0",
+                      "nth-[2]:border-r"
                     )}
                   >
                     {header.isPlaceholder
@@ -226,7 +219,11 @@ export function DataTable<TData extends { clusterId: number }, TValue>({
                 {row.getVisibleCells().map((cell) => (
                   <TableCell
                     key={cell.id}
-                    className="first:sticky first:left-0 bg-background"
+                    className={clsx(
+                      "first:text-left first:sticky first:left-0 first:bg-background",
+                      "nth-[2]:text-left bg-background nth-[2]:border-r",
+                      "text-center text-sm"
+                    )}
                   >
                     {flexRender(cell.column.columnDef.cell, cell.getContext())}
                   </TableCell>

@@ -3,17 +3,21 @@ import ScrollWrapper from "@/components/layouts/scroll-wrapper";
 
 export default function Contact() {
   return (
-    <section className="py-12 bg-accent lg:py-20">
+    <section className="py-12 bg-muted/50 lg:py-20">
       <ScrollWrapper
         name="contact"
         className="container-wrapper flex flex-col md:flex-row gap-6 justify-between"
       >
         <div className="max-w-md space-y-4">
-          <h2 className="text-4xl font-semibold">Register for Access</h2>
+          <h2 className="text-4xl font-semibold">
+            Download the 50-Site Portfolio — Invest in Indonesia&apos;s Clean
+            Energy Future
+          </h2>
           <p className="text-pretty">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor amet
-            praesentium totam porro nihil? Mollitia consequatur impedit incidunt
-            iure quod.
+            Access the full technical, financial, and social impact details for
+            50 ready-to-build projects replacing diesel with renewables.
+            Register now to download the portfolio report and secure your
+            position in Indonesia&apos;s energy transition.
           </p>
 
           <div className="space-y-3">

@@ -5,6 +5,8 @@ import { ThemeProvider } from "@/components/theme/theme-provider";
 import Header from "@/components/layouts/header";
 import Footer from "@/components/layouts/footer";
 
+import "leaflet/dist/leaflet.css";
+
 const lato = Lato({
   subsets: ["latin"],
   display: "swap",

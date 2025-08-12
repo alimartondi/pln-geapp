@@ -12,11 +12,18 @@ export default function Overview() {
           <h3 className="font-semibold">Program Overview</h3>
         </div>
         <div className="w-full lg:w-8/12 grid grid-cols-1 gap-6 lg:gap-12">
-          <h2 className="text-4xl font-semibold lg:text-5xl lg:leading-tight">
-            We are committed to replacing diesel-based electricity generation
-            with sustainable energy solutions for a cleaner and more resilient
-            Indonesia.
-          </h2>
+          <div className="space-y-4">
+            <h2 className="text-3xl font-semibold lg:text-4xl lg:leading-tight">
+              In partnership with PLN, GEAPP is bringing 50 island microgrid
+              projects to market—ready for private investment.
+            </h2>
+            <p className="max-w-md">
+              The program bridges financing gaps, reduces risk, and delivers
+              affordable, reliable power to where it&apos;s needed most.
+              Investors gain vetted, shovel-ready projects with strong returns
+              and community impact.
+            </p>
+          </div>
           <div className="w-full grid md:grid-cols-2 gap-6">
             <div className="relative aspect-3/4 rounded-md overflow-hidden">
               <Image
