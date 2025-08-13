@@ -176,3 +176,7 @@
   top: 8 !important;
   font-size: 20px !important;
 }
+
+.translate-z-0 {
+  transform: translateZ(0);
+}

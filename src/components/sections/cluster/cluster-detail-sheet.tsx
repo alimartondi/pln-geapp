@@ -12,6 +12,15 @@ import { clusterDetails } from "@/data/cluster";
 import { useMemo } from "react";
 import { MapPinCheck, MapPinned, Zap } from "lucide-react";
 
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
+
 type Props = {
   cluster: Cluster;
   onClose: () => void;

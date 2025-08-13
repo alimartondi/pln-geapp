@@ -16,7 +16,7 @@ export const clusters: Cluster[] = [
   {
     id: 3,
     name: "UID Sulawesi Utara, Tengah & Gorontalo",
-    shortName: "North Sulawesi, Central & Gorontalo",
+    shortName: "Sulawesi",
     alias: "STG",
   },
   {
@@ -27,8 +27,8 @@ export const clusters: Cluster[] = [
   },
   {
     id: 5,
-    name: "UID Maluku & Maluku Utara",
-    shortName: "Maluku & North Maluku",
+    name: "UID Maluku",
+    shortName: "Maluku",
     alias: "MMU",
   },
 ];

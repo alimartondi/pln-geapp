@@ -181,8 +181,8 @@ export function DataTable<TData extends { clusterId: number }, TValue>({
       </div>
 
       {/* Table */}
-      <Table>
-        <TableHeader className="bg-accent">
+      <Table className="border-collapse">
+        <TableHeader>
           {table.getHeaderGroups().map((headerGroup) => (
             <TableRow key={headerGroup.id}>
               {headerGroup.headers.map((header) => {
@@ -192,9 +192,14 @@ export function DataTable<TData extends { clusterId: number }, TValue>({
                     colSpan={header.colSpan}
                     className={clsx(
                       header.colSpan > 1 &&
-                        "text-center border-r last:border-r-0 uppercase font-semibold first:sticky first:left-0 first:bg-accent",
-                      "first:sticky first:bg-accent first:left-0",
-                      "nth-[2]:border-r"
+                        "text-center uppercase font-semibold",
+                      header.column.columnDef.header === "Identification" &&
+                        "sticky left-0 bg-background border-b border-border after:absolute after:right-0 after:h-full after:w-px after:bg-border after:top-0 will-change-transform",
+                      header.column.columnDef.header === "Site Name" &&
+                        "sticky left-0 bg-background after:absolute after:right-0 after:h-full after:w-px after:bg-border after:top-0 translate-z-0 text-left will-change-transform border-t",
+                      header.column.columnDef.header === "Province" &&
+                        "text-left",
+                      "tex-center"
                     )}
                   >
                     {header.isPlaceholder
@@ -220,9 +225,8 @@ export function DataTable<TData extends { clusterId: number }, TValue>({
                   <TableCell
                     key={cell.id}
                     className={clsx(
-                      "first:text-left first:sticky first:left-0 first:bg-background",
-                      "nth-[2]:text-left bg-background nth-[2]:border-r",
-                      "text-center text-sm"
+                      cell.column.columnDef.header === "Site Name" &&
+                        "bg-background sticky left-0 inset-y-0 z-10 after:absolute after:right-0 after:h-full after:w-px after:bg-border after:top-0 translate-z-0 will-change-transform"
                     )}
                   >
                     {flexRender(cell.column.columnDef.cell, cell.getContext())}
