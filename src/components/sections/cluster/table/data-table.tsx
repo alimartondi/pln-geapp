@@ -226,7 +226,8 @@ export function DataTable<TData extends { clusterId: number }, TValue>({
                     key={cell.id}
                     className={clsx(
                       cell.column.columnDef.header === "Site Name" &&
-                        "bg-background sticky left-0 inset-y-0 z-10 after:absolute after:right-0 after:h-full after:w-px after:bg-border after:top-0 translate-z-0 will-change-transform"
+                        "bg-background sticky left-0 inset-y-0 z-10 after:absolute after:right-0 after:h-full after:w-px after:bg-border after:top-0 translate-z-0 will-change-transform",
+                      "text-center first:text-left nth-[2]:text-left"
                     )}
                   >
                     {flexRender(cell.column.columnDef.cell, cell.getContext())}
