@@ -11,15 +11,6 @@ import { columns } from "./table/columns";
 import { clusterDetails } from "@/data/cluster";
 import { useMemo } from "react";
 import { MapPinCheck, MapPinned, Zap } from "lucide-react";
-
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 type Props = {

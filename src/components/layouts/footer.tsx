@@ -6,7 +6,7 @@ import { Link as ScrollTo } from "react-scroll";
 
 export default function Footer() {
   return (
-    <footer className="pt-12 pb-6 lg:pb-8 bg-secondary">
+    <footer className="pt-10 pb-6 lg:pb-8 bg-secondary">
       <div className="container-wrapper flex flex-col gap-4 lg:gap-8">
         <div className="flex items-center justify-between">
           <div className="flex gap-2 items-center">

@@ -7,7 +7,6 @@ import { Badge } from "@/components/ui/badge";
 import type { MarkerData } from "@/types/map.type";
 import { useState } from "react";
 import { FileDown } from "lucide-react";
-import { jsPDF } from "jspdf";
 
 interface MapClientProps {
   onMarkerSelect: (marker: MarkerData) => void;

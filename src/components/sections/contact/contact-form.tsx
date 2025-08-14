@@ -15,21 +15,19 @@ import { Button } from "@/components/ui/button";
 
 import { useForm } from "react-hook-form";
 
-import { set, z } from "zod";
+import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   AlertDialog,
   AlertDialogAction,
-  AlertDialogCancel,
   AlertDialogContent,
   AlertDialogDescription,
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle,
-  AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
-import { Badge, BadgeCheck, BadgeX, Check, X } from "lucide-react";
+import { Badge, Check, X } from "lucide-react";
 
 const formSchema = z.object({
   username: z
