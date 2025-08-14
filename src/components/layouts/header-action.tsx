@@ -1,12 +1,13 @@
 "use client";
 
-import { ToggleTheme } from "@/components/theme/toggle-theme";
+import { ThemeToggle } from "@/components/theme/toggle-theme";
 import { Button } from "../ui/button";
 import { Link as ScrollTo } from "react-scroll";
+import { Separator } from "../ui/separator";
 
 export default function HeaderAction() {
   return (
-    <div className="flex items-center gap-4">
+    <div className="flex items-center gap-3 h-10">
       <Button asChild>
         <ScrollTo
           to="contact"
@@ -18,7 +19,8 @@ export default function HeaderAction() {
           Sign In
         </ScrollTo>
       </Button>
-      <ToggleTheme />
+      <Separator orientation="vertical" />
+      <ThemeToggle />
     </div>
   );
 }

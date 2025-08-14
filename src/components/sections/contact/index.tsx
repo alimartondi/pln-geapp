@@ -3,12 +3,12 @@ import ScrollWrapper from "@/components/layouts/scroll-wrapper";
 
 export default function Contact() {
   return (
-    <section className="py-12 bg-muted/50 lg:py-20">
+    <section className="py-12 lg:py-20 bg-muted/50">
       <ScrollWrapper
         name="contact"
-        className="container-wrapper flex flex-col md:flex-row gap-6 justify-between"
+        className="container-wrapper flex flex-col md:flex-row gap-6 md:gap-8 justify-between"
       >
-        <div className="max-w-md space-y-4">
+        <div className="md:w-1/2 max-w-md space-y-4">
           <h2 className="text-4xl font-semibold">
             Download the 50-Site Portfolio — Invest in Indonesia&apos;s Clean
             Energy Future

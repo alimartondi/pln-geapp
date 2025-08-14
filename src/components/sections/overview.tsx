@@ -9,7 +9,13 @@ export default function Overview() {
         className="container-wrapper flex flex-col lg:flex-row gap-4 lg:gap-8"
       >
         <div className="w-full lg:w-4/12">
-          <h3 className="font-semibold">Program Overview</h3>
+          <h3 className="font-semibold">
+            <span className="relative  inline-flex size-3 mr-2">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75"></span>
+              <span className="relative inline-flex size-3 rounded-full bg-primary"></span>
+            </span>
+            Program Overview
+          </h3>
         </div>
         <div className="w-full lg:w-8/12 grid grid-cols-1 gap-6 lg:gap-12">
           <div className="space-y-4">
@@ -17,7 +23,7 @@ export default function Overview() {
               In partnership with PLN, GEAPP is bringing 50 island microgrid
               projects to market—ready for private investment.
             </h2>
-            <p className="max-w-md">
+            <p className="max-w-lg text-pretty">
               The program bridges financing gaps, reduces risk, and delivers
               affordable, reliable power to where it&apos;s needed most.
               Investors gain vetted, shovel-ready projects with strong returns
@@ -25,7 +31,7 @@ export default function Overview() {
             </p>
           </div>
           <div className="w-full grid md:grid-cols-2 gap-6">
-            <div className="relative aspect-3/4 rounded-md overflow-hidden">
+            <div className="relative aspect-3/4 rounded-lg overflow-hidden">
               <Image
                 src="/images/About-Image-01-by-Pexel.png"
                 alt="Panel Solar"
@@ -34,7 +40,7 @@ export default function Overview() {
                 quality={100}
               />
             </div>
-            <div className="relative aspect-5/4 rounded-md overflow-hidden">
+            <div className="relative aspect-5/4 rounded-lg overflow-hidden">
               <Image
                 src="/images/About-Image-02-by-Pexel.png"
                 alt="Panel Solar"

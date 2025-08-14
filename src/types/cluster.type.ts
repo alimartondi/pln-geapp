@@ -32,7 +32,7 @@ export type ClusterDetail = {
     portCap: string;
     complex: string;
     ifcCat: string;
-    esia: string;
+    esia: "Completed" | "Pending" | "Planned" | null;
     uklUpl: string;
     hazards: string;
     climate: string;
@@ -64,7 +64,7 @@ export type ClusterTableRow = {
   portCap: string;
   complex: string;
   ifcCat: string;
-  esia: string;
+  esia: "Completed" | "Pending" | "Planned" | null;
   uklUpl: string;
   hazards: string;
   climate: string;

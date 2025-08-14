@@ -30,7 +30,7 @@ export default function Location() {
           </p>
         </div>
 
-        <div className="aspect-3/4 md:aspect-16/11 lg:aspect-16/8 bg-muted rounded-md overflow-hidden border shadow-xs">
+        <div className="aspect-3/4 md:aspect-16/11 lg:aspect-16/8 bg-muted rounded-lg overflow-hidden border shadow-xs">
           <Map onMarkerSelect={handleMarkerSelect} />
 
           <MapSheetDetail

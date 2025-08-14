@@ -76,7 +76,7 @@ export function MultiSelect({
         <Button
           size="lg"
           variant="outline"
-          className="justify-between h-12 px-4 gap-4 w-full"
+          className="justify-between h-11 px-4 gap-4 w-full"
         >
           {label}
           <Separator

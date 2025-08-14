@@ -2,6 +2,8 @@
 
 import { ColumnDef } from "@tanstack/react-table";
 import { ClusterTableRow } from "@/types/cluster.type";
+import { Badge } from "@/components/ui/badge";
+import { CircleCheck, Clock6 } from "lucide-react";
 
 export const columns: ColumnDef<ClusterTableRow>[] = [
   {
@@ -61,7 +63,46 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
     header: "Regulatory & Risk",
     columns: [
       { accessorKey: "ifcCat", header: "IFC Cat" },
-      { accessorKey: "esia", header: "ESIA" },
+      {
+        accessorKey: "esia",
+        header: "ESIA",
+        cell: ({ row }) => {
+          const value = row.getValue("esia") as string | null;
+          if (!value) return null;
+
+          const statusMap: Record<
+            string,
+            {
+              variant: "success" | "warning" | "secondary";
+              icon: React.ElementType;
+              bg: string;
+            }
+          > = {
+            completed: {
+              variant: "success",
+              icon: CircleCheck,
+              bg: "bg-success-foreground",
+            },
+            pending: {
+              variant: "warning",
+              icon: Clock6,
+              bg: "bg-warning-foreground",
+            },
+          };
+
+          const statusKey = value.toLowerCase();
+          const status = statusMap[statusKey] || statusMap["failed"]; // default kalau tidak ada
+
+          const Icon = status.icon;
+
+          return (
+            <Badge variant={status.variant} className="gap-2">
+              <Icon className="size-3" strokeWidth={2} />
+              {value}
+            </Badge>
+          );
+        },
+      },
       { accessorKey: "uklUpl", header: "UKL/UPL" },
       { accessorKey: "hazards", header: "Hazards" },
       { accessorKey: "climate", header: "Climate" },

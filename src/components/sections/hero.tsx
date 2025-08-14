@@ -23,7 +23,7 @@ export default function Hero() {
                 smooth={true}
                 offset={-130}
                 duration={500}
-                className="inline-flex items-center justify-center px-5 py-2 h-11 bg-white/15 text-sm rounded backdrop-blur-sm border border-white hover:bg-white hover:text-primary transition-all duration-300 cursor-pointer"
+                className="inline-flex items-center justify-center px-5 py-2 h-11 bg-white/15 text-sm rounded-md backdrop-blur-sm border border-white hover:bg-white hover:text-primary transition-all duration-300 cursor-pointer"
               >
                 Explore Sites
               </ScrollTo>
@@ -31,7 +31,7 @@ export default function Hero() {
           </div>
         </div>
         <div className="flex flex-col md:flex-row gap-4 lg:gap-6">
-          <div className="relative w-full h-[200px] rounded-md overflow-hidden bg-[url('/images/indonesia-map.png')] bg-center bg-[#C4E7ED] after:absolute after:inset-0 after:bg-gradient-to-tr after:from-primary after:from-30%">
+          <div className="relative w-full h-[200px] rounded-lg overflow-hidden bg-[url('/images/indonesia-map.png')] bg-center bg-[#C4E7ED] after:absolute after:inset-0 after:bg-gradient-to-tr after:from-primary after:from-35%">
             <div className="absolute inset-0 flex items-center justify-center z-10">
               <div className="p-6 space-y-2 w-full text-white">
                 <h2 className="text-4xl font-bold">50 +</h2>
@@ -40,7 +40,7 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="relative w-full h-[200px] rounded-md overflow-hidden bg-[url('/images/solar-panel.png')] bg-cover after:absolute after:inset-0 after:bg-gradient-to-tr after:from-tertiary after:from-30%">
+          <div className="relative w-full h-[200px] rounded-lg overflow-hidden bg-[url('/images/solar-panel.png')] bg-cover after:absolute after:inset-0 after:bg-gradient-to-tr after:from-tertiary after:from-30%">
             <div className="absolute inset-0 flex items-center justify-center z-10">
               <div className="p-6 space-y-2 w-full text-gray-900">
                 <h2 className="text-4xl font-bold">5 +</h2>
@@ -49,12 +49,12 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="relative w-full h-[200px] p-4 rounded-md bg-[url('/images/windmills-fuel-and-power-generation.png')] bg-contain bg-right bg-no-repeat bg-secondary">
+          <div className="relative w-full h-[200px] p-4 rounded-lg overflow-hidden bg-[url('/images/BES-Solar-PV.png')] bg-contain bg-right bg-no-repeat bg-secondary bg-end after:absolute after:inset-0 after:bg-gradient-to-tr after:from-secondary after:from-10%">
             <div className="absolute inset-0 flex items-center justify-center z-10">
               <div className="p-6 space-y-2 w-full text-white">
                 <h2 className="relative text-4xl font-bold">
                   54,902{" "}
-                  <span className="absolute text-xs bg-tertiary px-1 py-.5 text-gray-900 rounded-full ml-1">
+                  <span className="absolute text-xs bg-tertiary px-1 py-.5 text-gray-900 rounded ml-1">
                     kWh
                   </span>
                 </h2>

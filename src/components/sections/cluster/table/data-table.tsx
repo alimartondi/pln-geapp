@@ -36,6 +36,12 @@ import { Settings2, Search } from "lucide-react";
 
 import { MultiSelect } from "@/components/ui/multi-select";
 import { clusters } from "@/data/cluster";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+} from "@/components/ui/card";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
@@ -90,9 +96,9 @@ export function DataTable<TData extends { clusterId: number }, TValue>({
   }, [selectedClusters, table]);
 
   return (
-    <div className="border rounded-md p-4 lg:p-6">
+    <Card>
       {/* Top toolbar */}
-      <div className="flex flex-col md:flex-row gap-4 items-center justify-between sticky top-0 z-50 bg-background pb-4">
+      <CardHeader className="flex flex-col md:flex-row gap-4">
         <div className="flex flex-col md:flex-row gap-4 w-full">
           <div className="hidden md:block">
             <MultiSelect
@@ -140,6 +146,7 @@ export function DataTable<TData extends { clusterId: number }, TValue>({
               label="Clusters"
             />
           </div>
+
           <div className="ml-auto">
             {/* Column Visibility */}
             <DropdownMenu>
@@ -178,74 +185,84 @@ export function DataTable<TData extends { clusterId: number }, TValue>({
             </DropdownMenu>
           </div>
         </div>
-      </div>
+      </CardHeader>
 
       {/* Table */}
-      <Table className="border-collapse">
-        <TableHeader>
-          {table.getHeaderGroups().map((headerGroup) => (
-            <TableRow key={headerGroup.id}>
-              {headerGroup.headers.map((header) => {
-                return (
-                  <TableHead
-                    key={header.id}
-                    colSpan={header.colSpan}
-                    className={clsx(
-                      header.colSpan > 1 &&
-                        "text-center uppercase font-semibold",
-                      header.column.columnDef.header === "Identification" &&
-                        "sticky left-0 bg-background border-b border-border after:absolute after:right-0 after:h-full after:w-px after:bg-border after:top-0 will-change-transform",
-                      header.column.columnDef.header === "Site Name" &&
-                        "sticky left-0 bg-background after:absolute after:right-0 after:h-full after:w-px after:bg-border after:top-0 translate-z-0 text-left will-change-transform border-t",
-                      header.column.columnDef.header === "Province" &&
-                        "text-left",
-                      "tex-center"
-                    )}
-                  >
-                    {header.isPlaceholder
-                      ? null
-                      : flexRender(
-                          header.column.columnDef.header,
-                          header.getContext()
+      <CardContent>
+        <div className="border rounded-md overflow-hidden">
+          <Table>
+            <TableHeader>
+              {table.getHeaderGroups().map((headerGroup) => (
+                <TableRow key={headerGroup.id}>
+                  {headerGroup.headers.map((header) => {
+                    return (
+                      <TableHead
+                        key={header.id}
+                        colSpan={header.colSpan}
+                        className={clsx(
+                          header.colSpan > 1 &&
+                            "text-center uppercase font-semibold",
+                          header.column.columnDef.header === "Identification" &&
+                            "sticky left-0 bg-muted border-b border-border after:absolute after:right-0 after:h-full after:w-px after:bg-border after:top-0 will-change-transform",
+                          header.column.columnDef.header === "Site Name" &&
+                            "sticky left-0 bg-muted after:absolute after:right-0 after:h-full after:w-px after:bg-border after:top-0 translate-z-0 text-left will-change-transform border-t",
+                          header.column.columnDef.header === "Province" &&
+                            "text-left",
+                          "tex-center"
                         )}
-                  </TableHead>
-                );
-              })}
-            </TableRow>
-          ))}
-        </TableHeader>
-        <TableBody>
-          {table.getRowModel().rows?.length ? (
-            table.getRowModel().rows.map((row) => (
-              <TableRow
-                key={row.id}
-                data-state={row.getIsSelected() && "selected"}
-              >
-                {row.getVisibleCells().map((cell) => (
-                  <TableCell
-                    key={cell.id}
-                    className={clsx(
-                      cell.column.columnDef.header === "Site Name" &&
-                        "bg-background sticky left-0 inset-y-0 z-10 after:absolute after:right-0 after:h-full after:w-px after:bg-border after:top-0 translate-z-0 will-change-transform"
-                    )}
+                      >
+                        {header.isPlaceholder
+                          ? null
+                          : flexRender(
+                              header.column.columnDef.header,
+                              header.getContext()
+                            )}
+                      </TableHead>
+                    );
+                  })}
+                </TableRow>
+              ))}
+            </TableHeader>
+            <TableBody>
+              {table.getRowModel().rows?.length ? (
+                table.getRowModel().rows.map((row) => (
+                  <TableRow
+                    key={row.id}
+                    data-state={row.getIsSelected() && "selected"}
                   >
-                    {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                    {row.getVisibleCells().map((cell) => (
+                      <TableCell
+                        key={cell.id}
+                        className={clsx(
+                          cell.column.columnDef.header === "Site Name" &&
+                            "bg-card sticky left-0 inset-y-0 z-10 after:absolute after:right-0 after:h-full after:w-px after:bg-border after:top-0 translate-z-0 will-change-transform"
+                        )}
+                      >
+                        {flexRender(
+                          cell.column.columnDef.cell,
+                          cell.getContext()
+                        )}
+                      </TableCell>
+                    ))}
+                  </TableRow>
+                ))
+              ) : (
+                <TableRow>
+                  <TableCell
+                    colSpan={columns.length}
+                    className="h-24 text-center"
+                  >
+                    No results.
                   </TableCell>
-                ))}
-              </TableRow>
-            ))
-          ) : (
-            <TableRow>
-              <TableCell colSpan={columns.length} className="h-24 text-center">
-                No results.
-              </TableCell>
-            </TableRow>
-          )}
-        </TableBody>
-      </Table>
+                </TableRow>
+              )}
+            </TableBody>
+          </Table>
+        </div>
+      </CardContent>
 
       {/* Pagination */}
-      <div className="flex items-center justify-end space-x-2 pt-4">
+      <CardFooter className="flex items-center justify-end gap-2 md:gap-4">
         <Button
           variant="outline"
           size="lg"
@@ -262,7 +279,7 @@ export function DataTable<TData extends { clusterId: number }, TValue>({
         >
           Next
         </Button>
-      </div>
-    </div>
+      </CardFooter>
+    </Card>
   );
 }

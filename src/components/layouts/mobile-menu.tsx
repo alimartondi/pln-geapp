@@ -30,11 +30,11 @@ export default function MobileMenu({ links }: MobileMenuProps) {
     <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger asChild>
         <Button
-          variant={"ghost"}
-          size={"lg"}
-          className="has-[>svg]:p-0 hover:bg-transparent"
+          variant="ghost"
+          size="lg"
+          className="has-[>svg]:p-0 hover:bg-transparent dark:hover:bg-transparent group"
         >
-          <Menu className="size-8 text-muted-foreground" />
+          <Menu className="size-8 text-muted-foreground group-hover:text-foreground transition-colors duration-300" />
         </Button>
       </SheetTrigger>
       <SheetContent aria-describedby={undefined} className="rounded-l-lg">

@@ -1298,7 +1298,7 @@ export const clusterDetails: ClusterDetail[] = [
         portCap: "20'GP/10t",
         complex: "TBD",
         ifcCat: "TBD",
-        esia: "Completed",
+        esia: "Pending",
         uklUpl: "TBD",
         hazards: "TBD",
         climate: "TBD",

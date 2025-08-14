@@ -20,6 +20,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 type Props = {
   cluster: Cluster;
@@ -46,12 +47,13 @@ export default function ClusterDetailSheet({ cluster, onClose }: Props) {
         </SheetHeader>
 
         <div className="px-4 pb-4 space-y-6 overflow-y-auto">
-          {/* Statistik */}
-          <div className="space-y-4 p-4 lg:p-6 border rounded-md">
-            <h3>Statistic</h3>
-            <div className="flex flex-col md:flex-row gap-4 lg:gap-6">
+          <Card>
+            <CardHeader>
+              <CardTitle>Statistic</CardTitle>
+            </CardHeader>
+            <CardContent className="flex md:gap-8 flex-col md:flex-row gap-4">
               <div className="w-full border-b md:border-b-0 md:border-r flex items-center gap-4 pb-4 md:pb-0">
-                <div className="h-12 w-12 bg-primary/10 text-primary rounded lg:rounded-md flex items-center justify-center">
+                <div className="h-12 w-12 bg-secondary text-secondary-foreground rounded-md flex items-center justify-center">
                   <MapPinned />
                 </div>
                 <div className="space-y-1">
@@ -61,8 +63,9 @@ export default function ClusterDetailSheet({ cluster, onClose }: Props) {
                   <h3 className="text-2xl font-semibold">50</h3>
                 </div>
               </div>
+
               <div className="w-full border-b md:border-b-0 md:border-r flex items-center gap-4 pb-4 md:pb-0">
-                <div className="h-12 w-12 bg-destructive/10 text-destructive rounded lg:rounded-md flex items-center justify-center">
+                <div className="h-12 w-12 bg-tertiary text-tertiary-foreground rounded-md flex items-center justify-center">
                   <Zap />
                 </div>
                 <div className="space-y-1">
@@ -72,8 +75,9 @@ export default function ClusterDetailSheet({ cluster, onClose }: Props) {
                   <h3 className="text-2xl font-semibold">54,902</h3>
                 </div>
               </div>
+
               <div className="w-full flex items-center gap-4">
-                <div className="h-12 w-12 bg-secondary/10 text-secondary rounded lg:rounded-md flex items-center justify-center">
+                <div className="h-12 w-12 bg-destructive text-destructive-foreground rounded-md flex items-center justify-center">
                   <MapPinCheck />
                 </div>
                 <div className="space-y-1">
@@ -83,8 +87,8 @@ export default function ClusterDetailSheet({ cluster, onClose }: Props) {
                   <h3 className="text-2xl font-semibold">48</h3>
                 </div>
               </div>
-            </div>
-          </div>
+            </CardContent>
+          </Card>
 
           {/* Data Table */}
           <DataTable<ClusterTableRow, unknown>
