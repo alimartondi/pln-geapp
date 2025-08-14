@@ -32,7 +32,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 import clsx from "clsx";
-import { Settings2, Search } from "lucide-react";
+import { Settings2, Search, ChevronRight, ChevronLeft } from "lucide-react";
 
 import { MultiSelect } from "@/components/ui/multi-select";
 import { clusters } from "@/data/cluster";
@@ -42,6 +42,12 @@ import {
   CardFooter,
   CardHeader,
 } from "@/components/ui/card";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+} from "@/components/ui/select";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
@@ -186,7 +192,6 @@ export function DataTable<TData extends { clusterId: number }, TValue>({
           </div>
         </div>
       </CardHeader>
-
       {/* Table */}
       <CardContent>
         <div className="border rounded-md overflow-hidden">
@@ -201,14 +206,12 @@ export function DataTable<TData extends { clusterId: number }, TValue>({
                         colSpan={header.colSpan}
                         className={clsx(
                           header.colSpan > 1 &&
-                            "text-center uppercase font-semibold",
-                          header.column.columnDef.header === "Identification" &&
-                            "sticky left-0 bg-muted border-b border-border after:absolute after:right-0 after:h-full after:w-px after:bg-border after:top-0 will-change-transform",
+                            "text-center uppercase font-semibold border-r border-b last:border-r-0",
                           header.column.columnDef.header === "Site Name" &&
-                            "sticky left-0 bg-muted after:absolute after:right-0 after:h-full after:w-px after:bg-border after:top-0 translate-z-0 text-left will-change-transform border-t",
+                            "sticky left-0 bg-muted after:absolute after:right-0 after:h-full after:w-px after:bg-border after:top-0 translate-z-0 text-left will-change-transform border-b border-border",
                           header.column.columnDef.header === "Province" &&
                             "text-left",
-                          "tex-center"
+                          "tex-center border-b"
                         )}
                       >
                         {header.isPlaceholder
@@ -262,23 +265,55 @@ export function DataTable<TData extends { clusterId: number }, TValue>({
       </CardContent>
 
       {/* Pagination */}
-      <CardFooter className="flex items-center justify-end gap-2 md:gap-4">
-        <Button
-          variant="outline"
-          size="lg"
-          onClick={() => table.previousPage()}
-          disabled={!table.getCanPreviousPage()}
-        >
-          Previous
-        </Button>
-        <Button
-          variant="outline"
-          size="lg"
-          onClick={() => table.nextPage()}
-          disabled={!table.getCanNextPage()}
-        >
-          Next
-        </Button>
+      <CardFooter className="flex md:items-center md:justify-between gap-4">
+        {/* Rows per page selector ⬅️ added */}
+        <div className="flex items-center space-x-2">
+          <span className="text-sm">Rows per page</span>
+          <Select
+            value={String(table.getState().pagination.pageSize)} // ⬅️ pastikan string
+            onValueChange={(value) => table.setPageSize(Number(value))}
+          >
+            <SelectTrigger className="w-[80px]">
+              {/* Menampilkan nilai terpilih */}
+              {table.getState().pagination.pageSize}
+            </SelectTrigger>
+            <SelectContent>
+              {[10, 25, 50].map((size) => (
+                <SelectItem key={size} value={String(size)}>
+                  {size}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+        </div>
+
+        {/* Page info ⬅️ added */}
+        <div className="text-sm">
+          Page {table.getState().pagination.pageIndex + 1} of{" "}
+          {table.getPageCount()}
+        </div>
+
+        {/* Navigation buttons (existing, but moved slightly for layout) */}
+        <div className="flex items-center gap-2 md:gap-4">
+          <Button
+            variant="outline"
+            size="lg"
+            className="w-11"
+            onClick={() => table.previousPage()}
+            disabled={!table.getCanPreviousPage()}
+          >
+            <ChevronLeft />
+          </Button>
+          <Button
+            variant="outline"
+            size="lg"
+            className="w-11"
+            onClick={() => table.nextPage()}
+            disabled={!table.getCanNextPage()}
+          >
+            <ChevronRight />
+          </Button>
+        </div>
       </CardFooter>
     </Card>
   );

@@ -18,10 +18,11 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
     maxSize: 0,
   },
 
+  { accessorKey: "siteName", header: "Site Name" },
+
   {
     header: "Identification",
     columns: [
-      { accessorKey: "siteName", header: "Site Name" },
       { accessorKey: "province", header: "Province" },
       { accessorKey: "lat", header: "Lat" },
       { accessorKey: "lng", header: "Long" },
