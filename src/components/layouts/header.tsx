@@ -45,8 +45,8 @@ export default function Header() {
             className="flex gap-2 items-center cursor-pointer"
             onClick={scrollToTop}
           >
-            <div className="h-8 w-8 bg-yellow-400 flex items-center justify-center rounded-md">
-              <Zap fill="#D34036" stroke="#D34036" className="size-4" />
+            <div className="h-8 w-8 bg-tertiary flex items-center justify-center rounded-md">
+              <Zap fill="#f04438" stroke="#f04438" className="size-4" />
             </div>
             <h3 className="text-xl font-semibold tracking-wider text-primary">
               PLN

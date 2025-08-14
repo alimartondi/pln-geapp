@@ -57,7 +57,7 @@ export default function ClusterDetailSheet({ cluster, onClose }: Props) {
                   <MapPinned />
                 </div>
                 <div className="space-y-1">
-                  <h6 className="text-xs font-semibold text-gray-500">
+                  <h6 className="text-xs font-semibold text-muted-foreground">
                     Total Sites
                   </h6>
                   <h3 className="text-2xl font-semibold">50</h3>
@@ -69,7 +69,7 @@ export default function ClusterDetailSheet({ cluster, onClose }: Props) {
                   <Zap />
                 </div>
                 <div className="space-y-1">
-                  <h6 className="text-xs font-semibold text-gray-500">
+                  <h6 className="text-xs font-semibold text-muted-foreground">
                     Total Capacity
                   </h6>
                   <h3 className="text-2xl font-semibold">54,902</h3>
@@ -81,7 +81,7 @@ export default function ClusterDetailSheet({ cluster, onClose }: Props) {
                   <MapPinCheck />
                 </div>
                 <div className="space-y-1">
-                  <h6 className="text-xs font-semibold text-gray-500">
+                  <h6 className="text-xs font-semibold text-muted-foreground">
                     Confirmed Sites
                   </h6>
                   <h3 className="text-2xl font-semibold">48</h3>
