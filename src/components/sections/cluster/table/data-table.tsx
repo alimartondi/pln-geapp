@@ -127,10 +127,13 @@ export function DataTable<TData extends { clusterId: number }, TValue>({
               type="search"
               placeholder="Find project name..."
               value={
-                (table.getColumn("siteName")?.getFilterValue() as string) ?? ""
+                (table.getColumn("projectName")?.getFilterValue() as string) ??
+                ""
               }
               onChange={(event) =>
-                table.getColumn("siteName")?.setFilterValue(event.target.value)
+                table
+                  .getColumn("projectName")
+                  ?.setFilterValue(event.target.value)
               }
               className="min-w-[260px] max-w-full pl-9"
             />
@@ -206,12 +209,12 @@ export function DataTable<TData extends { clusterId: number }, TValue>({
                         colSpan={header.colSpan}
                         className={clsx(
                           header.colSpan > 1 &&
-                            "text-center uppercase font-semibold border-r border-b last:border-r-0",
-                          header.column.columnDef.header === "Site Name" &&
-                            "sticky left-0 bg-muted after:absolute after:right-0 after:h-full after:w-px after:bg-border after:top-0 translate-z-0 text-left will-change-transform border-b border-border",
-                          header.column.columnDef.header === "Province" &&
-                            "text-left",
-                          "tex-center border-b"
+                            "text-center uppercase font-semibold",
+                          header.column.id === "projectName" &&
+                            "sticky left-0 bg-primary border-t border-[#27a9c2] after:absolute after:right-0 after:h-full after:w-px after:bg-border after:top-0 translate-z-0 text-left will-change-transform",
+                          header.column.columnDef.header ===
+                            "Cluster Geography" && "text-left",
+                          "tex-center"
                         )}
                       >
                         {header.isPlaceholder
