@@ -3,14 +3,7 @@
 import { ColumnDef } from "@tanstack/react-table";
 import { ClusterTableRow } from "@/types/cluster.type";
 import { Badge } from "@/components/ui/badge";
-import {
-  Check,
-  CircleCheck,
-  Clock6,
-  SquareCheck,
-  SquareX,
-  X,
-} from "lucide-react";
+import { Check, X } from "lucide-react";
 import clsx from "clsx";
 
 export const columns: ColumnDef<ClusterTableRow>[] = [
@@ -26,26 +19,30 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
     maxSize: 0,
   },
 
+  // {
+  //   id: "dummyGroupForProjectName",
+  //   columns: [
+  //     {
+  //       accessorKey: "projectName",
+  //       header: ({ column }) => <div>Project Name</div>,
+  //     },
+  //   ],
+  // },
+
   {
-    id: "dummyGroupForProjectName",
+    header: "Project Overview",
     columns: [
       {
         accessorKey: "projectName",
         header: ({ column }) => <div>Project Name</div>,
       },
-    ],
-  },
-
-  {
-    header: "Project Overview",
-    columns: [
       { accessorKey: "cluster", header: "Geographic Cluster" },
       {
         accessorKey: "capacity",
         header: ({ column }) => (
           <div className="space-y-1">
             <span className="block">Capacity</span>
-            <Badge variant={"outline"}>(kW)</Badge>
+            <Badge variant={"glass"}>(kW)</Badge>
           </div>
         ),
 
@@ -77,7 +74,7 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
         header: ({ column }) => (
           <div className="space-y-1">
             <span className="block">Project Land Size</span>
-            <Badge variant={"outline"}>(ha)</Badge>
+            <Badge variant={"glass"}>(ha)</Badge>
           </div>
         ),
         cell: ({ row }) => (
@@ -91,7 +88,7 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
         header: ({ column }) => (
           <div className="space-y-1">
             <span className="block">PLTD Distance</span>
-            <Badge variant={"outline"}>(m)</Badge>
+            <Badge variant={"glass"}>(m)</Badge>
           </div>
         ),
         cell: ({ row }) => {
@@ -116,7 +113,7 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
         header: ({ column }) => (
           <div className="space-y-1">
             <span className="block">BPP</span>
-            <Badge variant={"outline"}>($/kWh)</Badge>
+            <Badge variant={"glass"}>($/kWh)</Badge>
           </div>
         ),
         cell: ({ row }) => (
@@ -130,7 +127,7 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
         header: ({ column }) => (
           <div className="space-y-1">
             <span className="block">ACE</span>
-            <Badge variant={"outline"}>(MWh/yr)</Badge>
+            <Badge variant={"glass"}>(MWh/yr)</Badge>
           </div>
         ),
         cell: ({ row }) => (
@@ -144,7 +141,7 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
         header: ({ column }) => (
           <div className="space-y-1">
             <span className="block">Peak Load</span>
-            <Badge variant={"outline"}>(kW)</Badge>
+            <Badge variant={"glass"}>(kW)</Badge>
           </div>
         ),
         cell: ({ row }) => (
@@ -158,7 +155,7 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
         header: ({ column }) => (
           <div className="space-y-1">
             <span className="block">Mean Load</span>
-            <Badge variant={"outline"}>(kW)</Badge>
+            <Badge variant={"glass"}>(kW)</Badge>
           </div>
         ),
         cell: ({ row }) => (
@@ -172,7 +169,7 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
         header: ({ column }) => (
           <div className="space-y-1">
             <span className="block">Renewable Penetration</span>
-            <Badge variant={"outline"}>(%)</Badge>
+            <Badge variant={"glass"}>(%)</Badge>
           </div>
         ),
         cell: ({ row }) => (
@@ -186,7 +183,7 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
         header: ({ column }) => (
           <div className="space-y-1">
             <span className="block">Connection Voltage</span>
-            <Badge variant={"outline"}>(kW)</Badge>
+            <Badge variant={"glass"}>(kW)</Badge>
           </div>
         ),
         cell: ({ row }) => (
@@ -206,7 +203,7 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
         header: ({ column }) => (
           <div className="space-y-1">
             <span className="block">Average Slope</span>
-            <Badge variant={"outline"}>(%)</Badge>
+            <Badge variant={"glass"}>(%)</Badge>
           </div>
         ),
         cell: ({ row }) => {
@@ -225,7 +222,7 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
         header: ({ column }) => (
           <div className="space-y-1">
             <span className="block">Slope Aspect</span>
-            <Badge variant={"outline"}>(°)</Badge>
+            <Badge variant={"glass"}>(°)</Badge>
           </div>
         ),
         cell: ({ row }) => {
@@ -279,7 +276,7 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
         header: ({ column }) => (
           <div className="space-y-1">
             <span className="block">Distance Port</span>
-            <Badge variant={"outline"}>(m)</Badge>
+            <Badge variant={"glass"}>(m)</Badge>
           </div>
         ),
         cell: ({ row }) => (
@@ -293,7 +290,7 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
         header: ({ column }) => (
           <div className="space-y-1">
             <span className="block">Distance Road</span>
-            <Badge variant={"outline"}>(m)</Badge>
+            <Badge variant={"glass"}>(m)</Badge>
           </div>
         ),
         cell: ({ row }) => {
@@ -312,7 +309,7 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
         header: ({ column }) => (
           <div className="space-y-1">
             <span className="block">Distance Coast</span>
-            <Badge variant={"outline"}>(m)</Badge>
+            <Badge variant={"glass"}>(m)</Badge>
           </div>
         ),
         cell: ({ row }) => {
@@ -345,7 +342,7 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
         header: ({ column }) => (
           <div className="space-y-1">
             <span className="block">Registered Land</span>
-            <Badge variant={"outline"}>(%)</Badge>
+            <Badge variant={"glass"}>(%)</Badge>
           </div>
         ),
         cell: ({ row }) => {
@@ -418,6 +415,7 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
       },
     ],
   },
+
   {
     header: "Hazards & Preliminary Climate Risk",
     columns: [
@@ -459,6 +457,7 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
       },
     ],
   },
+
   {
     header: "Approvals & Execution Pathway",
     columns: [

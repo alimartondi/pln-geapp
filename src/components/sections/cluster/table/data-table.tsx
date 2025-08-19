@@ -211,10 +211,10 @@ export function DataTable<TData extends { clusterId: number }, TValue>({
                           header.colSpan > 1 &&
                             "text-center uppercase font-semibold",
                           header.column.id === "projectName" &&
-                            "sticky left-0 bg-primary border-t border-[#27a9c2] after:absolute after:right-0 after:h-full after:w-px after:bg-border after:top-0 translate-z-0 text-left will-change-transform",
+                            "sticky left-0 bg-primary border-[#27a9c2] after:absolute after:right-0 after:h-full after:w-px after:bg-border after:top-0 translate-z-0 text-left will-change-transform z-10",
                           header.column.columnDef.header ===
                             "Cluster Geography" && "text-left",
-                          "tex-center"
+                          "tex-center text-white"
                         )}
                       >
                         {header.isPlaceholder
@@ -240,18 +240,16 @@ export function DataTable<TData extends { clusterId: number }, TValue>({
                       const isFirst = index === 0; // cek kolom pertama
                       const rowIndex = row.index; // index baris
 
-                      const bgClass =
-                        rowIndex % 2 === 0 ? "bg-white" : "bg-gray-50"; // ganjil/genap
-
                       return (
                         <TableCell
                           key={cell.id}
                           className={clsx(
-                            isFirst && "sticky left-0 z-10",
+                            isFirst &&
+                              "sticky left-0 z-10 after:absolute after:inset-y-0 after:right-0 after:w-[0.1px] after:bg-border",
                             isFirst &&
                               (rowIndex % 2 === 0
-                                ? "bg-[#18181a]"
-                                : "bg-[#232227]")
+                                ? "bg-[#ffffff] dark:bg-[#18181a]"
+                                : "bg-[#f6f7f9] dark:bg-[#232227]")
                           )}
                         >
                           {flexRender(
@@ -266,7 +264,7 @@ export function DataTable<TData extends { clusterId: number }, TValue>({
               ) : (
                 <TableRow>
                   <TableCell
-                    colSpan={columns.length}
+                    colSpan={columns.length + 24}
                     className="h-24 text-center"
                   >
                     No results.
