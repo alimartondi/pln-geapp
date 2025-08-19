@@ -7,66 +7,87 @@ export type Cluster = {
 
 export type ClusterList = Cluster[];
 
+export type Coordinate = {
+  lat: number;
+  lng: number;
+};
+
 export type ClusterDetail = {
   clusterId: number;
   table: {
-    siteName: string;
-    province: string;
-    lat: string;
-    lng: string;
+    projectName: string;
+
+    cluster: string;
+    capacity: number;
+    coordinates: Coordinate[];
+    landSize: number;
+    pltdDist: number[];
+
     bpp: number;
-    ace: string;
-    solarKw: string;
-    pltdKw: string;
-    genMwh: string;
-    solarPercent: string;
-    resource: number;
-    areaHa: string;
-    gradientPercent: string;
-    voltageKv: number;
-    distKm: string;
-    existKw: number;
-    generator: string;
-    roadM: string;
-    portKm: number;
-    portCap: string;
-    complex: string;
-    ifcCat: string;
-    esia: "Completed" | "Pending" | "Planned" | null;
-    uklUpl: string;
-    hazards: string;
-    climate: string;
-    esPlans: string;
+    ace: number;
+    peakLoad: number;
+    meanLoad: number;
+    renewablePenetration: number;
+    connectionVoltage: number;
+
+    avgSlope: number[];
+    slopeAspect: number[];
+    offsiteShading: ("Yes" | "No")[];
+    distPort: number;
+    distRoad: number[];
+    distCoast: number[];
+    landUseSensitivity: string[][];
+    registerLand: number[];
+    disputedLand: string[];
+    stateForesty: string[];
+    forestMoratorium: ("Yes" | "No")[];
+
+    keyHazards: string[];
+    preliminaryClimateRisk: ("Low" | "Medium" | "High")[];
+
+    goiApprovalsProfile: string;
+    preliminaryPositiveImpacts: string[][];
+    preliminaryNegativeImpacts: string[][];
+    ifcRiskCategory: string[];
+    keyEAndSManagementPlans: string[][];
   }[];
 };
 
 export type ClusterTableRow = {
   clusterId: number;
-  siteName: string;
-  province: string;
-  lat: string;
-  lng: string;
+  projectName: string;
+
+  cluster: string;
+  capacity: number;
+  coordinates: Coordinate[];
+  landSize: number;
+  pltdDist: number[];
+
   bpp: number;
-  ace: string;
-  solarKw: string;
-  pltdKw: string;
-  genMwh: string;
-  solarPercent: string;
-  resource: number;
-  areaHa: string;
-  gradientPercent: string;
-  voltageKv: number;
-  distKm: string;
-  existKw: number;
-  generator: string;
-  roadM: string;
-  portKm: number;
-  portCap: string;
-  complex: string;
-  ifcCat: string;
-  esia: "Completed" | "Pending" | "Planned" | null;
-  uklUpl: string;
-  hazards: string;
-  climate: string;
-  esPlans: string;
+  ace: number;
+  peakLoad: number;
+  meanLoad: number;
+  renewablePenetration: number;
+  connectionVoltage: number;
+
+  avgSlope: number[];
+  slopeAspect: number[];
+  offsiteShading: ("Yes" | "No")[];
+  distPort: number;
+  distRoad: number[];
+  distCoast: number[];
+  landUseSensitivity: string[][];
+  registerLand: number[];
+  disputedLand: string[];
+  stateForesty: string[];
+  forestMoratorium: ("Yes" | "No")[];
+
+  keyHazards: string[];
+  preliminaryClimateRisk: ("Low" | "Medium" | "High")[];
+
+  goiApprovalsProfile: string;
+  preliminaryPositiveImpacts: string[][];
+  preliminaryNegativeImpacts: string[][];
+  ifcRiskCategory: string[];
+  keyEAndSManagementPlans: string[][];
 };

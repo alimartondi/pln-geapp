@@ -106,21 +106,6 @@ export function DataTable<TData extends { clusterId: number }, TValue>({
       {/* Top toolbar */}
       <CardHeader className="flex flex-col md:flex-row gap-4">
         <div className="flex flex-col md:flex-row gap-4 w-full">
-          <div className="hidden md:block">
-            <MultiSelect
-              options={clusters.map((c) => ({
-                label: c.shortName,
-                value: String(c.id),
-                count: data.filter(
-                  (row) => String(row.clusterId) === String(c.id)
-                ).length,
-              }))}
-              selected={selectedClusters}
-              onChange={setSelectedClusters}
-              label="Clusters"
-            />
-          </div>
-
           <div className="flex items-center relative">
             <Search className="size-4 absolute left-3 text-muted-foreground" />
             <Input
@@ -136,6 +121,21 @@ export function DataTable<TData extends { clusterId: number }, TValue>({
                   ?.setFilterValue(event.target.value)
               }
               className="min-w-[260px] max-w-full pl-9"
+            />
+          </div>
+
+          <div className="hidden md:block">
+            <MultiSelect
+              options={clusters.map((c) => ({
+                label: c.shortName,
+                value: String(c.id),
+                count: data.filter(
+                  (row) => String(row.clusterId) === String(c.id)
+                ).length,
+              }))}
+              selected={selectedClusters}
+              onChange={setSelectedClusters}
+              label="Clusters"
             />
           </div>
         </div>
@@ -236,20 +236,31 @@ export function DataTable<TData extends { clusterId: number }, TValue>({
                     key={row.id}
                     data-state={row.getIsSelected() && "selected"}
                   >
-                    {row.getVisibleCells().map((cell) => (
-                      <TableCell
-                        key={cell.id}
-                        className={clsx(
-                          cell.column.columnDef.header === "Site Name" &&
-                            "bg-card sticky left-0 inset-y-0 z-10 after:absolute after:right-0 after:h-full after:w-px after:bg-border after:top-0 translate-z-0 will-change-transform"
-                        )}
-                      >
-                        {flexRender(
-                          cell.column.columnDef.cell,
-                          cell.getContext()
-                        )}
-                      </TableCell>
-                    ))}
+                    {row.getVisibleCells().map((cell, index) => {
+                      const isFirst = index === 0; // cek kolom pertama
+                      const rowIndex = row.index; // index baris
+
+                      const bgClass =
+                        rowIndex % 2 === 0 ? "bg-white" : "bg-gray-50"; // ganjil/genap
+
+                      return (
+                        <TableCell
+                          key={cell.id}
+                          className={clsx(
+                            isFirst && "sticky left-0 z-10",
+                            isFirst &&
+                              (rowIndex % 2 === 0
+                                ? "bg-[#18181a]"
+                                : "bg-[#232227]")
+                          )}
+                        >
+                          {flexRender(
+                            cell.column.columnDef.cell,
+                            cell.getContext()
+                          )}
+                        </TableCell>
+                      );
+                    })}
                   </TableRow>
                 ))
               ) : (

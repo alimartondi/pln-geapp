@@ -3,7 +3,15 @@
 import { ColumnDef } from "@tanstack/react-table";
 import { ClusterTableRow } from "@/types/cluster.type";
 import { Badge } from "@/components/ui/badge";
-import { CircleCheck, Clock6 } from "lucide-react";
+import {
+  Check,
+  CircleCheck,
+  Clock6,
+  SquareCheck,
+  SquareX,
+  X,
+} from "lucide-react";
+import clsx from "clsx";
 
 export const columns: ColumnDef<ClusterTableRow>[] = [
   {
@@ -19,7 +27,6 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
   },
 
   {
-    header: "",
     id: "dummyGroupForProjectName",
     columns: [
       {
@@ -41,9 +48,30 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
             <Badge variant={"outline"}>(kW)</Badge>
           </div>
         ),
+
+        cell: ({ row }) => (
+          <div>
+            <span>{row.original.capacity}</span>
+          </div>
+        ),
       },
-      { accessorKey: "lat", header: "Lat" },
-      { accessorKey: "lng", header: "Long" },
+      {
+        accessorKey: "coordinates",
+        header: "Coordinates",
+        cell: ({ row }) => {
+          const coords = row.original.coordinates; // Coordinate[]
+          return (
+            <div className="flex flex-col gap-4">
+              {coords.map((c, i) => (
+                <span key={i}>
+                  {c.lat}, {c.lng}
+                </span>
+              ))}
+            </div>
+          );
+        },
+      },
+
       {
         accessorKey: "landSize",
         header: ({ column }) => (
@@ -52,15 +80,30 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
             <Badge variant={"outline"}>(ha)</Badge>
           </div>
         ),
+        cell: ({ row }) => (
+          <div>
+            <span>{row.original.landSize}</span>
+          </div>
+        ),
       },
       {
-        accessorKey: "PLTDDist",
+        accessorKey: "pltdDist",
         header: ({ column }) => (
           <div className="space-y-1">
             <span className="block">PLTD Distance</span>
             <Badge variant={"outline"}>(m)</Badge>
           </div>
         ),
+        cell: ({ row }) => {
+          const dists = row.original.pltdDist;
+          return (
+            <div className="flex flex-col gap-4">
+              {dists.map((d, i) => (
+                <span key={i}>{d}</span>
+              ))}
+            </div>
+          );
+        },
       },
     ],
   },
@@ -76,6 +119,11 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
             <Badge variant={"outline"}>($/kWh)</Badge>
           </div>
         ),
+        cell: ({ row }) => (
+          <div>
+            <span>{row.original.bpp}</span>
+          </div>
+        ),
       },
       {
         accessorKey: "ace",
@@ -83,6 +131,11 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
           <div className="space-y-1">
             <span className="block">ACE</span>
             <Badge variant={"outline"}>(MWh/yr)</Badge>
+          </div>
+        ),
+        cell: ({ row }) => (
+          <div>
+            <span>{row.original.ace}</span>
           </div>
         ),
       },
@@ -94,6 +147,11 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
             <Badge variant={"outline"}>(kW)</Badge>
           </div>
         ),
+        cell: ({ row }) => (
+          <div>
+            <span>{row.original.peakLoad}</span>
+          </div>
+        ),
       },
       {
         accessorKey: "meanLoad",
@@ -101,6 +159,11 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
           <div className="space-y-1">
             <span className="block">Mean Load</span>
             <Badge variant={"outline"}>(kW)</Badge>
+          </div>
+        ),
+        cell: ({ row }) => (
+          <div>
+            <span>{row.original.meanLoad}</span>
           </div>
         ),
       },
@@ -112,6 +175,11 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
             <Badge variant={"outline"}>(%)</Badge>
           </div>
         ),
+        cell: ({ row }) => (
+          <div className="flex flex-col gap-4">
+            <span>{row.original.renewablePenetration}%</span>
+          </div>
+        ),
       },
       {
         accessorKey: "connectionVoltage",
@@ -119,6 +187,11 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
           <div className="space-y-1">
             <span className="block">Connection Voltage</span>
             <Badge variant={"outline"}>(kW)</Badge>
+          </div>
+        ),
+        cell: ({ row }) => (
+          <div>
+            <span>{row.original.connectionVoltage}</span>
           </div>
         ),
       },
@@ -136,6 +209,16 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
             <Badge variant={"outline"}>(%)</Badge>
           </div>
         ),
+        cell: ({ row }) => {
+          const avr = row.original.avgSlope;
+          return (
+            <div className="flex flex-col gap-4">
+              {avr.map((a, i) => (
+                <span key={i}>{a}</span>
+              ))}
+            </div>
+          );
+        },
       },
       {
         accessorKey: "slopeAspect",
@@ -145,6 +228,16 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
             <Badge variant={"outline"}>(°)</Badge>
           </div>
         ),
+        cell: ({ row }) => {
+          const slope = row.original.slopeAspect;
+          return (
+            <div className="flex flex-col gap-4">
+              {slope.map((s, i) => (
+                <span key={i}>{s}</span>
+              ))}
+            </div>
+          );
+        },
       },
       {
         accessorKey: "offsiteShading",
@@ -153,13 +246,45 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
             <span className="block">Off-site Shading</span>
           </div>
         ),
+        cell: ({ row }) => {
+          const sites: string[] = row.original.offsiteShading;
+
+          return (
+            <div className="flex flex-col gap-4">
+              {sites.map((s, i) => {
+                const Icon = s.toLowerCase() === "yes" ? Check : X;
+                return (
+                  <div key={i} className="flex items-center gap-2">
+                    <div
+                      className={clsx(
+                        "flex h-5 w-5 rounded justify-center items-center p-1",
+                        s.toLocaleLowerCase() === "yes"
+                          ? "bg-success-background text-success-foreground"
+                          : "bg-error-background text-error-foreground"
+                      )}
+                    >
+                      <Icon className="size-4" />
+                    </div>
+                    <span>{s}</span>
+                  </div>
+                );
+              })}
+            </div>
+          );
+        },
       },
+
       {
         accessorKey: "distPort",
         header: ({ column }) => (
           <div className="space-y-1">
             <span className="block">Distance Port</span>
             <Badge variant={"outline"}>(m)</Badge>
+          </div>
+        ),
+        cell: ({ row }) => (
+          <div>
+            <span>{row.original.distPort}</span>
           </div>
         ),
       },
@@ -171,6 +296,16 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
             <Badge variant={"outline"}>(m)</Badge>
           </div>
         ),
+        cell: ({ row }) => {
+          const road = row.original.distRoad;
+          return (
+            <div className="flex flex-col gap-4">
+              {road.map((r, i) => (
+                <span key={i}>{r}</span>
+              ))}
+            </div>
+          );
+        },
       },
       {
         accessorKey: "distCoast",
@@ -180,8 +315,31 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
             <Badge variant={"outline"}>(m)</Badge>
           </div>
         ),
+        cell: ({ row }) => {
+          const coast = row.original.distCoast;
+          return (
+            <div className="flex flex-col gap-4">
+              {coast.map((c, i) => (
+                <span key={i}>{c}</span>
+              ))}
+            </div>
+          );
+        },
       },
-      { accessorKey: "landUseSensitivity", header: "Land Use Sensitivity" },
+      {
+        accessorKey: "landUseSensitivity",
+        header: "Land Use Sensitivity",
+        cell: ({ row }) => {
+          const land = row.original.landUseSensitivity;
+          return (
+            <div className="flex flex-col gap-4">
+              {land.map((l, i) => (
+                <span key={i}>{l}</span>
+              ))}
+            </div>
+          );
+        },
+      },
       {
         accessorKey: "registerLand",
         header: ({ column }) => (
@@ -190,78 +348,184 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
             <Badge variant={"outline"}>(%)</Badge>
           </div>
         ),
+        cell: ({ row }) => {
+          const lands = row.original.registerLand;
+          return (
+            <div className="flex flex-col gap-4">
+              {lands.map((l, i) => (
+                <span key={i}>{l}</span>
+              ))}
+            </div>
+          );
+        },
       },
-      { accessorKey: "disputedLand", header: "Disputed Lands" },
-      { accessorKey: "stateForesty", header: "State Foresty" },
-      { accessorKey: "forestMoratorium", header: "Forest Moratorium" },
+      {
+        accessorKey: "disputedLand",
+        header: "Disputed Lands",
+        cell: ({ row }) => {
+          const disputed = row.original.disputedLand;
+          return (
+            <div className="flex flex-col gap-4">
+              {disputed.map((d, i) => (
+                <span key={i}>{d}</span>
+              ))}
+            </div>
+          );
+        },
+      },
+      {
+        accessorKey: "stateForesty",
+        header: "State Foresty",
+        cell: ({ row }) => {
+          const state = row.original.stateForesty;
+          return (
+            <div className="flex flex-col gap-4">
+              {state.map((s, i) => (
+                <span key={i}>{s}</span>
+              ))}
+            </div>
+          );
+        },
+      },
+      {
+        accessorKey: "forestMoratorium",
+        header: "Forest Moratorium",
+        cell: ({ row }) => {
+          const forest = row.original.forestMoratorium;
+          return (
+            <div className="flex flex-col gap-4">
+              {forest.map((f, i) => {
+                const Icon = f.toLowerCase() === "yes" ? Check : X;
+                return (
+                  <div key={i} className="flex items-center gap-2">
+                    <div
+                      className={clsx(
+                        "flex h-5 w-5 rounded justify-center items-center p-1",
+                        f.toLocaleLowerCase() === "yes"
+                          ? "bg-success-background text-success-foreground"
+                          : "bg-error-background text-error-foreground"
+                      )}
+                    >
+                      <Icon className="size-4" />
+                    </div>
+                    <span>{f}</span>
+                  </div>
+                );
+              })}
+            </div>
+          );
+        },
+      },
     ],
   },
   {
     header: "Hazards & Preliminary Climate Risk",
     columns: [
-      { accessorKey: "keyHazards", header: "Key Hazards" },
-      // {
-      //   accessorKey: "esia",
-      //   header: "ESIA",
-      //   cell: ({ row }) => {
-      //     const value = row.getValue("esia") as string | null;
-      //     if (!value) return null;
+      {
+        accessorKey: "keyHazards",
+        header: "Key Hazards",
+        cell: ({ row }) => {
+          const keys = row.original.keyHazards;
+          return (
+            <div className="flex flex-col gap-4">
+              {keys.map((k, i) => (
+                <span key={i}>{k}</span>
+              ))}
+            </div>
+          );
+        },
+      },
 
-      //     const statusMap: Record<
-      //       string,
-      //       {
-      //         variant: "success" | "warning" | "secondary";
-      //         icon: React.ElementType;
-      //         bg: string;
-      //       }
-      //     > = {
-      //       completed: {
-      //         variant: "success",
-      //         icon: CircleCheck,
-      //         bg: "bg-success-foreground",
-      //       },
-      //       pending: {
-      //         variant: "warning",
-      //         icon: Clock6,
-      //         bg: "bg-warning-foreground",
-      //       },
-      //     };
-
-      //     const statusKey = value.toLowerCase();
-      //     const status = statusMap[statusKey] || statusMap["failed"]; // default kalau tidak ada
-
-      //     const Icon = status.icon;
-
-      //     return (
-      //       <Badge variant={status.variant} className="gap-2">
-      //         <Icon className="size-3" strokeWidth={2} />
-      //         {value}
-      //       </Badge>
-      //     );
-      //   },
-      // },
       {
         accessorKey: "preliminaryClimateRisk",
         header: "Preliminary Climate Risk",
+        cell: ({ row }) => {
+          const preliminary = row.original.preliminaryClimateRisk;
+          const variants: Record<string, "error" | "warning" | "success"> = {
+            Low: "error",
+            Medium: "warning",
+          };
+
+          return (
+            <div className="flex flex-col gap-4">
+              {preliminary.map((p, i) => (
+                <Badge variant={variants[p] ?? "success"} key={i}>
+                  {p}
+                </Badge>
+              ))}
+            </div>
+          );
+        },
       },
     ],
   },
   {
-    header: "Regulatory & Risk",
+    header: "Approvals & Execution Pathway",
     columns: [
-      { accessorKey: "GOIApprovalsProfile", header: "GOI Approvals Profile" },
+      { accessorKey: "goiApprovalsProfile", header: "GOI Approvals Profile" },
       {
         accessorKey: "preliminaryPositiveImpacts",
         header: "Preliminary Posative Impacts ",
+        cell: ({ row }) => {
+          const preliminary = row.original.preliminaryPositiveImpacts;
+          return (
+            <div className="flex flex-col gap-4">
+              {preliminary.map((p, i) => (
+                <span key={i}>{p}</span>
+              ))}
+            </div>
+          );
+        },
       },
       {
         accessorKey: "preliminaryNegativeImpacts",
         header: "Preliminary Negative Impacts",
+        cell: ({ row }) => {
+          const preliminary = row.original.preliminaryNegativeImpacts;
+          return (
+            <div className="flex flex-col gap-2">
+              {preliminary.map((group, i) => (
+                <div key={i} className="flex gap-1">
+                  {group.map((item, j) => (
+                    <span key={j}>
+                      {item}
+                      {j !== group.length - 1 && ","}
+                    </span>
+                  ))}
+                </div>
+              ))}
+            </div>
+          );
+        },
       },
-      { accessorKey: "IFCRiskCategory", header: "IFC Risk Category" },
+
+      {
+        accessorKey: "ifcRiskCategory",
+        header: "IFC Risk Category",
+        cell: ({ row }) => {
+          const ifcRisk = row.original.ifcRiskCategory;
+          return (
+            <div className="flex flex-col gap-4">
+              {ifcRisk.map((r, i) => (
+                <span key={i}>{r}</span>
+              ))}
+            </div>
+          );
+        },
+      },
       {
         accessorKey: "keyEAndSManagementPlans",
         header: "Key E&S Management Plans",
+        cell: ({ row }) => {
+          const keysE = row.original.keyEAndSManagementPlans;
+          return (
+            <div className="flex flex-col gap-4">
+              {keysE.map((k, i) => (
+                <span key={i}>{k}</span>
+              ))}
+            </div>
+          );
+        },
       },
     ],
   },

@@ -122,7 +122,7 @@ export function MultiSelect({
                 className="w-full justify-center"
                 onClick={() => onChange([])}
               >
-                Clear Filters
+                All Clusters
               </Button>
             </div>
           </>
