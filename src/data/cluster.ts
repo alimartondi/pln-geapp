@@ -66,14 +66,14 @@ export const clusterDetails: ClusterDetail[] = [
         disputedLand: ["No"],
         stateForesty: ["No"],
         forestMoratorium: ["No"],
-        keyHazards: ["Floods (MED)"],
+        keyHazards: [["Floods (MED)"]],
         preliminaryClimateRisk: ["Medium"],
         goiApprovalsProfile:
           "STANDARD - District UKL/UPL + Mangrove (spatial plan)",
         preliminaryPositiveImpacts: [["Mangrove Loss"]],
-        preliminaryNegativeImpacts: [["Jobs, Electricity"]],
-        ifcRiskCategory: ["Category B - Enhanced management required"],
-        keyEAndSManagementPlans: [["PS1, PS4, PS6"]],
+        preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
+        ifcRiskCategory: [["Category B - Enhanced management required"]],
+        keyEAndSManagementPlans: [["PS1", "PS4", "PS6"]],
       },
       {
         projectName: "Sungai Buluh",
@@ -96,21 +96,21 @@ export const clusterDetails: ClusterDetail[] = [
         distPort: 170,
         distRoad: [100],
         distCoast: [50],
-        landUseSensitivity: [["Mangrove, Scrub"]],
+        landUseSensitivity: [["Mangrove", "Scrub"]],
         registerLand: [0],
         disputedLand: ["No"],
         stateForesty: ["Yes (90%)"],
         forestMoratorium: ["No"],
 
-        keyHazards: ["Floods (MED)"],
+        keyHazards: [["Floods (MED)"]],
         preliminaryClimateRisk: ["Medium"],
 
         goiApprovalsProfile:
           "HIGH - Ministry Forestry Permit (IPKKH) + Mangrove (spatial plan)",
         preliminaryPositiveImpacts: [["Mangrove Loss"]],
-        preliminaryNegativeImpacts: [["Jobs, Electricity"]],
-        ifcRiskCategory: ["Category B - Enhanced management required"],
-        keyEAndSManagementPlans: [["PS1, PS4, PS6"]],
+        preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
+        ifcRiskCategory: [["Category B - Enhanced management required"]],
+        keyEAndSManagementPlans: [["PS1", "PS4", "PS6"]],
       },
       {
         projectName: "Sungai Laut",
@@ -139,13 +139,13 @@ export const clusterDetails: ClusterDetail[] = [
         stateForesty: ["Yes (100%)"],
         forestMoratorium: ["No"],
 
-        keyHazards: ["Floods (MED)"],
+        keyHazards: [["Floods (MED)"]],
         preliminaryClimateRisk: ["Medium"],
 
         goiApprovalsProfile: "HIGH - Ministry Forestry Permit (IPKKH)",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
         preliminaryNegativeImpacts: [["Jobs, Electricity"]],
-        ifcRiskCategory: ["Category C - Standard mitigation sufficient"],
+        ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
         keyEAndSManagementPlans: [["PS1, PS4, PS5"]],
       },
       {
@@ -169,21 +169,21 @@ export const clusterDetails: ClusterDetail[] = [
         distPort: 540,
         distRoad: [50],
         distCoast: [100],
-        landUseSensitivity: [["Mangrove, Scrub"]],
+        landUseSensitivity: [["Mangrove", "Scrub"]],
         registerLand: [0],
         disputedLand: ["No"],
         stateForesty: ["No"],
         forestMoratorium: ["No"],
 
-        keyHazards: ["Floods (MED)"],
+        keyHazards: [["Floods (MED)"]],
         preliminaryClimateRisk: ["Medium"],
 
         goiApprovalsProfile:
           "STANDARD - District UKL/UPL + Mangrove (spatial plan)",
         preliminaryPositiveImpacts: [["Mangrove Loss"]],
-        preliminaryNegativeImpacts: [["Jobs, Electricity"]],
-        ifcRiskCategory: ["Category B - Enhanced management required"],
-        keyEAndSManagementPlans: [["PS1, PS4, PS6"]],
+        preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
+        ifcRiskCategory: [["Category B - Enhanced management required"]],
+        keyEAndSManagementPlans: [["PS1", "PS4", "PS6"]],
       },
 
       {
@@ -210,13 +210,13 @@ export const clusterDetails: ClusterDetail[] = [
         distPort: 910,
         distRoad: [165, 90],
         distCoast: [900, 650],
-        landUseSensitivity: [["Scrub, Farmland"], ["Scrub"]],
+        landUseSensitivity: [["Scrub", "Farmland"], ["Scrub"]],
         registerLand: [84.96, 15.92],
         disputedLand: ["No", "No"],
         stateForesty: ["No", "No"],
         forestMoratorium: ["No", "No"],
 
-        keyHazards: ["None Detected", "None Detected"],
+        keyHazards: [["None Detected"], ["None Detected"]],
         preliminaryClimateRisk: ["Low", "Low"],
 
         goiApprovalsProfile: "STANDARD - District UKL/UPL",
@@ -229,10 +229,13 @@ export const clusterDetails: ClusterDetail[] = [
           ["Jobs", "Electricity"],
         ],
         ifcRiskCategory: [
-          "Category C - Standard mitigation sufficient",
-          "Category C - Standard mitigation sufficient",
+          ["Category C - Standard mitigation sufficient"],
+          ["Category C - Standard mitigation sufficient"],
         ],
-        keyEAndSManagementPlans: [["PS1, PS4, PS5"], ["PS1, PS4, PS5"]],
+        keyEAndSManagementPlans: [
+          ["PS1", "PS4", "PS5"],
+          ["PS1", "PS4", "PS5"],
+        ],
       },
       {
         projectName: "Teluk Lanus",
@@ -255,20 +258,20 @@ export const clusterDetails: ClusterDetail[] = [
         distPort: 844,
         distRoad: [160],
         distCoast: [100],
-        landUseSensitivity: [["Scrub, Farmland"]],
+        landUseSensitivity: [["Scrub", "Farmland"]],
         registerLand: [0],
         disputedLand: ["No"],
         stateForesty: ["No"],
         forestMoratorium: ["No"],
 
-        keyHazards: ["Fire (HIGH), Floods (LOW)"],
+        keyHazards: [["Fire (HIGH)", "Floods (LOW)"]],
         preliminaryClimateRisk: ["High"],
 
         goiApprovalsProfile: "STANDARD - District UKL/UPL",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
-        preliminaryNegativeImpacts: [["Jobs, Electricity"]],
-        ifcRiskCategory: ["Category C - Standard mitigation sufficient"],
-        keyEAndSManagementPlans: [["PS1, PS4, PS5"]],
+        preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
+        ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
+        keyEAndSManagementPlans: [["PS1", "PS4", "PS5"]],
       },
       {
         projectName: "Daek Lingga",
@@ -297,14 +300,14 @@ export const clusterDetails: ClusterDetail[] = [
         stateForesty: ["No"],
         forestMoratorium: ["No"],
 
-        keyHazards: ["None Detected"],
+        keyHazards: [["None Detected"]],
         preliminaryClimateRisk: ["Low"],
 
         goiApprovalsProfile: "STANDARD - District UKL/UPL",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
-        preliminaryNegativeImpacts: [["Jobs, Electricity"]],
-        ifcRiskCategory: ["Category C - Standard mitigation sufficient"],
-        keyEAndSManagementPlans: [["PS1, PS4, PS5"]],
+        preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
+        ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
+        keyEAndSManagementPlans: [["PS1", "PS4", "PS5"]],
       },
       {
         projectName: "Ladan",
@@ -327,20 +330,20 @@ export const clusterDetails: ClusterDetail[] = [
         distPort: 4970,
         distRoad: [200],
         distCoast: [826],
-        landUseSensitivity: [["Farmland, Forest"]],
+        landUseSensitivity: [["Farmland", "Forest"]],
         registerLand: [25.78],
         disputedLand: ["No"],
         stateForesty: ["No"],
         forestMoratorium: ["No"],
 
-        keyHazards: ["None Detected"],
+        keyHazards: [["None Detected"]],
         preliminaryClimateRisk: ["Low"],
 
         goiApprovalsProfile: "STANDARD - District UKL/UPL",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
-        preliminaryNegativeImpacts: [["Jobs, Electricity"]],
-        ifcRiskCategory: ["Category C - Standard mitigation sufficient"],
-        keyEAndSManagementPlans: [["PS1, PS4, PS5"]],
+        preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
+        ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
+        keyEAndSManagementPlans: [["PS1", "PS4", "PS5"]],
       },
       {
         projectName: "Tarempa",
@@ -372,17 +375,23 @@ export const clusterDetails: ClusterDetail[] = [
         stateForesty: ["No", "No"],
         forestMoratorium: ["No", "No"],
 
-        keyHazards: ["None Detected", "None Detected"],
+        keyHazards: [["None Detected"], ["None Detected"]],
         preliminaryClimateRisk: ["Low", "Low"],
 
         goiApprovalsProfile: "STANDARD - District UKL/UPL",
-        preliminaryPositiveImpacts: [["Agricultural Conversion"]],
-        preliminaryNegativeImpacts: [
-          ["Jobs, Electricity"],
-          ["Jobs, Electricity"],
+        preliminaryPositiveImpacts: [
+          ["Agricultural Conversion"],
+          ["Agricultural Conversion"],
         ],
-        ifcRiskCategory: ["Category C - Standard mitigation sufficient"],
-        keyEAndSManagementPlans: [["PS1, PS4, PS5"], ["PS1, PS4, PS5"]],
+        preliminaryNegativeImpacts: [
+          ["Jobs", "Electricity"],
+          ["Jobs", "Electricity"],
+        ],
+        ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
+        keyEAndSManagementPlans: [
+          ["PS1", "PS4", "PS5"],
+          ["PS1", "PS4", "PS5"],
+        ],
       },
       {
         projectName: "Penarah",
@@ -405,20 +414,20 @@ export const clusterDetails: ClusterDetail[] = [
         distPort: 1300,
         distRoad: [50],
         distCoast: [310],
-        landUseSensitivity: [["Scrub, Farmland"]],
+        landUseSensitivity: [["Scrub", "Farmland"]],
         registerLand: [65.98],
         disputedLand: ["Yes (100%)"],
         stateForesty: ["No"],
         forestMoratorium: ["No"],
 
-        keyHazards: ["None Detected"],
+        keyHazards: [["None Detected"]],
         preliminaryClimateRisk: ["Low"],
 
         goiApprovalsProfile: "HIGH - BPN Disputed Lands (TORA PIAP)",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
-        preliminaryNegativeImpacts: [["Jobs, Electricity"]],
-        ifcRiskCategory: ["Category C - Standard mitigation sufficient"],
-        keyEAndSManagementPlans: [["PS1, PS4, PS5"]],
+        preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
+        ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
+        keyEAndSManagementPlans: [["PS1", "PS4", "PS5"]],
       },
       {
         projectName: "Penuba",
@@ -447,13 +456,13 @@ export const clusterDetails: ClusterDetail[] = [
         stateForesty: ["No"],
         forestMoratorium: ["No"],
 
-        keyHazards: ["None Detected"],
+        keyHazards: [["None Detected"]],
         preliminaryClimateRisk: ["Low"],
 
         goiApprovalsProfile: "STANDARD - District UKL/UPL",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
         preliminaryNegativeImpacts: [["Jobs, Electricity"]],
-        ifcRiskCategory: ["Category C - Standard mitigation sufficient"],
+        ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
         keyEAndSManagementPlans: [["PS1, PS4, PS5"]],
       },
       {
@@ -483,13 +492,13 @@ export const clusterDetails: ClusterDetail[] = [
         stateForesty: ["No"],
         forestMoratorium: ["No"],
 
-        keyHazards: ["None Detected"],
+        keyHazards: [["None Detected"]],
         preliminaryClimateRisk: ["Medium"],
 
         goiApprovalsProfile: "STANDARD - District UKL/UPL",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
         preliminaryNegativeImpacts: [["Jobs, Electricity"]],
-        ifcRiskCategory: ["Category C - Standard mitigation sufficient"],
+        ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
         keyEAndSManagementPlans: [["PS1, PS4, PS5"]],
       },
       {
@@ -519,13 +528,13 @@ export const clusterDetails: ClusterDetail[] = [
         stateForesty: ["No"],
         forestMoratorium: ["No"],
 
-        keyHazards: ["None Detected"],
+        keyHazards: [["None Detected"]],
         preliminaryClimateRisk: ["Low"],
 
         goiApprovalsProfile: "STANDARD - District UKL/UPL",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
         preliminaryNegativeImpacts: [["Jobs, Electricity"]],
-        ifcRiskCategory: ["Category C - Standard mitigation sufficient"],
+        ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
         keyEAndSManagementPlans: [["PS1, PS4, PS5"]],
       },
       {
@@ -555,13 +564,13 @@ export const clusterDetails: ClusterDetail[] = [
         stateForesty: ["No"],
         forestMoratorium: ["No"],
 
-        keyHazards: ["None Detected"],
+        keyHazards: [["None Detected"]],
         preliminaryClimateRisk: ["Low"],
 
         goiApprovalsProfile: "STANDARD - District UKL/UPL",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
         preliminaryNegativeImpacts: [["Jobs, Electricity"]],
-        ifcRiskCategory: ["Category C - Standard mitigation sufficient"],
+        ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
         keyEAndSManagementPlans: [["PS1, PS4, PS5"]],
       },
       {
@@ -591,13 +600,13 @@ export const clusterDetails: ClusterDetail[] = [
         stateForesty: ["No"],
         forestMoratorium: ["No"],
 
-        keyHazards: ["None Detected"],
+        keyHazards: [["None Detected"]],
         preliminaryClimateRisk: ["Low"],
 
         goiApprovalsProfile: "STANDARD - District UKL/UPL",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
         preliminaryNegativeImpacts: [["Jobs, Electricity"]],
-        ifcRiskCategory: ["Category C - Standard mitigation sufficient"],
+        ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
         keyEAndSManagementPlans: [["PS1, PS4, PS5"]],
       },
       {
@@ -627,13 +636,13 @@ export const clusterDetails: ClusterDetail[] = [
         stateForesty: ["No"],
         forestMoratorium: ["No"],
 
-        keyHazards: ["Fire (MED), Floods (MED)"],
+        keyHazards: [["Fire (MED)", "Floods (MED)"]],
         preliminaryClimateRisk: ["Medium"],
 
         goiApprovalsProfile: "STANDARD - District UKL/UPL",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
         preliminaryNegativeImpacts: [["Jobs, Electricity"]],
-        ifcRiskCategory: ["Category C - Standard mitigation sufficient"],
+        ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
         keyEAndSManagementPlans: [["PS1, PS4, PS5"]],
       },
       {
@@ -663,13 +672,13 @@ export const clusterDetails: ClusterDetail[] = [
         stateForesty: ["No"],
         forestMoratorium: ["No"],
 
-        keyHazards: ["Fire (MED), Floods (MED)"],
+        keyHazards: [["Fire (MED), Floods (MED)"]],
         preliminaryClimateRisk: ["Medium"],
 
         goiApprovalsProfile: "STANDARD - District UKL/UPL",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
         preliminaryNegativeImpacts: [["Jobs, Electricity"]],
-        ifcRiskCategory: ["Category C - Standard mitigation sufficient"],
+        ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
         keyEAndSManagementPlans: [["PS1, PS4, PS5"]],
       },
       {
@@ -699,13 +708,13 @@ export const clusterDetails: ClusterDetail[] = [
         stateForesty: ["No"],
         forestMoratorium: ["No"],
 
-        keyHazards: ["Fire (MED)"],
+        keyHazards: [["Fire (MED)"]],
         preliminaryClimateRisk: ["Low"],
 
         goiApprovalsProfile: "STANDARD - District UKL/UPL",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
         preliminaryNegativeImpacts: [["Jobs, Electricity"]],
-        ifcRiskCategory: ["Category C - Standard mitigation sufficient"],
+        ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
         keyEAndSManagementPlans: [["PS1, PS4, PS5"]],
       },
       {
@@ -735,13 +744,13 @@ export const clusterDetails: ClusterDetail[] = [
         stateForesty: ["No"],
         forestMoratorium: ["No"],
 
-        keyHazards: ["None Detected"],
+        keyHazards: [["None Detected"]],
         preliminaryClimateRisk: ["Low"],
 
         goiApprovalsProfile: "STANDARD - District UKL/UPL",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
         preliminaryNegativeImpacts: [["Jobs, Electricity"]],
-        ifcRiskCategory: ["Category C - Standard mitigation sufficient"],
+        ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
         keyEAndSManagementPlans: [["PS1, PS4, PS5"]],
       },
       {
@@ -771,13 +780,13 @@ export const clusterDetails: ClusterDetail[] = [
         stateForesty: ["No"],
         forestMoratorium: ["No"],
 
-        keyHazards: ["None Detected"],
+        keyHazards: [["None Detected"]],
         preliminaryClimateRisk: ["Low"],
 
         goiApprovalsProfile: "STANDARD - District UKL/UPL",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
         preliminaryNegativeImpacts: [["Jobs, Electricity"]],
-        ifcRiskCategory: ["Category C - Standard mitigation sufficient"],
+        ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
         keyEAndSManagementPlans: [["PS1, PS4, PS5"]],
       },
       {
@@ -801,16 +810,13 @@ export const clusterDetails: ClusterDetail[] = [
         distPort: 27500,
         distRoad: [80, 100],
         distCoast: [2100, 2300],
-        landUseSensitivity: [
-          ["Forest", "Farmland"],
-          ["Farmland", "Open Land"],
-        ],
+        landUseSensitivity: [["Forest, Farmland"], ["Farmland, Open Land"]],
         registerLand: [0, 0],
         disputedLand: ["No", "No"],
         stateForesty: ["No", "No"],
         forestMoratorium: ["No", "No"],
 
-        keyHazards: ["None Detected", "None Detected"],
+        keyHazards: [["None Detected"], ["None Detected"]],
         preliminaryClimateRisk: ["Low", "Low"],
 
         goiApprovalsProfile: "STANDARD - District UKL/UPL",
@@ -823,8 +829,8 @@ export const clusterDetails: ClusterDetail[] = [
           ["Jobs", "Electricity"],
         ],
         ifcRiskCategory: [
-          "Category C - Standard mitigation sufficient",
-          "Category C - Standard mitigation sufficient",
+          ["Category C - Standard mitigation sufficient"],
+          ["Category C - Standard mitigation sufficient"],
         ],
         keyEAndSManagementPlans: [["PS1, PS4, PS5"], ["PS1, PS4, PS5"]],
       },
@@ -855,13 +861,13 @@ export const clusterDetails: ClusterDetail[] = [
         stateForesty: ["No"],
         forestMoratorium: ["No"],
 
-        keyHazards: ["Floods (LOW)"],
+        keyHazards: [["Floods (LOW)"]],
         preliminaryClimateRisk: ["Low"],
 
         goiApprovalsProfile: "STANDARD - District UKL/UPL",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
         preliminaryNegativeImpacts: [["Jobs, Electricity"]],
-        ifcRiskCategory: ["Category C - Standard mitigation sufficient"],
+        ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
         keyEAndSManagementPlans: [["PS1, PS4, PS5"]],
       },
       {
@@ -891,13 +897,13 @@ export const clusterDetails: ClusterDetail[] = [
         stateForesty: ["No"],
         forestMoratorium: ["No"],
 
-        keyHazards: ["None Detected"],
+        keyHazards: [["None Detected"]],
         preliminaryClimateRisk: ["Low"],
 
         goiApprovalsProfile: "HIGH - BPN Disputed Lands (TORA PIAP)",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
         preliminaryNegativeImpacts: [["Jobs, Electricity"]],
-        ifcRiskCategory: ["Category B - Enhanced management required"],
+        ifcRiskCategory: [["Category B - Enhanced management required"]],
         keyEAndSManagementPlans: [["PS1, PS4, PS5"]],
       },
       {
@@ -927,14 +933,14 @@ export const clusterDetails: ClusterDetail[] = [
         stateForesty: ["No"],
         forestMoratorium: ["Yes"],
 
-        keyHazards: ["None Detected"],
+        keyHazards: [["None Detected"]],
         preliminaryClimateRisk: ["Low"],
 
         goiApprovalsProfile:
           "HIGH - BPN Disputed Lands (TORA PIAP) + Forest Moratorium",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
         preliminaryNegativeImpacts: [["Jobs, Electricity"]],
-        ifcRiskCategory: ["Category B - Enhanced management required"],
+        ifcRiskCategory: [["Category B - Enhanced management required"]],
         keyEAndSManagementPlans: [["PS1, PS4, PS5"]],
       },
       {
@@ -964,13 +970,13 @@ export const clusterDetails: ClusterDetail[] = [
         stateForesty: ["No"],
         forestMoratorium: ["No"],
 
-        keyHazards: ["Fire (LOW)"],
+        keyHazards: [["Fire (LOW)"]],
         preliminaryClimateRisk: ["Low"],
 
         goiApprovalsProfile: "STANDARD - District UKL/UPL",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
         preliminaryNegativeImpacts: [["Jobs, Electricity"]],
-        ifcRiskCategory: ["Category C - Standard mitigation sufficient"],
+        ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
         keyEAndSManagementPlans: [["PS1, PS4, PS5"]],
       },
     ],
@@ -1005,12 +1011,12 @@ export const clusterDetails: ClusterDetail[] = [
         stateForesty: ["No"],
         forestMoratorium: ["No"],
 
-        keyHazards: ["None Detected"],
+        keyHazards: [["None Detected"]],
         preliminaryClimateRisk: ["Low"],
         goiApprovalsProfile: "STANDARD - District UKL/UPL",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
-        ifcRiskCategory: ["Category C - Standard mitigation sufficient"],
+        ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
         keyEAndSManagementPlans: [["PS1", "PS4", "PS5"]],
       },
       {
@@ -1040,7 +1046,7 @@ export const clusterDetails: ClusterDetail[] = [
         stateForesty: ["Yes", "No"],
         forestMoratorium: ["No", "No"],
 
-        keyHazards: ["None Detected"],
+        keyHazards: [["None Detected"]],
         preliminaryClimateRisk: ["Low"],
         goiApprovalsProfile:
           "HIGH - Ministry Forestry + BPN Disputed (IPKKH + TORA PIAP)",
@@ -1052,7 +1058,7 @@ export const clusterDetails: ClusterDetail[] = [
           ["Jobs", "Electricity"],
           ["Jobs", "Electricity"],
         ],
-        ifcRiskCategory: ["Category B - Enhanced management required"],
+        ifcRiskCategory: [["Category B - Enhanced management required"]],
         keyEAndSManagementPlans: [["PS1", "PS4", "PS5"]],
       },
       {
@@ -1075,19 +1081,19 @@ export const clusterDetails: ClusterDetail[] = [
         offsiteShading: ["Yes"],
         distPort: 600,
         distRoad: [230],
-        distCoast: [10000], // >10000
+        distCoast: [10000],
         landUseSensitivity: [["Farmland"]],
         registerLand: [0],
         disputedLand: ["No"],
         stateForesty: ["No"],
         forestMoratorium: ["No"],
 
-        keyHazards: ["None Detected"],
+        keyHazards: [["None Detected"]],
         preliminaryClimateRisk: ["Low"],
         goiApprovalsProfile: "STANDARD - District UKL/UPL",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
-        ifcRiskCategory: ["Category C - Standard mitigation sufficient"],
+        ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
         keyEAndSManagementPlans: [["PS1", "PS4", "PS5"]],
       },
       {
@@ -1117,12 +1123,12 @@ export const clusterDetails: ClusterDetail[] = [
         stateForesty: ["No"],
         forestMoratorium: ["No"],
 
-        keyHazards: ["None Detected"],
+        keyHazards: [["None Detected"]],
         preliminaryClimateRisk: ["Low"],
         goiApprovalsProfile: "HIGH - BPN Disputed Lands (TORA PIAP)",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
-        ifcRiskCategory: ["Category B - Enhanced management required"],
+        ifcRiskCategory: [["Category B - Enhanced management required"]],
         keyEAndSManagementPlans: [["PS1", "PS4", "PS5"]],
       },
       {
@@ -1152,12 +1158,12 @@ export const clusterDetails: ClusterDetail[] = [
         stateForesty: ["No"],
         forestMoratorium: ["No"],
 
-        keyHazards: ["Fire (LOW)"],
+        keyHazards: [["Fire (LOW)"]],
         preliminaryClimateRisk: ["Low"],
         goiApprovalsProfile: "HIGH - BPN Disputed Lands (TORA PIAP)",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
-        ifcRiskCategory: ["Category B - Enhanced management required"],
+        ifcRiskCategory: [["Category B - Enhanced management required"]],
         keyEAndSManagementPlans: [["PS1", "PS4", "PS5"]],
       },
       {
@@ -1187,12 +1193,12 @@ export const clusterDetails: ClusterDetail[] = [
         stateForesty: ["No"],
         forestMoratorium: ["No"],
 
-        keyHazards: ["None Detected"],
+        keyHazards: [["None Detected"]],
         preliminaryClimateRisk: ["Low"],
         goiApprovalsProfile: "STANDARD - District UKL/UPL",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
-        ifcRiskCategory: ["Category C - Standard mitigation sufficient"],
+        ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
         keyEAndSManagementPlans: [["PS1", "PS4", "PS5"]],
       },
       {
@@ -1222,12 +1228,12 @@ export const clusterDetails: ClusterDetail[] = [
         stateForesty: ["No"],
         forestMoratorium: ["No"],
 
-        keyHazards: ["None Detected"],
+        keyHazards: [["None Detected"]],
         preliminaryClimateRisk: ["Low"],
         goiApprovalsProfile: "STANDARD - District UKL/UPL",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
-        ifcRiskCategory: ["Category C - Standard mitigation sufficient"],
+        ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
         keyEAndSManagementPlans: [["PS1", "PS4", "PS5"]],
       },
     ],
@@ -1262,12 +1268,12 @@ export const clusterDetails: ClusterDetail[] = [
         stateForesty: ["No"],
         forestMoratorium: ["No"],
 
-        keyHazards: ["None Detected"],
+        keyHazards: [["None Detected"]],
         preliminaryClimateRisk: ["Low"],
         goiApprovalsProfile: "STANDARD - District UKL/UPL",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
-        ifcRiskCategory: ["Category C - Standard mitigation sufficient"],
+        ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
         keyEAndSManagementPlans: [["PS1", "PS4", "PS5"]],
       },
       {
@@ -1297,12 +1303,12 @@ export const clusterDetails: ClusterDetail[] = [
         stateForesty: ["No"],
         forestMoratorium: ["No"],
 
-        keyHazards: ["None Detected"],
+        keyHazards: [["None Detected"]],
         preliminaryClimateRisk: ["Low"],
         goiApprovalsProfile: "STANDARD - District UKL/UPL",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
-        ifcRiskCategory: ["Category C - Standard mitigation sufficient"],
+        ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
         keyEAndSManagementPlans: [["PS1", "PS4", "PS5"]],
       },
       {
@@ -1338,7 +1344,7 @@ export const clusterDetails: ClusterDetail[] = [
         stateForesty: ["No", "No"],
         forestMoratorium: ["No", "No"],
 
-        keyHazards: ["None Detected", "None Detected"],
+        keyHazards: [["None Detected"], ["None Detected"]],
         preliminaryClimateRisk: ["Low", "Low"],
         goiApprovalsProfile: "STANDARD - District UKL/UPL",
         preliminaryPositiveImpacts: [
@@ -1350,8 +1356,8 @@ export const clusterDetails: ClusterDetail[] = [
           ["Jobs", "Electricity"],
         ],
         ifcRiskCategory: [
-          "Category C - Standard mitigation sufficient",
-          "Category C - Standard mitigation sufficient",
+          ["Category C - Standard mitigation sufficient"],
+          ["Category C - Standard mitigation sufficient"],
         ],
         keyEAndSManagementPlans: [
           ["PS1", "PS4", "PS5"],
@@ -1385,12 +1391,12 @@ export const clusterDetails: ClusterDetail[] = [
         stateForesty: ["No"],
         forestMoratorium: ["No"],
 
-        keyHazards: ["None Detected"],
+        keyHazards: [["None Detected"]],
         preliminaryClimateRisk: ["Low"],
         goiApprovalsProfile: "STANDARD - District UKL/UPL",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
-        ifcRiskCategory: ["Category C - Standard mitigation sufficient"],
+        ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
         keyEAndSManagementPlans: [["PS1", "PS4", "PS5"]],
       },
       {
@@ -1420,12 +1426,12 @@ export const clusterDetails: ClusterDetail[] = [
         stateForesty: ["No"],
         forestMoratorium: ["No"],
 
-        keyHazards: ["None Detected"],
+        keyHazards: [["None Detected"]],
         preliminaryClimateRisk: ["Low"],
         goiApprovalsProfile: "STANDARD - District UKL/UPL",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
-        ifcRiskCategory: ["Category C - Standard mitigation sufficient"],
+        ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
         keyEAndSManagementPlans: [["PS1", "PS4", "PS5"]],
       },
       {
@@ -1455,12 +1461,12 @@ export const clusterDetails: ClusterDetail[] = [
         stateForesty: ["No"],
         forestMoratorium: ["No"],
 
-        keyHazards: ["None Detected"],
+        keyHazards: [["None Detected"]],
         preliminaryClimateRisk: ["Low"],
         goiApprovalsProfile: "STANDARD - District UKL/UPL",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
-        ifcRiskCategory: ["Category C - Standard mitigation sufficient"],
+        ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
         keyEAndSManagementPlans: [["PS1", "PS4", "PS5"]],
       },
       {
@@ -1490,12 +1496,12 @@ export const clusterDetails: ClusterDetail[] = [
         stateForesty: ["No"],
         forestMoratorium: ["No"],
 
-        keyHazards: ["None Detected"],
+        keyHazards: [["None Detected"]],
         preliminaryClimateRisk: ["Low"],
         goiApprovalsProfile: "STANDARD - District UKL/UPL",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
-        ifcRiskCategory: ["Category C - Standard mitigation sufficient"],
+        ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
         keyEAndSManagementPlans: [["PS1", "PS4", "PS5"]],
       },
       {
@@ -1525,12 +1531,12 @@ export const clusterDetails: ClusterDetail[] = [
         stateForesty: ["No"],
         forestMoratorium: ["No"],
 
-        keyHazards: ["None Detected"],
+        keyHazards: [["None Detected"]],
         preliminaryClimateRisk: ["Low"],
         goiApprovalsProfile: "STANDARD - District UKL/UPL",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
-        ifcRiskCategory: ["Category C - Standard mitigation sufficient"],
+        ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
         keyEAndSManagementPlans: [["PS1", "PS4", "PS5"]],
       },
       {
@@ -1560,12 +1566,12 @@ export const clusterDetails: ClusterDetail[] = [
         stateForesty: ["No"],
         forestMoratorium: ["No"],
 
-        keyHazards: ["None Detected"],
+        keyHazards: [["None Detected"]],
         preliminaryClimateRisk: ["Low"],
         goiApprovalsProfile: "STANDARD - District UKL/UPL",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
-        ifcRiskCategory: ["Category C - Standard mitigation sufficient"],
+        ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
         keyEAndSManagementPlans: [["PS1", "PS4", "PS5"]],
       },
     ],
@@ -1600,12 +1606,12 @@ export const clusterDetails: ClusterDetail[] = [
         stateForesty: ["No"],
         forestMoratorium: ["No"],
 
-        keyHazards: ["None Detected"],
+        keyHazards: [["None Detected"]],
         preliminaryClimateRisk: ["Low"],
         goiApprovalsProfile: "STANDARD - District UKL/UPL",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
-        ifcRiskCategory: ["Category C - Standard mitigation sufficient"],
+        ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
         keyEAndSManagementPlans: [["PS1", "PS4", "PS5"]],
       },
     ],
@@ -1640,12 +1646,12 @@ export const clusterDetails: ClusterDetail[] = [
         stateForesty: ["No"],
         forestMoratorium: ["No"],
 
-        keyHazards: ["None Detected"],
+        keyHazards: [["None Detected"]],
         preliminaryClimateRisk: ["Low"],
         goiApprovalsProfile: "STANDARD - District UKL/UPL",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
-        ifcRiskCategory: ["Category C - Standard mitigation sufficient"],
+        ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
         keyEAndSManagementPlans: [["PS1", "PS4", "PS5"]],
       },
       {
@@ -1675,12 +1681,12 @@ export const clusterDetails: ClusterDetail[] = [
         stateForesty: ["No"],
         forestMoratorium: ["No"],
 
-        keyHazards: ["None Detected"],
+        keyHazards: [["None Detected"]],
         preliminaryClimateRisk: ["Low"],
         goiApprovalsProfile: "STANDARD - District UKL/UPL",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
-        ifcRiskCategory: ["Category C - Standard mitigation sufficient"],
+        ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
         keyEAndSManagementPlans: [["PS1", "PS4", "PS5"]],
       },
       {
@@ -1710,12 +1716,12 @@ export const clusterDetails: ClusterDetail[] = [
         stateForesty: ["No"],
         forestMoratorium: ["No"],
 
-        keyHazards: ["None Detected"],
+        keyHazards: [["None Detected"]],
         preliminaryClimateRisk: ["Low"],
         goiApprovalsProfile: "STANDARD - District UKL/UPL",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
-        ifcRiskCategory: ["Category C - Standard mitigation sufficient"],
+        ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
         keyEAndSManagementPlans: [["PS1", "PS4", "PS5"]],
       },
       {
@@ -1745,13 +1751,13 @@ export const clusterDetails: ClusterDetail[] = [
         stateForesty: ["Yes"],
         forestMoratorium: ["No"],
 
-        keyHazards: ["None Detected"],
+        keyHazards: [["None Detected"]],
         preliminaryClimateRisk: ["Low"],
         goiApprovalsProfile:
           "HIGH - Ministry Forestry + BPN Disputed (IPKKH + TORA PIAP)",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
-        ifcRiskCategory: ["Category B - Enhanced management required"],
+        ifcRiskCategory: [["Category B - Enhanced management required"]],
         keyEAndSManagementPlans: [["PS1", "PS4", "PS5"]],
       },
       {
@@ -1781,12 +1787,12 @@ export const clusterDetails: ClusterDetail[] = [
         stateForesty: ["No"],
         forestMoratorium: ["No"],
 
-        keyHazards: ["None Detected"],
+        keyHazards: [["None Detected"]],
         preliminaryClimateRisk: ["Low"],
         goiApprovalsProfile: "STANDARD - District UKL/UPL",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
-        ifcRiskCategory: ["Category C - Standard mitigation sufficient"],
+        ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
         keyEAndSManagementPlans: [["PS1", "PS4", "PS5"]],
       },
       {
@@ -1819,7 +1825,7 @@ export const clusterDetails: ClusterDetail[] = [
         stateForesty: ["No", "No"],
         forestMoratorium: ["No", "No"],
 
-        keyHazards: ["None Detected", "None Detected"],
+        keyHazards: [["None Detected"], ["None Detected"]],
         preliminaryClimateRisk: ["Low", "Low"],
         goiApprovalsProfile: "STANDARD - District UKL/UPL",
         preliminaryPositiveImpacts: [
@@ -1831,8 +1837,8 @@ export const clusterDetails: ClusterDetail[] = [
           ["Jobs", "Electricity"],
         ],
         ifcRiskCategory: [
-          "Category C - Standard mitigation sufficient",
-          "Category C - Standard mitigation sufficient",
+          ["Category C - Standard mitigation sufficient"],
+          ["Category C - Standard mitigation sufficient"],
         ],
         keyEAndSManagementPlans: [
           ["PS1", "PS4", "PS5"],
@@ -1866,12 +1872,12 @@ export const clusterDetails: ClusterDetail[] = [
         stateForesty: ["No"],
         forestMoratorium: ["No"],
 
-        keyHazards: ["None Detected"],
+        keyHazards: [["None Detected"]],
         preliminaryClimateRisk: ["Low"],
         goiApprovalsProfile: "STANDARD - District UKL/UPL",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
-        ifcRiskCategory: ["Category C - Standard mitigation sufficient"],
+        ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
         keyEAndSManagementPlans: [["PS1", "PS4", "PS5"]],
       },
       {
@@ -1901,12 +1907,12 @@ export const clusterDetails: ClusterDetail[] = [
         stateForesty: ["No"],
         forestMoratorium: ["No"],
 
-        keyHazards: ["None Detected"],
+        keyHazards: [["None Detected"]],
         preliminaryClimateRisk: ["Low"],
         goiApprovalsProfile: "STANDARD - District UKL/UPL",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
-        ifcRiskCategory: ["Category C - Standard mitigation sufficient"],
+        ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
         keyEAndSManagementPlans: [["PS1", "PS4", "PS5"]],
       },
     ],

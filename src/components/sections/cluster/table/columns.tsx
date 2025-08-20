@@ -24,12 +24,12 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
   },
 
   {
+    accessorKey: "projectName",
+    header: () => <div>Project Name</div>,
+  },
+  {
     header: "Project Overview",
     columns: [
-      {
-        accessorKey: "projectName",
-        header: () => <div>Project Name</div>,
-      },
       { accessorKey: "cluster", header: "Geographic Cluster" },
       {
         accessorKey: "capacity",
@@ -324,8 +324,15 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
           const land = row.original.landUseSensitivity;
           return (
             <div className="flex flex-col gap-4">
-              {land.map((l, i) => (
-                <span key={i}>{l}</span>
+              {land.map((group, i) => (
+                <div key={i} className="flex gap-1">
+                  {group.map((item, j) => (
+                    <span key={j}>
+                      {item}
+                      {j !== group.length - 1 && ","}
+                    </span>
+                  ))}
+                </div>
               ))}
             </div>
           );
@@ -420,8 +427,15 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
           const keys = row.original.keyHazards;
           return (
             <div className="flex flex-col gap-4">
-              {keys.map((k, i) => (
-                <span key={i}>{k}</span>
+              {keys.map((group, i) => (
+                <div key={i} className="flex gap-1">
+                  {group.map((item, j) => (
+                    <span key={j}>
+                      {item}
+                      {j !== group.length - 1 && ","}
+                    </span>
+                  ))}
+                </div>
               ))}
             </div>
           );
@@ -434,14 +448,14 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
         cell: ({ row }) => {
           const preliminary = row.original.preliminaryClimateRisk;
           const variants: Record<string, "error" | "warning" | "success"> = {
-            Low: "error",
+            Low: "success",
             Medium: "warning",
           };
 
           return (
             <div className="flex flex-col gap-4">
               {preliminary.map((p, i) => (
-                <Badge variant={variants[p] ?? "success"} key={i}>
+                <Badge variant={variants[p] ?? "error"} key={i}>
                   {p}
                 </Badge>
               ))}
@@ -476,7 +490,7 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
         cell: ({ row }) => {
           const preliminary = row.original.preliminaryNegativeImpacts;
           return (
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-4">
               {preliminary.map((group, i) => (
                 <div key={i} className="flex gap-1">
                   {group.map((item, j) => (
@@ -499,8 +513,15 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
           const ifcRisk = row.original.ifcRiskCategory;
           return (
             <div className="flex flex-col gap-4">
-              {ifcRisk.map((r, i) => (
-                <span key={i}>{r}</span>
+              {ifcRisk.map((group, i) => (
+                <div key={i} className="flex gap-1">
+                  {group.map((item, j) => (
+                    <span key={j}>
+                      {item}
+                      {j !== group.length - 1 && ","}
+                    </span>
+                  ))}
+                </div>
               ))}
             </div>
           );
@@ -513,8 +534,15 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
           const keysE = row.original.keyEAndSManagementPlans;
           return (
             <div className="flex flex-col gap-4">
-              {keysE.map((k, i) => (
-                <span key={i}>{k}</span>
+              {keysE.map((group, i) => (
+                <div key={i} className="flex gap-1">
+                  {group.map((item, j) => (
+                    <span key={j}>
+                      {item}
+                      {j !== group.length - 1 && ","}
+                    </span>
+                  ))}
+                </div>
               ))}
             </div>
           );

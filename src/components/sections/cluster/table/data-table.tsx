@@ -157,7 +157,7 @@ export function DataTable<TData extends { clusterId: number }, TValue>({
               <DropdownMenuTrigger asChild>
                 <Button variant="outline" size={"lg"}>
                   <Settings2 />
-                  <span className="hidden md:block">Group</span> Header
+                  Sections
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end">
@@ -206,7 +206,7 @@ export function DataTable<TData extends { clusterId: number }, TValue>({
                           header.colSpan > 1 &&
                             "text-center uppercase font-semibold",
                           header.column.id === "projectName" &&
-                            "sticky left-0 bg-primary border-[#27a9c2] after:absolute after:right-0 after:h-full after:w-px after:bg-border after:top-0 translate-z-0 text-left will-change-transform z-10",
+                            "sticky left-0 bg-primary border-t border-[#27a9c2] after:absolute after:right-0 after:h-full after:w-px after:bg-border after:top-0 translate-z-0 text-left will-change-transform z-10",
                           header.column.columnDef.header ===
                             "Cluster Geography" && "text-left",
                           "tex-center text-white"

@@ -42,13 +42,13 @@ export type ClusterDetail = {
     stateForesty: string[];
     forestMoratorium: ("Yes" | "No")[];
 
-    keyHazards: string[];
+    keyHazards: string[][];
     preliminaryClimateRisk: ("Low" | "Medium" | "High")[];
 
     goiApprovalsProfile: string;
     preliminaryPositiveImpacts: string[][];
     preliminaryNegativeImpacts: string[][];
-    ifcRiskCategory: string[];
+    ifcRiskCategory: string[][];
     keyEAndSManagementPlans: string[][];
   }[];
 };
@@ -82,12 +82,12 @@ export type ClusterTableRow = {
   stateForesty: string[];
   forestMoratorium: ("Yes" | "No")[];
 
-  keyHazards: string[];
+  keyHazards: string[][];
   preliminaryClimateRisk: ("Low" | "Medium" | "High")[];
 
   goiApprovalsProfile: string;
   preliminaryPositiveImpacts: string[][];
   preliminaryNegativeImpacts: string[][];
-  ifcRiskCategory: string[];
+  ifcRiskCategory: string[][];
   keyEAndSManagementPlans: string[][];
 };
