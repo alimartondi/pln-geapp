@@ -34,7 +34,7 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
     columns: [
       {
         accessorKey: "projectName",
-        header: ({ column }) => <div>Project Name</div>,
+        header: () => <div>Project Name</div>,
       },
       { accessorKey: "cluster", header: "Geographic Cluster" },
       {

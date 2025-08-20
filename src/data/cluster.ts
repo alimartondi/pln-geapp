@@ -3,8 +3,8 @@ import { Cluster, ClusterDetail } from "@/types/cluster.type";
 export const clusters: Cluster[] = [
   {
     id: 1,
-    name: "UID Riau & Kepri & Kepri",
-    shortName: "Riau & Kepri & Kepri",
+    name: "UID Riau & Kepri",
+    shortName: "Riau & Kepri",
     alias: "RKR",
   },
   {

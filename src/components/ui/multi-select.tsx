@@ -119,6 +119,7 @@ export function MultiSelect({
             <div className="p-2">
               <Button
                 variant="ghost"
+                size="sm"
                 className="w-full justify-center"
                 onClick={() => onChange([])}
               >
