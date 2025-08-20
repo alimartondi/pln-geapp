@@ -17,17 +17,11 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
     size: 0,
     minSize: 0,
     maxSize: 0,
+    filterFn: (row, columnId, filterValue: string[]) => {
+      if (!filterValue || filterValue.length === 0) return true;
+      return filterValue.includes(String(row.getValue(columnId)));
+    },
   },
-
-  // {
-  //   id: "dummyGroupForProjectName",
-  //   columns: [
-  //     {
-  //       accessorKey: "projectName",
-  //       header: ({ column }) => <div>Project Name</div>,
-  //     },
-  //   ],
-  // },
 
   {
     header: "Project Overview",
@@ -39,7 +33,7 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
       { accessorKey: "cluster", header: "Geographic Cluster" },
       {
         accessorKey: "capacity",
-        header: ({ column }) => (
+        header: () => (
           <div className="space-y-1">
             <span className="block">Capacity</span>
             <Badge variant={"glass"}>(kW)</Badge>
@@ -71,7 +65,7 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
 
       {
         accessorKey: "landSize",
-        header: ({ column }) => (
+        header: () => (
           <div className="space-y-1">
             <span className="block">Project Land Size</span>
             <Badge variant={"glass"}>(ha)</Badge>
@@ -85,7 +79,7 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
       },
       {
         accessorKey: "pltdDist",
-        header: ({ column }) => (
+        header: () => (
           <div className="space-y-1">
             <span className="block">PLTD Distance</span>
             <Badge variant={"glass"}>(m)</Badge>
@@ -110,7 +104,7 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
     columns: [
       {
         accessorKey: "bpp",
-        header: ({ column }) => (
+        header: () => (
           <div className="space-y-1">
             <span className="block">BPP</span>
             <Badge variant={"glass"}>($/kWh)</Badge>
@@ -124,7 +118,7 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
       },
       {
         accessorKey: "ace",
-        header: ({ column }) => (
+        header: () => (
           <div className="space-y-1">
             <span className="block">ACE</span>
             <Badge variant={"glass"}>(MWh/yr)</Badge>
@@ -138,7 +132,7 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
       },
       {
         accessorKey: "peakLoad",
-        header: ({ column }) => (
+        header: () => (
           <div className="space-y-1">
             <span className="block">Peak Load</span>
             <Badge variant={"glass"}>(kW)</Badge>
@@ -152,7 +146,7 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
       },
       {
         accessorKey: "meanLoad",
-        header: ({ column }) => (
+        header: () => (
           <div className="space-y-1">
             <span className="block">Mean Load</span>
             <Badge variant={"glass"}>(kW)</Badge>
@@ -166,7 +160,7 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
       },
       {
         accessorKey: "renewablePenetration",
-        header: ({ column }) => (
+        header: () => (
           <div className="space-y-1">
             <span className="block">Renewable Penetration</span>
             <Badge variant={"glass"}>(%)</Badge>
@@ -180,7 +174,7 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
       },
       {
         accessorKey: "connectionVoltage",
-        header: ({ column }) => (
+        header: () => (
           <div className="space-y-1">
             <span className="block">Connection Voltage</span>
             <Badge variant={"glass"}>(kW)</Badge>
@@ -200,7 +194,7 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
     columns: [
       {
         accessorKey: "avgSlope",
-        header: ({ column }) => (
+        header: () => (
           <div className="space-y-1">
             <span className="block">Average Slope</span>
             <Badge variant={"glass"}>(%)</Badge>
@@ -219,7 +213,7 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
       },
       {
         accessorKey: "slopeAspect",
-        header: ({ column }) => (
+        header: () => (
           <div className="space-y-1">
             <span className="block">Slope Aspect</span>
             <Badge variant={"glass"}>(°)</Badge>
@@ -238,7 +232,7 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
       },
       {
         accessorKey: "offsiteShading",
-        header: ({ column }) => (
+        header: () => (
           <div className="space-y-1">
             <span className="block">Off-site Shading</span>
           </div>
@@ -273,7 +267,7 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
 
       {
         accessorKey: "distPort",
-        header: ({ column }) => (
+        header: () => (
           <div className="space-y-1">
             <span className="block">Distance Port</span>
             <Badge variant={"glass"}>(m)</Badge>
@@ -287,7 +281,7 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
       },
       {
         accessorKey: "distRoad",
-        header: ({ column }) => (
+        header: () => (
           <div className="space-y-1">
             <span className="block">Distance Road</span>
             <Badge variant={"glass"}>(m)</Badge>
@@ -306,7 +300,7 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
       },
       {
         accessorKey: "distCoast",
-        header: ({ column }) => (
+        header: () => (
           <div className="space-y-1">
             <span className="block">Distance Coast</span>
             <Badge variant={"glass"}>(m)</Badge>
@@ -339,7 +333,7 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
       },
       {
         accessorKey: "registerLand",
-        header: ({ column }) => (
+        header: () => (
           <div className="space-y-1">
             <span className="block">Registered Land</span>
             <Badge variant={"glass"}>(%)</Badge>

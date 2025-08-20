@@ -62,16 +62,13 @@ export function DataTable<TData extends { clusterId: number }, TValue>({
   defaultClusterId,
 }: DataTableProps<TData, TValue>) {
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
-    []
+    defaultClusterId ? [{ id: "clusterId", value: [defaultClusterId] }] : []
   );
+
   const [columnVisibility, setColumnVisibility] =
     React.useState<VisibilityState>({
       clusterId: false,
     });
-
-  const [selectedClusters, setSelectedClusters] = React.useState<string[]>(
-    defaultClusterId ? [defaultClusterId] : []
-  );
 
   const [sorting, setSorting] = React.useState<SortingState>([]);
 
@@ -92,14 +89,8 @@ export function DataTable<TData extends { clusterId: number }, TValue>({
     },
   });
 
-  // Sinkronisasi filter clusterId setiap selectedClusters berubah
-  React.useEffect(() => {
-    if (selectedClusters.length === 0) {
-      table.getColumn("clusterId")?.setFilterValue(undefined);
-    } else {
-      table.getColumn("clusterId")?.setFilterValue(selectedClusters);
-    }
-  }, [selectedClusters, table]);
+  const selectedClusters =
+    (table.getColumn("clusterId")?.getFilterValue() as string[]) ?? [];
 
   return (
     <Card>
@@ -134,7 +125,9 @@ export function DataTable<TData extends { clusterId: number }, TValue>({
                 ).length,
               }))}
               selected={selectedClusters}
-              onChange={setSelectedClusters}
+              onChange={(values) =>
+                table.getColumn("clusterId")?.setFilterValue(values)
+              }
               label="Clusters"
             />
           </div>
@@ -151,7 +144,9 @@ export function DataTable<TData extends { clusterId: number }, TValue>({
                 ).length,
               }))}
               selected={selectedClusters}
-              onChange={setSelectedClusters}
+              onChange={(values) =>
+                table.getColumn("clusterId")?.setFilterValue(values)
+              }
               label="Clusters"
             />
           </div>
