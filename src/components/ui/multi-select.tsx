@@ -76,14 +76,14 @@ export function MultiSelect({
         <Button
           size="lg"
           variant="outline"
-          className="justify-between h-11 px-4 gap-4 w-full"
+          className="justify-between h-11 px-4 gap-4 w-full overflow-x-auto"
         >
           {label}
           <Separator
             orientation="vertical"
             className="data-[orientation=vertical]:h-8"
           />
-          <Badge variant="info" className="px-2 py-1 rounded-full truncate">
+          <Badge variant="info" className="px-2 py-1 rounded-full">
             {badgeText}
           </Badge>
         </Button>

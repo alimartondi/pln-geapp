@@ -1,6 +1,7 @@
 "use client";
 
 import { Link as ScrollTo } from "react-scroll";
+import { AnimatedCounter } from "../ui/animated-counter";
 
 export default function Hero() {
   return (
@@ -31,29 +32,64 @@ export default function Hero() {
           </div>
         </div>
         <div className="flex flex-col md:flex-row gap-4 lg:gap-6">
-          <div className="relative w-full h-[200px] rounded-lg overflow-hidden bg-[url('/images/indonesia-map.png')] bg-center bg-[#C4E7ED] after:absolute after:inset-0 after:bg-gradient-to-tr after:from-primary after:from-35%">
+          <ScrollTo
+            to="location"
+            spy={true}
+            smooth={true}
+            offset={-130}
+            duration={500}
+            className="relative w-full h-[200px] rounded-lg overflow-hidden bg-[url('/images/indonesia-map.png')] bg-center bg-[#C4E7ED] after:absolute after:inset-0 after:bg-gradient-to-tr after:from-primary after:from-35% cursor-pointer"
+          >
             <div className="absolute inset-0 flex items-center justify-center z-10">
               <div className="p-6 space-y-2 w-full text-white">
-                <h2 className="text-4xl font-bold">50 +</h2>
+                <h2 className="text-4xl lg:text-5xl font-bold">
+                  <AnimatedCounter
+                    start={0}
+                    end={50}
+                    duration={2000}
+                    suffix=" +"
+                  />
+                </h2>
                 <span className="block">Total Sites for Solar PV & BESS</span>
               </div>
             </div>
-          </div>
+          </ScrollTo>
 
-          <div className="relative w-full h-[200px] rounded-lg overflow-hidden bg-[url('/images/solar-panel.png')] bg-cover after:absolute after:inset-0 after:bg-gradient-to-tr after:from-tertiary after:from-30%">
+          <ScrollTo
+            to="cluster"
+            spy={true}
+            smooth={true}
+            offset={-130}
+            duration={500}
+            className="relative w-full h-[200px] rounded-lg overflow-hidden bg-[url('/images/solar-panel.png')] bg-cover after:absolute after:inset-0 after:bg-gradient-to-tr after:from-tertiary after:from-30% cursor-pointer"
+          >
             <div className="absolute inset-0 flex items-center justify-center z-10">
               <div className="p-6 space-y-2 w-full text-gray-900">
-                <h2 className="text-4xl font-bold">5 +</h2>
+                <h2 className="text-4xl lg:text-5xl font-bold">
+                  <AnimatedCounter
+                    start={0}
+                    end={5}
+                    duration={2000}
+                    suffix=" +"
+                  />
+                </h2>
                 <span className="block">Regional Clusters</span>
               </div>
             </div>
-          </div>
+          </ScrollTo>
 
-          <div className="relative w-full h-[200px] p-4 rounded-lg overflow-hidden bg-[url('/images/BES-Solar-PV.png')] bg-contain bg-right bg-no-repeat bg-secondary bg-end after:absolute after:inset-0 after:bg-gradient-to-tr after:from-secondary after:from-10%">
+          <ScrollTo
+            to="cluster"
+            spy={true}
+            smooth={true}
+            offset={-130}
+            duration={500}
+            className="relative w-full h-[200px] p-4 rounded-lg overflow-hidden bg-[url('/images/BES-Solar-PV.png')] bg-contain bg-right bg-no-repeat bg-secondary bg-end after:absolute after:inset-0 after:bg-gradient-to-tr after:from-secondary after:from-10% cursor-pointer"
+          >
             <div className="absolute inset-0 flex items-center justify-center z-10">
               <div className="p-6 space-y-2 w-full text-white">
-                <h2 className="relative text-4xl font-bold">
-                  54,902{" "}
+                <h2 className="relative text-4xl lg:text-5xl font-bold">
+                  <AnimatedCounter start={0} end={54902} duration={2000} />
                   <span className="absolute text-xs bg-tertiary px-1 py-.5 text-gray-900 rounded ml-1">
                     kWh
                   </span>
@@ -61,7 +97,7 @@ export default function Hero() {
                 <span className="block">Total Capacity</span>
               </div>
             </div>
-          </div>
+          </ScrollTo>
         </div>
 
         <hr className="mt-8" />

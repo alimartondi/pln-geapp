@@ -162,7 +162,7 @@ export function DataTable<TData extends { clusterId: number }, TValue>({
               <DropdownMenuTrigger asChild>
                 <Button variant="outline" size={"lg"}>
                   <Settings2 />
-                  Columns
+                  <span className="hidden md:block">Group</span> Header
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end">
@@ -277,16 +277,14 @@ export function DataTable<TData extends { clusterId: number }, TValue>({
       </CardContent>
 
       {/* Pagination */}
-      <CardFooter className="flex md:items-center md:justify-between gap-4">
-        {/* Rows per page selector ⬅️ added */}
+      <CardFooter className="flex items-center justify-between gap-4">
         <div className="flex items-center space-x-2">
-          <span className="text-sm">Rows per page</span>
+          <span className="text-sm hidden md:block">Rows per page</span>
           <Select
-            value={String(table.getState().pagination.pageSize)} // ⬅️ pastikan string
+            value={String(table.getState().pagination.pageSize)}
             onValueChange={(value) => table.setPageSize(Number(value))}
           >
             <SelectTrigger className="w-[80px]">
-              {/* Menampilkan nilai terpilih */}
               {table.getState().pagination.pageSize}
             </SelectTrigger>
             <SelectContent>
@@ -299,13 +297,11 @@ export function DataTable<TData extends { clusterId: number }, TValue>({
           </Select>
         </div>
 
-        {/* Page info ⬅️ added */}
         <div className="text-sm">
           Page {table.getState().pagination.pageIndex + 1} of{" "}
           {table.getPageCount()}
         </div>
 
-        {/* Navigation buttons (existing, but moved slightly for layout) */}
         <div className="flex items-center gap-2 md:gap-4">
           <Button
             variant="outline"
