@@ -2,9 +2,17 @@
 
 import { ColumnDef } from "@tanstack/react-table";
 import { ClusterTableRow } from "@/types/cluster.type";
-import { Badge } from "@/components/ui/badge";
-import { Check, X } from "lucide-react";
+import { Check, X, ChevronsUpDown, ArrowUp, ArrowDown } from "lucide-react";
 import clsx from "clsx";
+
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuItem,
+} from "@/components/ui/dropdown-menu";
 
 export const columns: ColumnDef<ClusterTableRow>[] = [
   {
@@ -27,19 +35,36 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
     accessorKey: "projectName",
     header: () => <div>Project Name</div>,
   },
+
   {
     header: "Project Overview",
     columns: [
       { accessorKey: "cluster", header: "Geographic Cluster" },
       {
         accessorKey: "capacity",
-        header: () => (
-          <div className="space-y-1">
-            <span className="block">Capacity</span>
-            <Badge variant={"glass"}>(kW)</Badge>
-          </div>
+        header: ({ column }) => (
+          <DropdownMenu>
+            <div className="space-y-2">
+              <DropdownMenuTrigger asChild>
+                <Button variant="outline" size="sm" className="ml-auto">
+                  <span className="block">Capacity</span>
+                  <ChevronsUpDown className="h-4 w-4" />
+                </Button>
+              </DropdownMenuTrigger>
+              <Badge className="block mx-auto" variant={"glass"}>
+                (kW)
+              </Badge>
+            </div>
+            <DropdownMenuContent align="start">
+              <DropdownMenuItem onClick={() => column.toggleSorting(false)}>
+                <ArrowUp className="mr-2 h-4 w-4" /> Sort Asc
+              </DropdownMenuItem>
+              <DropdownMenuItem onClick={() => column.toggleSorting(true)}>
+                <ArrowDown className="mr-2 h-4 w-4" /> Sort Desc
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
         ),
-
         cell: ({ row }) => (
           <div>
             <span>{row.original.capacity}</span>
@@ -162,7 +187,9 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
         accessorKey: "renewablePenetration",
         header: () => (
           <div className="space-y-1">
-            <span className="block">Renewable Penetration</span>
+            <span className="block">
+              Renewable <br /> Penetration
+            </span>
             <Badge variant={"glass"}>(%)</Badge>
           </div>
         ),
@@ -176,7 +203,9 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
         accessorKey: "connectionVoltage",
         header: () => (
           <div className="space-y-1">
-            <span className="block">Connection Voltage</span>
+            <span className="block">
+              Connection <br /> Voltage
+            </span>
             <Badge variant={"glass"}>(kW)</Badge>
           </div>
         ),
@@ -190,6 +219,7 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
   },
 
   {
+    id: "sitingSuitability",
     header: "Siting Suitability",
     columns: [
       {
@@ -444,7 +474,11 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
 
       {
         accessorKey: "preliminaryClimateRisk",
-        header: "Preliminary Climate Risk",
+        header: () => (
+          <span className="block">
+            Preliminary <br /> Climate Risk
+          </span>
+        ),
         cell: ({ row }) => {
           const preliminary = row.original.preliminaryClimateRisk;
           const variants: Record<string, "error" | "warning" | "success"> = {
@@ -472,7 +506,7 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
       { accessorKey: "goiApprovalsProfile", header: "GOI Approvals Profile" },
       {
         accessorKey: "preliminaryPositiveImpacts",
-        header: "Preliminary Posative Impacts ",
+        header: "Preliminary Positive Impacts ",
         cell: ({ row }) => {
           const preliminary = row.original.preliminaryPositiveImpacts;
           return (

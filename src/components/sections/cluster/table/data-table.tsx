@@ -1,6 +1,12 @@
 "use client";
 
 import * as React from "react";
+import { clusters } from "@/data/cluster";
+import DataTableSectionFilter from "./data-table-section-Filter";
+import { MultiSelect } from "@/components/ui/multi-select";
+import { Search, ChevronRight, ChevronLeft } from "lucide-react";
+import clsx from "clsx";
+
 import {
   ColumnDef,
   SortingState,
@@ -13,7 +19,6 @@ import {
   getSortedRowModel,
   useReactTable,
 } from "@tanstack/react-table";
-
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -24,18 +29,6 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import {
-  DropdownMenu,
-  DropdownMenuCheckboxItem,
-  DropdownMenuContent,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-
-import clsx from "clsx";
-import { Settings2, Search, ChevronRight, ChevronLeft } from "lucide-react";
-
-import { MultiSelect } from "@/components/ui/multi-select";
-import { clusters } from "@/data/cluster";
 import {
   Card,
   CardContent,
@@ -55,7 +48,6 @@ interface DataTableProps<TData, TValue> {
   defaultClusterId?: string;
 }
 
-// ⬅️ pastikan TData punya clusterId
 export function DataTable<TData extends { clusterId: number }, TValue>({
   columns,
   data,
@@ -115,7 +107,7 @@ export function DataTable<TData extends { clusterId: number }, TValue>({
             />
           </div>
 
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <MultiSelect
               options={clusters.map((c) => ({
                 label: c.shortName,
@@ -133,8 +125,8 @@ export function DataTable<TData extends { clusterId: number }, TValue>({
           </div>
         </div>
 
-        <div className="flex items-center gap-4 max-w-full w-full lg:justify-end justify-between">
-          <div className="md:hidden flex-1 overflow-hidden">
+        <div className="flex gap-4 justify-between md:justify-end w-full">
+          <div className="lg:hidden w-full md:w-auto">
             <MultiSelect
               options={clusters.map((c) => ({
                 label: c.shortName,
@@ -151,45 +143,12 @@ export function DataTable<TData extends { clusterId: number }, TValue>({
             />
           </div>
 
-          <div className="ml-auto">
-            {/* Column Visibility */}
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button variant="outline" size={"lg"}>
-                  <Settings2 />
-                  Sections
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="end">
-                {table
-                  .getAllColumns()
-                  .filter((col) => col.columns?.length)
-                  .map((group) => {
-                    const leafCols = group.getLeafColumns();
-                    const allVisible = leafCols.every((col) =>
-                      col.getIsVisible()
-                    );
-
-                    return (
-                      <DropdownMenuCheckboxItem
-                        key={group.id}
-                        className="capitalize"
-                        checked={allVisible}
-                        onCheckedChange={(value) => {
-                          leafCols.forEach((col) =>
-                            col.toggleVisibility(!!value)
-                          );
-                        }}
-                      >
-                        {group.columnDef.header as string}
-                      </DropdownMenuCheckboxItem>
-                    );
-                  })}
-              </DropdownMenuContent>
-            </DropdownMenu>
+          <div className="lg:ml-auto w-full md:w-auto">
+            <DataTableSectionFilter table={table} />
           </div>
         </div>
       </CardHeader>
+
       {/* Table */}
       <CardContent>
         <div className="border rounded-md overflow-hidden">

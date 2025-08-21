@@ -8,7 +8,7 @@ export default function Contact() {
         name="contact"
         className="container-wrapper flex flex-col md:flex-row gap-6 md:gap-8 justify-between"
       >
-        <div className="md:w-1/2 max-w-md space-y-4">
+        <div className="md:w-1/2 max-w-lg space-y-4">
           <h2 className="text-4xl font-semibold">
             Download the 50-Site Portfolio — Invest in Indonesia&apos;s Clean
             Energy Future

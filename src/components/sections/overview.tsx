@@ -23,7 +23,7 @@ export default function Overview() {
               In partnership with PLN, GEAPP is bringing 50 island microgrid
               projects to market—ready for private investment.
             </h2>
-            <p className="max-w-lg text-pretty">
+            <p className="max-w-2xl text-pretty">
               The program bridges financing gaps, reduces risk, and delivers
               affordable, reliable power to where it&apos;s needed most.
               Investors gain vetted, shovel-ready projects with strong returns

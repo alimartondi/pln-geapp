@@ -44,8 +44,8 @@ export default function ClusterDetailSheet({ cluster, onClose }: Props) {
             </CardHeader>
             <CardContent className="flex md:gap-8 flex-col md:flex-row gap-4">
               <div className="w-full border-b md:border-b-0 md:border-r flex items-center gap-4 pb-4 md:pb-0">
-                <div className="h-12 w-12 bg-secondary text-secondary-foreground rounded-md flex items-center justify-center">
-                  <MapPinned />
+                <div className="h-10 md:h-12 w-10 md:w-12 bg-secondary text-secondary-foreground rounded-md flex items-center justify-center">
+                  <MapPinned className="size-5 md:size-6" />
                 </div>
                 <div className="space-y-1">
                   <h6 className="text-xs font-semibold text-muted-foreground">
@@ -56,8 +56,8 @@ export default function ClusterDetailSheet({ cluster, onClose }: Props) {
               </div>
 
               <div className="w-full border-b md:border-b-0 md:border-r flex items-center gap-4 pb-4 md:pb-0">
-                <div className="h-12 w-12 bg-tertiary text-tertiary-foreground rounded-md flex items-center justify-center">
-                  <Zap />
+                <div className="h-10 md:h-12 w-10 md:w-12 bg-tertiary text-tertiary-foreground rounded-md flex items-center justify-center">
+                  <Zap className="size-5 md:size-6" />
                 </div>
                 <div className="space-y-1">
                   <h6 className="text-xs font-semibold text-muted-foreground">
@@ -68,8 +68,8 @@ export default function ClusterDetailSheet({ cluster, onClose }: Props) {
               </div>
 
               <div className="w-full flex items-center gap-4">
-                <div className="h-12 w-12 bg-destructive text-destructive-foreground rounded-md flex items-center justify-center">
-                  <MapPinCheck />
+                <div className="h-10 md:h-12 w-10 md:w-12 bg-destructive text-destructive-foreground rounded-md flex items-center justify-center">
+                  <MapPinCheck className="size-5 md:size-6" />
                 </div>
                 <div className="space-y-1">
                   <h6 className="text-xs font-semibold text-muted-foreground">

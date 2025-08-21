@@ -15,6 +15,7 @@ import {
 } from "@/components/ui/popover";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Separator } from "@/components/ui/separator";
+import { Rows2 } from "lucide-react";
 
 interface MultiSelectFilterProps {
   options: { label: string; value: string; count?: number }[];
@@ -73,17 +74,14 @@ export function MultiSelect({
   return (
     <Popover>
       <PopoverTrigger asChild>
-        <Button
-          size="lg"
-          variant="outline"
-          className="justify-between h-11 px-4 gap-4 w-full overflow-x-auto"
-        >
-          {label}
+        <Button size="lg" variant="outline" className="gap-3">
+          <Rows2 />
+          <span className="hidden lg:block">{label}</span>
           <Separator
             orientation="vertical"
             className="data-[orientation=vertical]:h-8"
           />
-          <Badge variant="info" className="px-2 py-1 rounded-full">
+          <Badge variant="info" className="px-2 py-1 rounded-full text-xs">
             {badgeText}
           </Badge>
         </Button>

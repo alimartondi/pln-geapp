@@ -16,7 +16,7 @@ export default function DesktopMenu({ links }: MobileMenuProps) {
       {links.map((link, i) => (
         <li key={i}>
           <ScrollTo
-            className="font-semibold hover:underline transition-all duration-300 cursor-pointer"
+            className="font-medium hover:underline transition-all duration-300 cursor-pointer"
             to={link.to}
             spy={true}
             smooth={true}

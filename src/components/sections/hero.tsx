@@ -43,12 +43,7 @@ export default function Hero() {
             <div className="absolute inset-0 flex items-center justify-center z-10">
               <div className="p-6 space-y-2 w-full text-white">
                 <h2 className="text-4xl lg:text-5xl font-bold">
-                  <AnimatedCounter
-                    start={0}
-                    end={50}
-                    duration={2000}
-                    suffix=" +"
-                  />
+                  <AnimatedCounter start={0} end={50} duration={2000} />
                 </h2>
                 <span className="block">Total Sites for Solar PV & BESS</span>
               </div>
@@ -66,12 +61,7 @@ export default function Hero() {
             <div className="absolute inset-0 flex items-center justify-center z-10">
               <div className="p-6 space-y-2 w-full text-gray-900">
                 <h2 className="text-4xl lg:text-5xl font-bold">
-                  <AnimatedCounter
-                    start={0}
-                    end={5}
-                    duration={2000}
-                    suffix=" +"
-                  />
+                  <AnimatedCounter start={0} end={5} duration={2000} />
                 </h2>
                 <span className="block">Regional Clusters</span>
               </div>
