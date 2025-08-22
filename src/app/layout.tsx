@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Urbanist } from "next/font/google";
+import { Roboto } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme/theme-provider";
 import Header from "@/components/layouts/header";
@@ -7,9 +7,10 @@ import Footer from "@/components/layouts/footer";
 
 import "leaflet/dist/leaflet.css";
 
-const urbanist = Urbanist({
+const roboto = Roboto({
   subsets: ["latin"],
   display: "swap",
+  style: "normal",
 });
 
 // const geistMono = Geist_Mono({
@@ -30,7 +31,7 @@ export default function RootLayout({
 }>) {
   return (
     <>
-      <html lang="en" className={urbanist.className} suppressHydrationWarning>
+      <html lang="en" className={roboto.className} suppressHydrationWarning>
         <body>
           <ThemeProvider
             attribute="class"

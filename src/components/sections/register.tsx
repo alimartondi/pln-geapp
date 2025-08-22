@@ -1,7 +1,7 @@
 "use client";
 
-import ScrollWrapper from "@/components/layouts/scroll-wrapper";
 import { Link as ScrollTo } from "react-scroll";
+import ScrollWrapper from "@/components/layouts/scroll-wrapper";
 
 export default function Register() {
   return (
