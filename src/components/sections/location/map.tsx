@@ -531,12 +531,12 @@ export default function Map({ onMarkerSelect }: MapClientProps) {
                     {marker.landSize}
                   </span>
                 </div>
-                <div className="flex justify-between items-center">
+                {/* <div className="flex justify-between items-center">
                   <span className="text-sm">Status</span>
                   <Badge className="bg-[#f0f9ff] text-[#0ba5ec]">
                     {marker.status}
                   </Badge>
-                </div>
+                </div> */}
                 <Button
                   className="w-full"
                   onClick={() => {

@@ -61,10 +61,10 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
             </div>
             <DropdownMenuContent align="start">
               <DropdownMenuItem onClick={() => column.toggleSorting(false)}>
-                <ArrowUp className="mr-2 h-4 w-4" /> Sort Asc
+                <ArrowUp className="mr-2 h-4 w-4" /> Asc
               </DropdownMenuItem>
               <DropdownMenuItem onClick={() => column.toggleSorting(true)}>
-                <ArrowDown className="mr-2 h-4 w-4" /> Sort Desc
+                <ArrowDown className="mr-2 h-4 w-4" /> Desc
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Lato } from "next/font/google";
+import { Urbanist } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme/theme-provider";
 import Header from "@/components/layouts/header";
@@ -7,10 +7,9 @@ import Footer from "@/components/layouts/footer";
 
 import "leaflet/dist/leaflet.css";
 
-const lato = Lato({
+const urbanist = Urbanist({
   subsets: ["latin"],
   display: "swap",
-  weight: ["400", "700"],
 });
 
 // const geistMono = Geist_Mono({
@@ -31,7 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <>
-      <html lang="en" className={lato.className} suppressHydrationWarning>
+      <html lang="en" className={urbanist.className} suppressHydrationWarning>
         <body>
           <ThemeProvider
             attribute="class"

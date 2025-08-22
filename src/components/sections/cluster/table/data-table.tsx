@@ -187,7 +187,7 @@ export function DataTable<TData extends { clusterId: number }, TValue>({
             </TableHeader>
             <TableBody>
               {table.getRowModel().rows?.length ? (
-                table.getRowModel().rows.map((row) => (
+                table.getRowModel().rows.map((row, actualIndex) => (
                   <TableRow
                     key={row.id}
                     data-state={row.getIsSelected() && "selected"}
@@ -197,13 +197,14 @@ export function DataTable<TData extends { clusterId: number }, TValue>({
                       const rowIndex = row.index; // index baris
 
                       return (
+                        // Di dalam loop table.getRowModel().rows.map((row, actualIndex) =>
                         <TableCell
                           key={cell.id}
                           className={clsx(
                             isFirst &&
                               "sticky left-0 z-10 after:absolute after:inset-y-0 after:right-0 after:w-[0.1px] after:bg-border",
                             isFirst &&
-                              (rowIndex % 2 === 0
+                              (actualIndex % 2 === 0 // Gunakan actualIndex dari map
                                 ? "bg-[#ffffff] dark:bg-[#18181a]"
                                 : "bg-[#f6f7f9] dark:bg-[#232227]")
                           )}
