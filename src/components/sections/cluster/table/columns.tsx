@@ -33,7 +33,7 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
 
   {
     accessorKey: "projectName",
-    header: () => <div>Project Name</div>,
+    header: "Project Name",
   },
 
   {
@@ -46,7 +46,11 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
           <DropdownMenu>
             <div className="space-y-2">
               <DropdownMenuTrigger asChild>
-                <Button variant="outline" size="sm" className="ml-auto">
+                <Button
+                  variant="glass"
+                  size="sm"
+                  className="ml-auto shadow-none"
+                >
                   <span className="block">Capacity</span>
                   <ChevronsUpDown className="h-4 w-4" />
                 </Button>

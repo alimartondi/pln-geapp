@@ -74,7 +74,7 @@ export default function Hero() {
             smooth={true}
             offset={-130}
             duration={500}
-            className="relative w-full h-[200px] p-4 rounded-lg overflow-hidden bg-[url('/images/BES-Solar-PV.png')] bg-contain bg-right bg-no-repeat bg-secondary bg-end after:absolute after:inset-0 after:bg-gradient-to-tr after:from-secondary after:from-10% cursor-pointer"
+            className="relative w-full h-[200px] p-4 rounded-lg overflow-hidden bg-[url('/images/BESS-Solar-PV.webp')] bg-cover bg-right bg-no-repeat bg-secondary bg-end after:absolute after:inset-0 after:bg-gradient-to-tr after:from-secondary after:from-10% cursor-pointer"
           >
             <div className="absolute inset-0 flex items-center justify-center z-10">
               <div className="p-6 space-y-2 w-full text-white">

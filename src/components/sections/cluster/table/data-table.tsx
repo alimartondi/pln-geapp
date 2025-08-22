@@ -165,9 +165,11 @@ export function DataTable<TData extends { clusterId: number }, TValue>({
                           header.colSpan > 1 &&
                             "text-center uppercase font-semibold",
                           header.column.id === "projectName" &&
-                            "sticky left-0 bg-primary border-t border-[#27a9c2] after:absolute after:right-0 after:h-full after:w-px after:bg-border after:top-0 translate-z-0 text-left will-change-transform z-10",
-                          header.column.columnDef.header ===
-                            "Cluster Geography" && "text-left",
+                            !header.isPlaceholder &&
+                            "sticky left-0 bg-primary border-t border-[#e5e7eb] dark:border-[#27a9c2] after:absolute after:right-0 after:h-full after:w-[0.1px] after:bg-border after:top-0 translate-z-0 text-left will-change-transform z-10",
+                          headerGroup.headers.indexOf(header) === 0 &&
+                            headerGroup.headers[0].isPlaceholder &&
+                            "sticky left-0 bg-primary after:absolute after:right-0 after:h-full after:w-[0.1px] after:bg-border after:top-0 border-[#e5e7eb] dark:border-[#27a9c2] will-change-transform z-10",
                           "tex-center text-white"
                         )}
                       >
