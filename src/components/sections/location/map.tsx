@@ -7,9 +7,9 @@ import type { MarkerData } from "@/types/map.type";
 import { useState } from "react";
 import { FileDown } from "lucide-react";
 
-interface MapClientProps {
-  onMarkerSelect: (marker: MarkerData) => void;
-}
+// interface MapClientProps {
+//   onMarkerSelect: (marker: MarkerData) => void;
+// }
 
 const icon = L.icon({
   iconUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png",
@@ -539,7 +539,7 @@ const markers: MarkerData[] = [
   },
 ];
 
-export default function Map({ onMarkerSelect }: MapClientProps) {
+export default function Map() {
   const [key] = useState(() => Date.now());
   const [downloading, setDownloading] = useState(false);
 

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo, useCallback } from "react";
 import { Columns2 } from "lucide-react";
 import type { Table } from "@tanstack/react-table";
 
@@ -31,44 +31,51 @@ export default function DataTableSectionFilter<TData>({
 }: DataTableSectionFilterProps<TData>) {
   const [open, setOpen] = useState(false);
   const [selectedSections, setSelectedSections] = useState<string[]>([]);
+  const [isInitialized, setIsInitialized] = useState(false);
 
-  const groups = table.getAllColumns().filter((col) => col.columns?.length);
+  const groups = useMemo(() => {
+    return table.getAllColumns().filter((col) => col.columns?.length);
+  }, [table]);
 
-  const applyFiltering = (sections: string[]) => {
-    if (sections.length === 0) {
-      // Show all sections when none selected
-      groups.forEach((group) => {
-        const leafCols = group.getLeafColumns();
-        leafCols.forEach((col) => col.toggleVisibility(true));
-      });
-    } else {
-      // Show only selected sections
-      groups.forEach((group) => {
-        const leafCols = group.getLeafColumns();
-        const shouldBeVisible = sections.includes(group.id);
-        leafCols.forEach((col) => col.toggleVisibility(shouldBeVisible));
-      });
-    }
-  };
+  const applyFiltering = useCallback(
+    (sections: string[]) => {
+      const currentGroups = table
+        .getAllColumns()
+        .filter((col) => col.columns?.length);
 
-  const initializeDefaultVisibility = () => {
-    // Use the first available group as default, or "project_overview" if it exists
-    const availableGroupIds = groups.map((g) => g.id);
-    const defaultSections = availableGroupIds.includes("project_overview")
-      ? ["project_overview"]
-      : availableGroupIds.length > 0
-      ? [availableGroupIds[0]]
-      : [];
-
-    setSelectedSections(defaultSections);
-    applyFiltering(defaultSections);
-  };
+      if (sections.length === 0) {
+        // Show all sections when none selected
+        currentGroups.forEach((group) => {
+          const leafCols = group.getLeafColumns();
+          leafCols.forEach((col) => col.toggleVisibility(true));
+        });
+      } else {
+        // Show only selected sections
+        currentGroups.forEach((group) => {
+          const leafCols = group.getLeafColumns();
+          const shouldBeVisible = sections.includes(group.id);
+          leafCols.forEach((col) => col.toggleVisibility(shouldBeVisible));
+        });
+      }
+    },
+    [table]
+  );
 
   useEffect(() => {
-    if (groups.length > 0) {
-      initializeDefaultVisibility();
+    if (groups.length > 0 && !isInitialized) {
+      // Use the first available group as default, or "project_overview" if it exists
+      const availableGroupIds = groups.map((g) => g.id);
+      const defaultSections = availableGroupIds.includes("project_overview")
+        ? ["project_overview"]
+        : availableGroupIds.length > 0
+        ? [availableGroupIds[0]]
+        : [];
+
+      setSelectedSections(defaultSections);
+      applyFiltering(defaultSections);
+      setIsInitialized(true);
     }
-  }, [groups.length]); // Added dependency to ensure groups are loaded
+  }, [groups.length, isInitialized, applyFiltering, groups]);
 
   const toggleSection = (groupId: string) => {
     const newSelectedSections = selectedSections.includes(groupId)
@@ -78,6 +85,12 @@ export default function DataTableSectionFilter<TData>({
     setSelectedSections(newSelectedSections);
     applyFiltering(newSelectedSections);
   };
+
+  // const removeSection = (groupId: string) => {
+  //   const newSelectedSections = selectedSections.filter((id) => id !== groupId);
+  //   setSelectedSections(newSelectedSections);
+  //   applyFiltering(newSelectedSections);
+  // };
 
   const clearAllSections = () => {
     setSelectedSections([]);

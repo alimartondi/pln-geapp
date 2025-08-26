@@ -1,24 +1,24 @@
 "use client";
 
-import { useState } from "react";
+// import { useState } from "react";
 import ScrollWrapper from "@/components/layouts/scroll-wrapper";
-import { MarkerData } from "@/types/map.type";
+// import { MarkerData } from "@/types/map.type";
 
 import dynamic from "next/dynamic";
-import MapSheetDetail from "./map-sheet-detail";
+// import MapSheetDetail from "./map-sheet-detail";
 
 const Map = dynamic(() => import("@/components/sections/location/map"), {
   ssr: false,
 });
 
 export default function Location() {
-  const [selectedMarker, setSelectedMarker] = useState<MarkerData | null>(null);
-  const [sheetOpen, setSheetOpen] = useState(false);
+  // const [selectedMarker, setSelectedMarker] = useState<MarkerData | null>(null);
+  // const [sheetOpen, setSheetOpen] = useState(false);
 
-  const handleMarkerSelect = (marker: MarkerData) => {
-    setSelectedMarker(marker);
-    setSheetOpen(true);
-  };
+  // const handleMarkerSelect = (marker: MarkerData) => {
+  //   setSelectedMarker(marker);
+  //   setSheetOpen(true);
+  // };
 
   return (
     <section className="py-12 bg-muted/50 lg:py-20">
@@ -31,13 +31,13 @@ export default function Location() {
         </div>
 
         <div className="aspect-3/4 md:aspect-16/11 lg:aspect-16/8 bg-muted rounded-lg overflow-hidden border shadow-xs">
-          <Map onMarkerSelect={handleMarkerSelect} />
+          <Map />
 
-          <MapSheetDetail
+          {/* <MapSheetDetail
             marker={selectedMarker}
             open={sheetOpen}
             onOpenChange={setSheetOpen}
-          />
+          /> */}
         </div>
       </ScrollWrapper>
     </section>

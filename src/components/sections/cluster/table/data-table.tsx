@@ -194,7 +194,6 @@ export function DataTable<TData extends { clusterId: number }, TValue>({
                   >
                     {row.getVisibleCells().map((cell, index) => {
                       const isFirst = index === 0; // cek kolom pertama
-                      const rowIndex = row.index; // index baris
 
                       return (
                         // Di dalam loop table.getRowModel().rows.map((row, actualIndex) =>
