@@ -16,7 +16,7 @@ export default function HeaderAction() {
           offset={-130}
           duration={500}
         >
-          Sign In
+          Request Full Report
         </ScrollTo>
       </Button>
       <Separator orientation="vertical" />

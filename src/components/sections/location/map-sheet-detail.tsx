@@ -79,7 +79,7 @@ export default function MapSheetDetail({
                         <span className="text-muted-foreground text-sm">
                           Grid Connection (250m)
                         </span>
-                        <Badge variant={"success"}>Rady</Badge>
+                        <Badge variant={"success"}>Ready</Badge>
                       </div>
                       <div className="flex justify-between">
                         <span className="text-muted-foreground text-sm">

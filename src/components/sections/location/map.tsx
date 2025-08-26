@@ -3,7 +3,6 @@
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import L from "leaflet";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import type { MarkerData } from "@/types/map.type";
 import { useState } from "react";
 import { FileDown } from "lucide-react";
@@ -30,6 +29,7 @@ const markers: MarkerData[] = [
     landSize: "1.4253 hectares",
     status: "Confirmed",
     region: "Riau & Kepri",
+    image: "/images/pltd-images/pltd-sungai-bela-zoom.webp",
   },
   {
     id: 2,
@@ -40,6 +40,7 @@ const markers: MarkerData[] = [
     landSize: "0.7302 hectares",
     status: "Planned",
     region: "Riau & Kepri",
+    image: "/images/pltd-images/pltd-sungai-buluh-zoom.webp",
   },
   {
     id: 3,
@@ -50,6 +51,7 @@ const markers: MarkerData[] = [
     landSize: "0.8759 hectares",
     status: "Pending",
     region: "Riau & Kepri",
+    image: "/images/pltd-images/pltd-sungai-laut-zoom.webp",
   },
   {
     id: 4,
@@ -60,6 +62,7 @@ const markers: MarkerData[] = [
     landSize: "0.85 hectares",
     status: "Confirmed",
     region: "Riau & Kepri",
+    image: "/images/pltd-images/pltd-tanjung-pasir-zoom.webp",
   },
   {
     id: 5,
@@ -70,6 +73,7 @@ const markers: MarkerData[] = [
     landSize: "2.1915 hectares",
     status: "Planned",
     region: "Riau & Kepri",
+    image: "/images/pltd-images/pltd-alai-zoom.webp",
   },
   {
     id: 6,
@@ -80,6 +84,7 @@ const markers: MarkerData[] = [
     landSize: "2.2767 hectares",
     status: "Pending",
     region: "Riau & Kepri",
+    image: "/images/pltd-images/pltd-teluk-lanus-zoom.webp",
   },
   {
     id: 7,
@@ -90,6 +95,7 @@ const markers: MarkerData[] = [
     landSize: "10.4892 hectares",
     status: "Confirmed",
     region: "Riau & Kepri",
+    image: "/images/pltd-images/pltd-daek-lingga-zoom.webp",
   },
   {
     id: 8,
@@ -100,6 +106,7 @@ const markers: MarkerData[] = [
     landSize: "10.1602 hectares",
     status: "Planned",
     region: "Riau & Kepri",
+    image: "/images/pltd-images/pltd-ladan-zoom.webp",
   },
   {
     id: 9,
@@ -110,6 +117,7 @@ const markers: MarkerData[] = [
     landSize: "2.5802 hectares",
     status: "Pending",
     region: "Riau & Kepri",
+    image: "/images/pltd-images/pltd-tarempa-zoom.webp",
   },
   {
     id: 10,
@@ -120,6 +128,7 @@ const markers: MarkerData[] = [
     landSize: "5.6853 hectares",
     status: "Confirmed",
     region: "Riau & Kepri",
+    image: "/images/pltd-images/pltd-penarah-zoom.webp",
   },
   {
     id: 11,
@@ -130,6 +139,7 @@ const markers: MarkerData[] = [
     landSize: "3.0091 hectares",
     status: "Planned",
     region: "Riau & Kepri",
+    image: "/images/pltd-images/pltd-penuba-zoom.webp",
   },
   {
     id: 12,
@@ -140,6 +150,7 @@ const markers: MarkerData[] = [
     landSize: "1.1717 hectares",
     status: "Pending",
     region: "Riau & Kepri",
+    image: "/images/pltd-images/pltd-pangkil-zoom.webp",
   },
   {
     id: 13,
@@ -150,6 +161,7 @@ const markers: MarkerData[] = [
     landSize: "2.251 hectares",
     status: "Confirmed",
     region: "Riau & Kepri",
+    image: "/images/pltd-images/pltd-nyamuk-zoom.webp",
   },
   {
     id: 14,
@@ -160,6 +172,7 @@ const markers: MarkerData[] = [
     landSize: "0.5505 hectares",
     status: "Pending",
     region: "Riau & Kepri",
+    image: "/images/pltd-images/pltd-mubur-zoom.webp",
   },
   {
     id: 15,
@@ -170,6 +183,7 @@ const markers: MarkerData[] = [
     landSize: "0.3949 hectares",
     status: "Planned",
     region: "Riau & Kepri",
+    image: "/images/pltd-images/pltd-sanglar-zoom.webp",
   },
   {
     id: 16,
@@ -180,6 +194,7 @@ const markers: MarkerData[] = [
     landSize: "2.2041 hectares",
     status: "Confirmed",
     region: "Riau & Kepri",
+    image: "/images/pltd-images/pltd-buluh-patah-zoom.webp",
   },
   {
     id: 17,
@@ -190,6 +205,7 @@ const markers: MarkerData[] = [
     landSize: "0.3976 hectares",
     status: "Pending",
     region: "Riau & Kepri",
+    image: "/images/pltd-images/pltd-ngal-zoom.webp",
   },
   {
     id: 18,
@@ -200,6 +216,7 @@ const markers: MarkerData[] = [
     landSize: "1.0355 hectares",
     status: "Confirmed",
     region: "Riau & Kepri",
+    image: "/images/pltd-images/pltd-pulau-duyung-zoom.webp",
   },
   {
     id: 19,
@@ -210,6 +227,7 @@ const markers: MarkerData[] = [
     landSize: "0.952 hectares",
     status: "Planned",
     region: "Riau & Kepri",
+    image: "/images/pltd-images/pltd-pulau-bukit-zoom.webp",
   },
   {
     id: 20,
@@ -220,6 +238,7 @@ const markers: MarkerData[] = [
     landSize: "1.5132 hectares",
     status: "Pending",
     region: "Riau & Kepri",
+    image: "/images/pltd-images/pltd-impol-zoom.webp",
   },
   {
     id: 21,
@@ -230,6 +249,7 @@ const markers: MarkerData[] = [
     landSize: "10.9121 hectares",
     status: "Confirmed",
     region: "Riau & Kepri",
+    image: "/images/pltd-images/pltd-dabo-singkep-zoom.webp",
   },
   {
     id: 22,
@@ -240,6 +260,7 @@ const markers: MarkerData[] = [
     landSize: "0.9104 hectares",
     status: "Pending",
     region: "Riau & Kepri",
+    image: "/images/pltd-images/pltd-berhala-zoom.webp",
   },
   {
     id: 23,
@@ -250,6 +271,7 @@ const markers: MarkerData[] = [
     landSize: "1.1491 hectares",
     status: "Planned",
     region: "Riau & Kepri",
+    image: "/images/pltd-images/pltd-belibak-zoom.webp",
   },
   {
     id: 24,
@@ -260,6 +282,7 @@ const markers: MarkerData[] = [
     landSize: "1.2346 hectares",
     status: "Confirmed",
     region: "Riau & Kepri",
+    image: "/images/pltd-images/pltd-air-putih-zoom.webp",
   },
   {
     id: 25,
@@ -270,6 +293,7 @@ const markers: MarkerData[] = [
     landSize: "null hectares",
     status: "Planned",
     region: "Riau & Kepri",
+    image: "/images/pltd-images/pltd-kundur-zoom.webp",
   },
   {
     id: 26,
@@ -280,6 +304,7 @@ const markers: MarkerData[] = [
     landSize: "4.7795 hectares",
     status: "Confirmed",
     region: "Kalimantan",
+    image: "/images/pltd-images/pltd-jongkong-zoom.webp",
   },
   {
     id: 27,
@@ -290,6 +315,7 @@ const markers: MarkerData[] = [
     landSize: "null hectares",
     status: "Pending",
     region: "Kalimantan",
+    image: "/images/pltd-images/pltd-kayan-hulu-zoom.webp",
   },
   {
     id: 28,
@@ -300,6 +326,7 @@ const markers: MarkerData[] = [
     landSize: "0.9674 hectares",
     status: "Planned",
     region: "Kalimantan",
+    image: "/images/pltd-images/pltd-labang-zoom.webp",
   },
   {
     id: 29,
@@ -310,6 +337,7 @@ const markers: MarkerData[] = [
     landSize: "1.2228 hectares",
     status: "Confirmed",
     region: "Kalimantan",
+    image: "/images/pltd-images/pltd-long-layu-zoom.webp",
   },
   {
     id: 30,
@@ -320,6 +348,7 @@ const markers: MarkerData[] = [
     landSize: "null hectares",
     status: "Planned",
     region: "Kalimantan",
+    image: "/images/pltd-images/pltd-pa-upan-zoom.webp",
   },
   {
     id: 31,
@@ -330,6 +359,7 @@ const markers: MarkerData[] = [
     landSize: "4.4966 hectares",
     status: "Pending",
     region: "Kalimantan",
+    image: "/images/pltd-images/pltd-sei-menggaris-zoom.webp",
   },
   {
     id: 32,
@@ -340,6 +370,7 @@ const markers: MarkerData[] = [
     landSize: "4.0598 hectares",
     status: "Confirmed",
     region: "Kalimantan",
+    image: "/images/pltd-images/pltd-tanah-merah-zoom.webp",
   },
   {
     id: 33,
@@ -350,6 +381,7 @@ const markers: MarkerData[] = [
     landSize: "0.7402 hectares",
     status: "Pending",
     region: "North Sulawesi",
+    image: "/images/pltd-images/pltd-salingkere-zoom.webp",
   },
   {
     id: 34,
@@ -360,6 +392,7 @@ const markers: MarkerData[] = [
     landSize: "1.0453 hectares",
     status: "Planned",
     region: "North Sulawesi",
+    image: "/images/pltd-images/pltd-bebalang-zoom.webp",
   },
   {
     id: 35,
@@ -370,6 +403,7 @@ const markers: MarkerData[] = [
     landSize: "2.7737 hectares",
     status: "Confirmed",
     region: "North Sulawesi",
+    image: "/images/pltd-images/pltd-makalehi-zoom.webp",
   },
   {
     id: 36,
@@ -380,6 +414,7 @@ const markers: MarkerData[] = [
     landSize: "null hectares",
     status: "Pending",
     region: "North Sulawesi",
+    image: "/images/pltd-images/pltd-kalama-zoom.webp",
   },
   {
     id: 37,
@@ -390,6 +425,7 @@ const markers: MarkerData[] = [
     landSize: "1.4987 hectares",
     status: "Planned",
     region: "North Sulawesi",
+    image: "/images/pltd-images/pltd-mahengetang-zoom.webp",
   },
   {
     id: 38,
@@ -400,6 +436,7 @@ const markers: MarkerData[] = [
     landSize: "6.1155 hectares",
     status: "Confirmed",
     region: "North Sulawesi",
+    image: "/images/pltd-images/pltd-siau-zoom.webp",
   },
   {
     id: 39,
@@ -410,6 +447,7 @@ const markers: MarkerData[] = [
     landSize: "2.0574 hectares",
     status: "Pending",
     region: "North Sulawesi",
+    image: "/images/pltd-images/pltd-bangkurung-zoom.webp",
   },
   {
     id: 40,
@@ -420,6 +458,7 @@ const markers: MarkerData[] = [
     landSize: "1.3236 hectares",
     status: "Planned",
     region: "North Sulawesi",
+    image: "/images/pltd-images/pltd-siau-zoom.webp",
   },
   {
     id: 41,
@@ -430,6 +469,7 @@ const markers: MarkerData[] = [
     landSize: "27.7383 hectares",
     status: "Confirmed",
     region: "NTT",
+    image: "/images/pltd-images/pltd-waibalun-zoom.webp",
   },
   {
     id: 42,
@@ -440,6 +480,7 @@ const markers: MarkerData[] = [
     landSize: "2.3641 hectares",
     status: "Planned",
     region: "Maluku",
+    image: "/images/pltd-images/pltd-kalama-zoom.webp",
   },
   {
     id: 43,
@@ -450,6 +491,7 @@ const markers: MarkerData[] = [
     landSize: "4.8357 hectares",
     status: "Pending",
     region: "Maluku",
+    image: "/images/pltd-images/pltd-dagasuli-zoom.webp",
   },
   {
     id: 44,
@@ -460,6 +502,7 @@ const markers: MarkerData[] = [
     landSize: "2.3392 hectares",
     status: "Confirmed",
     region: "Maluku",
+    image: "/images/pltd-images/pltd-dama-zoom.webp",
   },
   {
     id: 45,
@@ -470,6 +513,7 @@ const markers: MarkerData[] = [
     landSize: "2.7649 hectares",
     status: "Pending",
     region: "Maluku",
+    image: "/images/pltd-images/pltd-lonthoir-zoom.webp",
   },
   {
     id: 46,
@@ -480,6 +524,7 @@ const markers: MarkerData[] = [
     landSize: "8.44 hectares",
     status: "Planned",
     region: "Maluku",
+    image: "/images/pltd-images/pltd-saparua-zoom.webp",
   },
   {
     id: 47,
@@ -490,10 +535,28 @@ const markers: MarkerData[] = [
     landSize: "12.6698 hectares",
     status: "Confirmed",
     region: "Maluku",
+    image: "/images/pltd-images/pltd-wahai-zoom.webp",
   },
 ];
+
 export default function Map({ onMarkerSelect }: MapClientProps) {
   const [key] = useState(() => Date.now());
+  const [downloading, setDownloading] = useState(false);
+
+  const handleDownload = (marker: MarkerData) => {
+    if (downloading) return; // cegah klik spam
+    setDownloading(true);
+
+    const link = document.createElement("a");
+    link.href = marker.image;
+    link.download = `${marker.name}.webp`;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+    // reset setelah beberapa detik (misal 2 detik)
+    setTimeout(() => setDownloading(false), 2000);
+  };
 
   return (
     <MapContainer
@@ -540,13 +603,11 @@ export default function Map({ onMarkerSelect }: MapClientProps) {
                 <Button
                   className="w-full"
                   onClick={() => {
-                    const link = document.createElement("a");
-                    link.href = " /documents/sample.pdf"; // path relatif dari folder public
-                    link.download = "sample.pdf"; // nama file yang di-download
-                    link.click();
+                    handleDownload(marker);
                   }}
+                  disabled={downloading}
                 >
-                  Download Site Profile
+                  {downloading ? "Downloading..." : "Download Site Image"}
                   <FileDown />
                 </Button>
               </div>
