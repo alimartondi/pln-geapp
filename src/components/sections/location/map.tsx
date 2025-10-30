@@ -1,7 +1,14 @@
 "use client";
 
-import { MapContainer, TileLayer, Marker, Popup, GeoJSON } from "react-leaflet";
-import L, { GeoJSON as LeafletGeoJSON } from "leaflet";
+import {
+  MapContainer,
+  TileLayer,
+  Marker,
+  Popup,
+  GeoJSON as RLGeoJSON,
+} from "react-leaflet";
+import L from "leaflet";
+import type { FeatureCollection, Feature, Point } from "geojson";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
 import { FileDown } from "lucide-react";
@@ -18,7 +25,7 @@ const icon = L.icon({
 });
 
 export default function Map() {
-  const [geoData, setGeoData] = useState<any>(null);
+  const [geoData, setGeoData] = useState<FeatureCollection | null>(null);
   const [downloading, setDownloading] = useState(false);
 
   const handleDownload = (marker: MarkerData) => {
@@ -62,24 +69,22 @@ export default function Map() {
 
       {/* 🟢 Tampilkan polygon & garis dari KMZ, tapi jangan tampilkan point */}
       {geoData && (
-        <GeoJSON
-          data={geoData as GeoJSON.FeatureCollection}
-          style={
-            (feature) =>
-              feature?.geometry?.type !== "Point"
-                ? { color: "red", weight: 2 }
-                : { opacity: 0 } // sembunyikan point
-          }
-          pointToLayer={() => null as unknown as L.Layer}
+        <RLGeoJSON
+          data={geoData}
+          filter={(feature) => feature.geometry?.type !== "Point"}
+          style={() => ({ color: "red", weight: 2 })}
         />
       )}
 
       {/* 🟢 Marker custom dari KMZ point */}
       {geoData?.features
-        ?.filter((f: any) => f.geometry?.type === "Point")
-        .map((f: any, i: number) => {
-          const [lng, lat] = f.geometry.coordinates;
-          const nameFromKmz = f.properties?.name?.toLowerCase().trim() || "";
+        ?.filter(
+          (f): f is Feature<Point, { name?: string }> =>
+            f.geometry?.type === "Point"
+        )
+        .map((f, i: number) => {
+          const [lng, lat] = f.geometry.coordinates as [number, number];
+          const nameFromKmz = (f.properties?.name ?? "").toLowerCase().trim();
 
           const info = Markers.find((m) => {
             const markerName = m.name.toLowerCase().trim();
