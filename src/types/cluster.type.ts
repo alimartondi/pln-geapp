@@ -21,21 +21,21 @@ export type ClusterDetail = {
     capacity: number;
     coordinates: Coordinate[];
     landSize: number;
-    pltdDist: number[];
+    pltdDist: string[];
 
     bpp: number;
     ace: number;
     peakLoad: number;
     meanLoad: number;
-    renewablePenetration: number;
+    renewablePenetration: string;
     connectionVoltage: number;
 
     avgSlope: number[];
     slopeAspect: number[];
     offsiteShading: ("Yes" | "No")[];
     distPort: number;
-    distRoad: number[];
-    distCoast: number[];
+    distRoad: string[];
+    distCoast: string[];
     landUseSensitivity: string[][];
     registerLand: number[];
     disputedLand: string[];
@@ -61,21 +61,21 @@ export type ClusterTableRow = {
   capacity: number;
   coordinates: Coordinate[];
   landSize: number;
-  pltdDist: number[];
+  pltdDist: string[];
 
   bpp: number;
   ace: number;
   peakLoad: number;
   meanLoad: number;
-  renewablePenetration: number;
+  renewablePenetration: string;
   connectionVoltage: number;
 
   avgSlope: number[];
   slopeAspect: number[];
   offsiteShading: ("Yes" | "No")[];
   distPort: number;
-  distRoad: number[];
-  distCoast: number[];
+  distRoad: string[];
+  distCoast: string[];
   landUseSensitivity: string[][];
   registerLand: number[];
   disputedLand: string[];

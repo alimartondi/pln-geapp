@@ -199,7 +199,7 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
         ),
         cell: ({ row }) => (
           <div className="flex flex-col gap-4">
-            <span>{row.original.renewablePenetration}%</span>
+            <span>{row.original.renewablePenetration}</span>
           </div>
         ),
       },
