@@ -49,12 +49,14 @@ export const clusterDetails: ClusterDetail[] = [
         ],
         landSize: 1.4253,
         pltdDist: ["110"],
+
         bpp: 30.55,
         ace: 400,
         peakLoad: 141,
         meanLoad: 101,
         renewablePenetration: "46%",
         connectionVoltage: 0.4,
+
         avgSlope: [6.11],
         slopeAspect: [174],
         offsiteShading: ["Yes"],
@@ -66,14 +68,17 @@ export const clusterDetails: ClusterDetail[] = [
         disputedLand: ["No"],
         stateForesty: ["No"],
         forestMoratorium: ["No"],
+
         keyHazards: [["Floods (MED)"]],
         preliminaryClimateRisk: ["Medium"],
+
         goiApprovalsProfile:
           "STANDARD - District UKL/UPL + Mangrove (spatial plan)",
         preliminaryPositiveImpacts: [["Mangrove Loss"]],
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
         ifcRiskCategory: [["Category B - Enhanced management required"]],
         keyEAndSManagementPlans: [["PS1", "PS4", "PS6"]],
+        developmentFeasibilityClass: ["Challenging"],
       },
       {
         projectName: "Sungai Buluh",
@@ -111,6 +116,7 @@ export const clusterDetails: ClusterDetail[] = [
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
         ifcRiskCategory: [["Category B - Enhanced management required"]],
         keyEAndSManagementPlans: [["PS1", "PS4", "PS6"]],
+        developmentFeasibilityClass: ["Critical"],
       },
       {
         projectName: "Sungai Laut",
@@ -147,6 +153,7 @@ export const clusterDetails: ClusterDetail[] = [
         preliminaryNegativeImpacts: [["Jobs, Electricity"]],
         ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
         keyEAndSManagementPlans: [["PS1, PS4, PS5"]],
+        developmentFeasibilityClass: ["Moderate"],
       },
       {
         projectName: "Tanjung Pasir",
@@ -184,6 +191,7 @@ export const clusterDetails: ClusterDetail[] = [
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
         ifcRiskCategory: [["Category B - Enhanced management required"]],
         keyEAndSManagementPlans: [["PS1", "PS4", "PS6"]],
+        developmentFeasibilityClass: ["Challenging"],
       },
 
       {
@@ -236,6 +244,7 @@ export const clusterDetails: ClusterDetail[] = [
           ["PS1", "PS4", "PS5"],
           ["PS1", "PS4", "PS5"],
         ],
+        developmentFeasibilityClass: ["Favourable", "Favourable"],
       },
       {
         projectName: "Teluk Lanus",
@@ -272,6 +281,7 @@ export const clusterDetails: ClusterDetail[] = [
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
         ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
         keyEAndSManagementPlans: [["PS1", "PS4", "PS5"]],
+        developmentFeasibilityClass: ["Moderate"],
       },
       {
         projectName: "Daek Lingga",
@@ -308,6 +318,7 @@ export const clusterDetails: ClusterDetail[] = [
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
         ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
         keyEAndSManagementPlans: [["PS1", "PS4", "PS5"]],
+        developmentFeasibilityClass: ["Favourable"],
       },
       {
         projectName: "Ladan",
@@ -344,6 +355,7 @@ export const clusterDetails: ClusterDetail[] = [
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
         ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
         keyEAndSManagementPlans: [["PS1", "PS4", "PS5"]],
+        developmentFeasibilityClass: ["Favourable"],
       },
       {
         projectName: "Tarempa",
@@ -392,6 +404,7 @@ export const clusterDetails: ClusterDetail[] = [
           ["PS1", "PS4", "PS5"],
           ["PS1", "PS4", "PS5"],
         ],
+        developmentFeasibilityClass: ["Favourable", "Favourable"],
       },
       {
         projectName: "Penarah",
@@ -428,6 +441,7 @@ export const clusterDetails: ClusterDetail[] = [
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
         ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
         keyEAndSManagementPlans: [["PS1", "PS4", "PS5"]],
+        developmentFeasibilityClass: ["Moderate"],
       },
       {
         projectName: "Penuba",
@@ -464,6 +478,7 @@ export const clusterDetails: ClusterDetail[] = [
         preliminaryNegativeImpacts: [["Jobs, Electricity"]],
         ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
         keyEAndSManagementPlans: [["PS1, PS4, PS5"]],
+        developmentFeasibilityClass: ["Moderate"],
       },
       {
         projectName: "Pangkil",
@@ -500,6 +515,7 @@ export const clusterDetails: ClusterDetail[] = [
         preliminaryNegativeImpacts: [["Jobs, Electricity"]],
         ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
         keyEAndSManagementPlans: [["PS1, PS4, PS5"]],
+        developmentFeasibilityClass: ["Favourable"],
       },
       {
         projectName: "Nyamuk",
@@ -536,6 +552,7 @@ export const clusterDetails: ClusterDetail[] = [
         preliminaryNegativeImpacts: [["Jobs, Electricity"]],
         ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
         keyEAndSManagementPlans: [["PS1, PS4, PS5"]],
+        developmentFeasibilityClass: ["Favourable"],
       },
       {
         projectName: "Mubur",
@@ -572,6 +589,7 @@ export const clusterDetails: ClusterDetail[] = [
         preliminaryNegativeImpacts: [["Jobs, Electricity"]],
         ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
         keyEAndSManagementPlans: [["PS1, PS4, PS5"]],
+        developmentFeasibilityClass: ["Favourable"],
       },
       {
         projectName: "Sanglar",
@@ -608,6 +626,7 @@ export const clusterDetails: ClusterDetail[] = [
         preliminaryNegativeImpacts: [["Jobs, Electricity"]],
         ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
         keyEAndSManagementPlans: [["PS1, PS4, PS5"]],
+        developmentFeasibilityClass: ["Favourable"],
       },
       {
         projectName: "Buluh Patah",
@@ -644,6 +663,7 @@ export const clusterDetails: ClusterDetail[] = [
         preliminaryNegativeImpacts: [["Jobs, Electricity"]],
         ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
         keyEAndSManagementPlans: [["PS1, PS4, PS5"]],
+        developmentFeasibilityClass: ["Moderate"],
       },
       {
         projectName: "Ngal",
@@ -680,6 +700,7 @@ export const clusterDetails: ClusterDetail[] = [
         preliminaryNegativeImpacts: [["Jobs, Electricity"]],
         ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
         keyEAndSManagementPlans: [["PS1, PS4, PS5"]],
+        developmentFeasibilityClass: ["Moderate"],
       },
       {
         projectName: "Pulau Duyung",
@@ -716,6 +737,7 @@ export const clusterDetails: ClusterDetail[] = [
         preliminaryNegativeImpacts: [["Jobs, Electricity"]],
         ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
         keyEAndSManagementPlans: [["PS1, PS4, PS5"]],
+        developmentFeasibilityClass: ["Favourable"],
       },
       {
         projectName: "Pulau Bukit",
@@ -752,6 +774,7 @@ export const clusterDetails: ClusterDetail[] = [
         preliminaryNegativeImpacts: [["Jobs, Electricity"]],
         ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
         keyEAndSManagementPlans: [["PS1, PS4, PS5"]],
+        developmentFeasibilityClass: ["Favourable"],
       },
       {
         projectName: "Impol",
@@ -788,6 +811,7 @@ export const clusterDetails: ClusterDetail[] = [
         preliminaryNegativeImpacts: [["Jobs, Electricity"]],
         ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
         keyEAndSManagementPlans: [["PS1, PS4, PS5"]],
+        developmentFeasibilityClass: ["Favourable"],
       },
       {
         projectName: "Dabo Singkep",
@@ -833,6 +857,7 @@ export const clusterDetails: ClusterDetail[] = [
           ["Category C - Standard mitigation sufficient"],
         ],
         keyEAndSManagementPlans: [["PS1, PS4, PS5"], ["PS1, PS4, PS5"]],
+        developmentFeasibilityClass: ["Moderate", "Favourable"],
       },
       {
         projectName: "Berhala",
@@ -869,6 +894,7 @@ export const clusterDetails: ClusterDetail[] = [
         preliminaryNegativeImpacts: [["Jobs, Electricity"]],
         ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
         keyEAndSManagementPlans: [["PS1, PS4, PS5"]],
+        developmentFeasibilityClass: ["Moderate"],
       },
       {
         projectName: "Belibak",
@@ -905,6 +931,7 @@ export const clusterDetails: ClusterDetail[] = [
         preliminaryNegativeImpacts: [["Jobs, Electricity"]],
         ifcRiskCategory: [["Category B - Enhanced management required"]],
         keyEAndSManagementPlans: [["PS1, PS4, PS5"]],
+        developmentFeasibilityClass: ["Challenging"],
       },
       {
         projectName: "Air Putih",
@@ -942,11 +969,12 @@ export const clusterDetails: ClusterDetail[] = [
         preliminaryNegativeImpacts: [["Jobs, Electricity"]],
         ifcRiskCategory: [["Category B - Enhanced management required"]],
         keyEAndSManagementPlans: [["PS1, PS4, PS5"]],
+        developmentFeasibilityClass: ["Challenging"],
       },
       {
         projectName: "Kundur",
         cluster: "Riau & Kepri",
-        capacity: 22.200,
+        capacity: 22.2,
         coordinates: [{ lat: 0.84123, lng: 103.37314 }],
         landSize: 24.5,
         pltdDist: ["250"],
@@ -978,6 +1006,7 @@ export const clusterDetails: ClusterDetail[] = [
         preliminaryNegativeImpacts: [["Jobs, Electricity"]],
         ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
         keyEAndSManagementPlans: [["PS1, PS4, PS5"]],
+        developmentFeasibilityClass: ["Favourable"],
       },
     ],
   },
@@ -987,7 +1016,7 @@ export const clusterDetails: ClusterDetail[] = [
       {
         projectName: "Jongkong",
         cluster: "Kalimantan",
-        capacity: 1.190,
+        capacity: 1.19,
         coordinates: [{ lat: -0.6403, lng: 112.27895 }],
         landSize: 4.7795,
         pltdDist: ["2500"],
@@ -1018,6 +1047,7 @@ export const clusterDetails: ClusterDetail[] = [
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
         ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
         keyEAndSManagementPlans: [["PS1", "PS4", "PS5"]],
+        developmentFeasibilityClass: ["Favourable"],
       },
       {
         projectName: "Kayan Hulu",
@@ -1060,6 +1090,7 @@ export const clusterDetails: ClusterDetail[] = [
         ],
         ifcRiskCategory: [["Category B - Enhanced management required"]],
         keyEAndSManagementPlans: [["PS1", "PS4", "PS5"]],
+        developmentFeasibilityClass: ["Challenging", "Challenging"],
       },
       {
         projectName: "Labang",
@@ -1095,6 +1126,7 @@ export const clusterDetails: ClusterDetail[] = [
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
         ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
         keyEAndSManagementPlans: [["PS1", "PS4", "PS5"]],
+        developmentFeasibilityClass: ["Favourable"],
       },
       {
         projectName: "Long Layu",
@@ -1130,6 +1162,7 @@ export const clusterDetails: ClusterDetail[] = [
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
         ifcRiskCategory: [["Category B - Enhanced management required"]],
         keyEAndSManagementPlans: [["PS1", "PS4", "PS5"]],
+        developmentFeasibilityClass: ["Challenging"],
       },
       {
         projectName: "Pa Upan",
@@ -1165,6 +1198,7 @@ export const clusterDetails: ClusterDetail[] = [
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
         ifcRiskCategory: [["Category B - Enhanced management required"]],
         keyEAndSManagementPlans: [["PS1", "PS4", "PS5"]],
+        developmentFeasibilityClass: ["Challenging"],
       },
       {
         projectName: "Sei Menggaris",
@@ -1200,6 +1234,7 @@ export const clusterDetails: ClusterDetail[] = [
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
         ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
         keyEAndSManagementPlans: [["PS1", "PS4", "PS5"]],
+        developmentFeasibilityClass: ["Favourable"],
       },
       {
         projectName: "Tanah Merah",
@@ -1235,6 +1270,7 @@ export const clusterDetails: ClusterDetail[] = [
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
         ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
         keyEAndSManagementPlans: [["PS1", "PS4", "PS5"]],
+        developmentFeasibilityClass: ["Favourable"],
       },
     ],
   },
@@ -1275,6 +1311,7 @@ export const clusterDetails: ClusterDetail[] = [
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
         ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
         keyEAndSManagementPlans: [["PS1", "PS4", "PS5"]],
+        developmentFeasibilityClass: ["Favourable"],
       },
       {
         projectName: "Bebalang",
@@ -1310,6 +1347,7 @@ export const clusterDetails: ClusterDetail[] = [
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
         ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
         keyEAndSManagementPlans: [["PS1", "PS4", "PS5"]],
+        developmentFeasibilityClass: ["Moderate"],
       },
       {
         projectName: "Makalehi",
@@ -1363,11 +1401,12 @@ export const clusterDetails: ClusterDetail[] = [
           ["PS1", "PS4", "PS5"],
           ["PS1", "PS4", "PS5"],
         ],
+        developmentFeasibilityClass: ["Favourable", "Moderate"],
       },
       {
         projectName: "Tarun",
         cluster: "Sulawesi",
-        capacity: 8.900,
+        capacity: 8.9,
         coordinates: [{ lat: 4.07457, lng: 126.69772 }],
         landSize: 10.203, // 10,203 → disesuaikan
         pltdDist: ["250"],
@@ -1398,6 +1437,7 @@ export const clusterDetails: ClusterDetail[] = [
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
         ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
         keyEAndSManagementPlans: [["PS1", "PS4", "PS5"]],
+        developmentFeasibilityClass: ["Favourable"],
       },
       {
         projectName: "Kalama",
@@ -1433,6 +1473,7 @@ export const clusterDetails: ClusterDetail[] = [
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
         ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
         keyEAndSManagementPlans: [["PS1", "PS4", "PS5"]],
+        developmentFeasibilityClass: ["Favourable"],
       },
       {
         projectName: "Mahengetang",
@@ -1468,11 +1509,12 @@ export const clusterDetails: ClusterDetail[] = [
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
         ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
         keyEAndSManagementPlans: [["PS1", "PS4", "PS5"]],
+        developmentFeasibilityClass: ["Moderate"],
       },
       {
         projectName: "Siau",
         cluster: "Sulawesi",
-        capacity: 5.560,
+        capacity: 5.56,
         coordinates: [{ lat: 2.76063, lng: 125.37924 }],
         landSize: 6.1155,
         pltdDist: ["2000"],
@@ -1491,7 +1533,7 @@ export const clusterDetails: ClusterDetail[] = [
         distRoad: ["100"],
         distCoast: ["2100"],
         landUseSensitivity: [["Farmland", "Forest"]],
-        registerLand: [7,9],
+        registerLand: [7, 9],
         disputedLand: ["No"],
         stateForesty: ["No"],
         forestMoratorium: ["No"],
@@ -1503,11 +1545,12 @@ export const clusterDetails: ClusterDetail[] = [
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
         ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
         keyEAndSManagementPlans: [["PS1", "PS4", "PS5"]],
+        developmentFeasibilityClass: ["Moderate"],
       },
       {
         projectName: "Bangkurung",
         cluster: "Sulawesi",
-        capacity: 1.320,
+        capacity: 1.32,
         coordinates: [{ lat: -1.91343, lng: 123.08117 }],
         landSize: 2.0574,
         pltdDist: ["920"],
@@ -1538,6 +1581,7 @@ export const clusterDetails: ClusterDetail[] = [
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
         ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
         keyEAndSManagementPlans: [["PS1", "PS4", "PS5"]],
+        developmentFeasibilityClass: ["Favourable"],
       },
       {
         projectName: "Siladen",
@@ -1573,6 +1617,7 @@ export const clusterDetails: ClusterDetail[] = [
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
         ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
         keyEAndSManagementPlans: [["PS1", "PS4", "PS5"]],
+        developmentFeasibilityClass: ["Moderate"],
       },
     ],
   },
@@ -1582,7 +1627,7 @@ export const clusterDetails: ClusterDetail[] = [
       {
         projectName: "Waibalun",
         cluster: "NTT",
-        capacity: 9.360,
+        capacity: 9.36,
         coordinates: [{ lat: -8.31703, lng: 122.91943 }],
         landSize: 27.7383, // dari 27,7383 → disesuaikan
         pltdDist: ["3200"],
@@ -1613,6 +1658,7 @@ export const clusterDetails: ClusterDetail[] = [
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
         ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
         keyEAndSManagementPlans: [["PS1", "PS4", "PS5"]],
+        developmentFeasibilityClass: ["Favourable"],
       },
     ],
   },
@@ -1622,7 +1668,7 @@ export const clusterDetails: ClusterDetail[] = [
       {
         projectName: "Letwurung",
         cluster: "Maluku",
-        capacity: 1.600,
+        capacity: 1.6,
         coordinates: [{ lat: -7.90104, lng: 129.86183 }],
         landSize: 5, // dari 5 → disesuaikan (misal ha → m²)
         pltdDist: ["300"],
@@ -1653,6 +1699,7 @@ export const clusterDetails: ClusterDetail[] = [
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
         ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
         keyEAndSManagementPlans: [["PS1", "PS4", "PS5"]],
+        developmentFeasibilityClass: ["Favourable"],
       },
       {
         projectName: "Kedi",
@@ -1688,6 +1735,7 @@ export const clusterDetails: ClusterDetail[] = [
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
         ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
         keyEAndSManagementPlans: [["PS1", "PS4", "PS5"]],
+        developmentFeasibilityClass: ["Favourable"],
       },
       {
         projectName: "Dagasuli",
@@ -1723,6 +1771,7 @@ export const clusterDetails: ClusterDetail[] = [
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
         ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
         keyEAndSManagementPlans: [["PS1", "PS4", "PS5"]],
+        developmentFeasibilityClass: ["Favourable"],
       },
       {
         projectName: "Dama",
@@ -1759,11 +1808,12 @@ export const clusterDetails: ClusterDetail[] = [
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
         ifcRiskCategory: [["Category B - Enhanced management required"]],
         keyEAndSManagementPlans: [["PS1", "PS4", "PS5"]],
+        developmentFeasibilityClass: ["Challenging"],
       },
       {
         projectName: "Lonthoir",
         cluster: "Maluku",
-        capacity: 1.150,
+        capacity: 1.15,
         coordinates: [{ lat: -4.5475, lng: 129.89515 }],
         landSize: 2.7649,
         pltdDist: ["150"],
@@ -1794,14 +1844,13 @@ export const clusterDetails: ClusterDetail[] = [
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
         ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
         keyEAndSManagementPlans: [["PS1", "PS4", "PS5"]],
+        developmentFeasibilityClass: ["Favourable"],
       },
       {
         projectName: "Saparua",
         cluster: "Maluku",
         capacity: 3.274,
-        coordinates: [
-          { lat: -3.57365, lng: 128.64346 },
-        ],
+        coordinates: [{ lat: -3.57365, lng: 128.64346 }],
         landSize: 8.44,
         pltdDist: ["142", "685"],
 
@@ -1843,6 +1892,7 @@ export const clusterDetails: ClusterDetail[] = [
           ["PS1", "PS4", "PS5"],
           ["PS1", "PS4", "PS5"],
         ],
+        developmentFeasibilityClass: ["Favourable", "Favourable"],
       },
       {
         projectName: "Wahai",
@@ -1878,6 +1928,7 @@ export const clusterDetails: ClusterDetail[] = [
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
         ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
         keyEAndSManagementPlans: [["PS1", "PS4", "PS5"]],
+        developmentFeasibilityClass: ["Favourable"],
       },
       {
         projectName: "Weda",
@@ -1913,6 +1964,7 @@ export const clusterDetails: ClusterDetail[] = [
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
         ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
         keyEAndSManagementPlans: [["PS1", "PS4", "PS5"]],
+        developmentFeasibilityClass: ["Moderate"],
       },
     ],
   },

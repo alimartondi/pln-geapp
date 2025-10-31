@@ -50,6 +50,7 @@ export type ClusterDetail = {
     preliminaryNegativeImpacts: string[][];
     ifcRiskCategory: string[][];
     keyEAndSManagementPlans: string[][];
+    developmentFeasibilityClass: string[];
   }[];
 };
 
@@ -90,4 +91,5 @@ export type ClusterTableRow = {
   preliminaryNegativeImpacts: string[][];
   ifcRiskCategory: string[][];
   keyEAndSManagementPlans: string[][];
+  developmentFeasibilityClass: string[];
 };

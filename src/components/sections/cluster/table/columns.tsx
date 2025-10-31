@@ -586,6 +586,39 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
           );
         },
       },
+      {
+        accessorKey: "developmentFeasibilityClass",
+        header: () => (
+          <span className="block">
+            Development <br /> Feasibility Class
+          </span>
+        ),
+        cell: ({ row }) => {
+          const development = row.original.developmentFeasibilityClass;
+
+          // mapping label → class Tailwind
+          const colorVariants: Record<string, string> = {
+            Favourable: "bg-success-foreground",
+            Moderate: "bg-warning-foreground",
+            Challenging: "bg-orange-300",
+          };
+
+          return (
+            <div className="flex flex-col gap-4 divide-y">
+              {development.map((d: string, i: number) => (
+                <div className="flex gap-2 items-center first:pb-4" key={i}>
+                  <div
+                    className={`w-3 h-3 rounded-full mb-px ${
+                      colorVariants[d] || "bg-error-foreground"
+                    }`}
+                  ></div>
+                  <span className="uppercase">{d}</span>
+                </div>
+              ))}
+            </div>
+          );
+        },
+      },
     ],
   },
 ];
