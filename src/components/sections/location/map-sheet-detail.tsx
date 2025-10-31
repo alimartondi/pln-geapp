@@ -149,7 +149,7 @@ export default function MapSheetDetail({
                         <span className="text-muted-foreground text-sm">
                           Land Registration
                         </span>
-                        <Badge variant={"error"}>Tier 4</Badge>
+                        <Badge variant={"error"}>Tier 3</Badge>
                       </div>
                       <div className="flex justify-between">
                         <span className="text-muted-foreground text-sm">

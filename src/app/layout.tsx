@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
-import "./globals.css";
-import { ThemeProvider } from "@/components/theme/theme-provider";
 import Header from "@/components/layouts/header";
 import Footer from "@/components/layouts/footer";
 
+import { ThemeProvider } from "@/components/theme/theme-provider";
+import { MetaThemeColor } from "@/components/theme/meta-theme-color";
+
+import "./globals.css";
 import "leaflet/dist/leaflet.css";
 
 const roboto = Roboto({
@@ -12,11 +14,6 @@ const roboto = Roboto({
   display: "swap",
   style: "normal",
 });
-
-// const geistMono = Geist_Mono({
-//   variable: "--font-geist-mono",
-//   subsets: ["latin"],
-// });
 
 export const metadata: Metadata = {
   title: "PLN | Diesel Replacement Program",
@@ -40,6 +37,7 @@ export default function RootLayout({
             disableTransitionOnChange
           >
             <Header />
+            <MetaThemeColor />
             <main>{children}</main>
             <Footer />
           </ThemeProvider>
