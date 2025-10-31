@@ -123,8 +123,8 @@ export default function Map() {
                         onClick={() => handleDownload(info)}
                         disabled={downloading}
                       >
-                        {downloading ? "Downloading..." : "Download Site Image"}
-                        <FileDown />
+                        {downloading ? "Downloading..." : "Download"}
+                        {/* <FileDown /> */}
                       </Button>
                     </div>
                   </div>
