@@ -1,29 +1,33 @@
 "use client";
 
-import { useEffect } from "react";
 import { useTheme } from "next-themes";
+import { useEffect } from "react";
 
+/**
+ * Mengatur warna <meta name="theme-color">
+ * agar mengikuti theme (light/dark/system) secara real-time.
+ */
 export function MetaThemeColor() {
-  const { theme, systemTheme } = useTheme();
+  const { theme, resolvedTheme } = useTheme();
 
   useEffect(() => {
-    const meta = document.querySelector('meta[name="theme-color"]');
+    // Tentukan warna sesuai theme
+    const color =
+      resolvedTheme === "dark"
+        ? "#09090b" // background dark
+        : "#ffffff"; // background light
 
-    // Pastikan tag meta ada, kalau belum kita buat
+    // Ambil atau buat meta tag
+    let meta = document.querySelector('meta[name="theme-color"]');
     if (!meta) {
-      const newMeta = document.createElement("meta");
-      newMeta.name = "theme-color";
-      document.head.appendChild(newMeta);
+      meta = document.createElement("meta");
+      meta.setAttribute("name", "theme-color");
+      document.head.appendChild(meta);
     }
 
-    const currentTheme = theme === "system" ? systemTheme : theme;
-
-    // Warna hex sesuai mode
-    const color = currentTheme === "dark" ? "#0a0a0a" : "#ffffff";
-    document
-      .querySelector('meta[name="theme-color"]')
-      ?.setAttribute("content", color);
-  }, [theme, systemTheme]);
+    // Set warna theme
+    meta.setAttribute("content", color);
+  }, [theme, resolvedTheme]);
 
   return null;
 }
