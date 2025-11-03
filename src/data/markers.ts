@@ -10,8 +10,7 @@ export const Markers: MarkerData[] = [
     landSize: "1.4253 hectares",
     status: "Confirmed",
     region: "Riau & Kepri",
-    image:
-      "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Riau_Kepri/PLTD_Sungai_Bela.pdf",
+    pdf: "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Riau_Kepri/PLTD_Sungai_Bela.pdf",
   },
   {
     id: 2,
@@ -22,8 +21,7 @@ export const Markers: MarkerData[] = [
     landSize: "0.7302 hectares",
     status: "Planned",
     region: "Riau & Kepri",
-    image:
-      "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Riau_Kepri/PLTD_Sungai_Buluh.pdf",
+    pdf: "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Riau_Kepri/PLTD_Sungai_Buluh.pdf",
   },
   {
     id: 3,
@@ -34,8 +32,7 @@ export const Markers: MarkerData[] = [
     landSize: "0.8759 hectares",
     status: "Pending",
     region: "Riau & Kepri",
-    image:
-      "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Riau_Kepri/PLTD_Sungai_laut.pdf",
+    pdf: "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Riau_Kepri/PLTD_Sungai_laut.pdf",
   },
   {
     id: 4,
@@ -46,8 +43,7 @@ export const Markers: MarkerData[] = [
     landSize: "0.85 hectares",
     status: "Confirmed",
     region: "Riau & Kepri",
-    image:
-      "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Riau_Kepri/PLTD_Tanjung_Pasir.pdf",
+    pdf: "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Riau_Kepri/PLTD_Tanjung_Pasir.pdf",
   },
   {
     id: 5,
@@ -58,8 +54,7 @@ export const Markers: MarkerData[] = [
     landSize: "2.1915 hectares",
     status: "Planned",
     region: "Riau & Kepri",
-    image:
-      "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Riau_Kepri/PLTD_Alai.pdf",
+    pdf: "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Riau_Kepri/PLTD_Alai.pdf",
   },
   {
     id: 6,
@@ -70,8 +65,7 @@ export const Markers: MarkerData[] = [
     landSize: "2.2767 hectares",
     status: "Pending",
     region: "Riau & Kepri",
-    image:
-      "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Riau_Kepri/PLTD_Teluk_Lanus.pdf",
+    pdf: "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Riau_Kepri/PLTD_Teluk_Lanus.pdf",
   },
   {
     id: 7,
@@ -82,8 +76,7 @@ export const Markers: MarkerData[] = [
     landSize: "10.4892 hectares",
     status: "Confirmed",
     region: "Riau & Kepri",
-    image:
-      "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Riau_Kepri/PLTD_Daek_Lingga.pdf",
+    pdf: "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Riau_Kepri/PLTD_Daek_Lingga.pdf",
   },
   {
     id: 8,
@@ -94,7 +87,7 @@ export const Markers: MarkerData[] = [
     landSize: "10.1602 hectares",
     status: "Planned",
     region: "Riau & Kepri",
-    image: "/images/pltd-images/pltd-ladan-zoom.webp",
+    pdf: "/images/pltd-images/pltd-ladan-zoom.webp",
   },
   {
     id: 9,
@@ -105,8 +98,7 @@ export const Markers: MarkerData[] = [
     landSize: "2.5802 hectares",
     status: "Pending",
     region: "Riau & Kepri",
-    image:
-      "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Riau_Kepri/PLTD_Tarempa.pdf",
+    pdf: "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Riau_Kepri/PLTD_Tarempa.pdf",
   },
   {
     id: 10,
@@ -117,8 +109,7 @@ export const Markers: MarkerData[] = [
     landSize: "5.6853 hectares",
     status: "Confirmed",
     region: "Riau & Kepri",
-    image:
-      "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Riau_Kepri/PLTD_Penarah.pdf",
+    pdf: "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Riau_Kepri/PLTD_Penarah.pdf",
   },
   {
     id: 11,
@@ -129,8 +120,7 @@ export const Markers: MarkerData[] = [
     landSize: "3.0091 hectares",
     status: "Planned",
     region: "Riau & Kepri",
-    image:
-      "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Riau_Kepri/PLTD_Penuba.pdf",
+    pdf: "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Riau_Kepri/PLTD_Penuba.pdf",
   },
   {
     id: 12,
@@ -141,8 +131,7 @@ export const Markers: MarkerData[] = [
     landSize: "1.1717 hectares",
     status: "Pending",
     region: "Riau & Kepri",
-    image:
-      "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Riau_Kepri/PLTD_Pangkil.pdf",
+    pdf: "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Riau_Kepri/PLTD_Pangkil.pdf",
   },
   {
     id: 13,
@@ -153,8 +142,7 @@ export const Markers: MarkerData[] = [
     landSize: "2.251 hectares",
     status: "Confirmed",
     region: "Riau & Kepri",
-    image:
-      "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Riau_Kepri/PLTD_Desa_nyamuk.pdf",
+    pdf: "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Riau_Kepri/PLTD_Desa_nyamuk.pdf",
   },
   {
     id: 14,
@@ -165,8 +153,7 @@ export const Markers: MarkerData[] = [
     landSize: "0.5505 hectares",
     status: "Pending",
     region: "Riau & Kepri",
-    image:
-      "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Riau_Kepri/PLTD_Mubur.pdf",
+    pdf: "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Riau_Kepri/PLTD_Mubur.pdf",
   },
   {
     id: 15,
@@ -177,7 +164,7 @@ export const Markers: MarkerData[] = [
     landSize: "0.3949 hectares",
     status: "Planned",
     region: "Riau & Kepri",
-    image: "/images/pltd-images/pltd-sanglar-zoom.webp",
+    pdf: "/images/pltd-images/pltd-sanglar-zoom.webp",
   },
   {
     id: 16,
@@ -188,8 +175,7 @@ export const Markers: MarkerData[] = [
     landSize: "2.2041 hectares",
     status: "Confirmed",
     region: "Riau & Kepri",
-    image:
-      "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Riau_Kepri/PLTD_Buluh_Patah.pdf",
+    pdf: "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Riau_Kepri/PLTD_Buluh_Patah.pdf",
   },
   {
     id: 17,
@@ -200,8 +186,7 @@ export const Markers: MarkerData[] = [
     landSize: "0.3976 hectares",
     status: "Pending",
     region: "Riau & Kepri",
-    image:
-      "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Riau_Kepri/PLTD_Ngal.pdf",
+    pdf: "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Riau_Kepri/PLTD_Ngal.pdf",
   },
   {
     id: 18,
@@ -212,8 +197,7 @@ export const Markers: MarkerData[] = [
     landSize: "1.0355 hectares",
     status: "Confirmed",
     region: "Riau & Kepri",
-    image:
-      "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Riau_Kepri/PLTD_Pulau_Duyung.pdf",
+    pdf: "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Riau_Kepri/PLTD_Pulau_Duyung.pdf",
   },
   {
     id: 19,
@@ -224,8 +208,7 @@ export const Markers: MarkerData[] = [
     landSize: "0.952 hectares",
     status: "Planned",
     region: "Riau & Kepri",
-    image:
-      "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Riau_Kepri/PLTD_Pulau_Bukit.pdf",
+    pdf: "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Riau_Kepri/PLTD_Pulau_Bukit.pdf",
   },
   {
     id: 20,
@@ -236,8 +219,7 @@ export const Markers: MarkerData[] = [
     landSize: "1.5132 hectares",
     status: "Pending",
     region: "Riau & Kepri",
-    image:
-      "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Riau_Kepri/PLTD_Impol.pdf",
+    pdf: "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Riau_Kepri/PLTD_Impol.pdf",
   },
   {
     id: 21,
@@ -248,8 +230,7 @@ export const Markers: MarkerData[] = [
     landSize: "10.9121 hectares",
     status: "Confirmed",
     region: "Riau & Kepri",
-    image:
-      "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Riau_Kepri/PLTD_Dabo_singkep.pdf",
+    pdf: "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Riau_Kepri/PLTD_Dabo_singkep.pdf",
   },
   {
     id: 22,
@@ -260,8 +241,7 @@ export const Markers: MarkerData[] = [
     landSize: "0.9104 hectares",
     status: "Pending",
     region: "Riau & Kepri",
-    image:
-      "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Riau_Kepri/PLTD_Berhala.pdf",
+    pdf: "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Riau_Kepri/PLTD_Berhala.pdf",
   },
   {
     id: 23,
@@ -272,8 +252,7 @@ export const Markers: MarkerData[] = [
     landSize: "1.1491 hectares",
     status: "Planned",
     region: "Riau & Kepri",
-    image:
-      "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Riau_Kepri/PLTD_Belibak.pdf",
+    pdf: "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Riau_Kepri/PLTD_Belibak.pdf",
   },
   {
     id: 24,
@@ -284,7 +263,7 @@ export const Markers: MarkerData[] = [
     landSize: "1.2346 hectares",
     status: "Confirmed",
     region: "Riau & Kepri",
-    image: "/images/pltd-images/pltd-air-putih-zoom.webp",
+    pdf: "/images/pltd-images/pltd-air-putih-zoom.webp",
   },
   {
     id: 25,
@@ -295,7 +274,7 @@ export const Markers: MarkerData[] = [
     landSize: "24.5 hectares",
     status: "Planned",
     region: "Riau & Kepri",
-    image: "/images/pltd-images/pltd-kundur-zoom.webp",
+    pdf: "/images/pltd-images/pltd-kundur-zoom.webp",
   },
   {
     id: 26,
@@ -306,8 +285,7 @@ export const Markers: MarkerData[] = [
     landSize: "4.7795 hectares",
     status: "Confirmed",
     region: "Kalimantan",
-    image:
-      "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Kalimantan/PLTD_Jongkong.pdf",
+    pdf: "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Kalimantan/PLTD_Jongkong.pdf",
   },
   {
     id: 27,
@@ -318,8 +296,7 @@ export const Markers: MarkerData[] = [
     landSize: "3.0438 hectares",
     status: "Pending",
     region: "Kalimantan",
-    image:
-      "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Kalimantan/PLTD_Kayan_Hulu.pdf",
+    pdf: "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Kalimantan/PLTD_Kayan_Hulu.pdf",
   },
   {
     id: 28,
@@ -330,8 +307,7 @@ export const Markers: MarkerData[] = [
     landSize: "0.9674 hectares",
     status: "Planned",
     region: "Kalimantan",
-    image:
-      "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Kalimantan/PLTD_Labang.pdf",
+    pdf: "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Kalimantan/PLTD_Labang.pdf",
   },
   {
     id: 29,
@@ -342,8 +318,7 @@ export const Markers: MarkerData[] = [
     landSize: "1.2228 hectares",
     status: "Confirmed",
     region: "Kalimantan",
-    image:
-      "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Kalimantan/PLTD_Long_layu.pdf",
+    pdf: "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Kalimantan/PLTD_Long_layu.pdf",
   },
   {
     id: 30,
@@ -354,8 +329,7 @@ export const Markers: MarkerData[] = [
     landSize: "1.4788 hectares",
     status: "Planned",
     region: "Kalimantan",
-    image:
-      "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Kalimantan/PLTD_Pa_Upan.pdf",
+    pdf: "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Kalimantan/PLTD_Pa_Upan.pdf",
   },
   {
     id: 31,
@@ -366,8 +340,7 @@ export const Markers: MarkerData[] = [
     landSize: "4.4966 hectares",
     status: "Pending",
     region: "Kalimantan",
-    image:
-      "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Kalimantan/PLTD_Sei_Menggaris.pdf",
+    pdf: "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Kalimantan/PLTD_Sei_Menggaris.pdf",
   },
   {
     id: 32,
@@ -378,7 +351,7 @@ export const Markers: MarkerData[] = [
     landSize: "4.0598 hectares",
     status: "Confirmed",
     region: "Kalimantan",
-    image: "/images/pltd-images/pltd-tanah-merah-zoom.webp",
+    pdf: "/images/pltd-images/pltd-tanah-merah-zoom.webp",
   },
   {
     id: 33,
@@ -389,8 +362,7 @@ export const Markers: MarkerData[] = [
     landSize: "0.7402 hectares",
     status: "Pending",
     region: "North Sulawesi",
-    image:
-      "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Sulawesi/https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Sulawesi/PLTD_Salingkere.pdf",
+    pdf: "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Sulawesi/https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Sulawesi/PLTD_Salingkere.pdf",
   },
   {
     id: 34,
@@ -401,8 +373,7 @@ export const Markers: MarkerData[] = [
     landSize: "1.0453 hectares",
     status: "Planned",
     region: "North Sulawesi",
-    image:
-      "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Sulawesi/PLTD_Bebalang.pdf",
+    pdf: "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Sulawesi/PLTD_Bebalang.pdf",
   },
   {
     id: 35,
@@ -413,8 +384,7 @@ export const Markers: MarkerData[] = [
     landSize: "2.7737 hectares",
     status: "Confirmed",
     region: "North Sulawesi",
-    image:
-      "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Sulawesi/PLTD_Makalehi.pdf",
+    pdf: "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Sulawesi/PLTD_Makalehi.pdf",
   },
   {
     id: 36,
@@ -425,8 +395,7 @@ export const Markers: MarkerData[] = [
     landSize: "1.2 hectares",
     status: "Pending",
     region: "North Sulawesi",
-    image:
-      "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Sulawesi/PLTD_Kalama.pdf",
+    pdf: "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Sulawesi/PLTD_Kalama.pdf",
   },
   {
     id: 37,
@@ -437,8 +406,7 @@ export const Markers: MarkerData[] = [
     landSize: "1.4987 hectares",
     status: "Planned",
     region: "North Sulawesi",
-    image:
-      "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Sulawesi/PLTD_Mahengetang.pdf",
+    pdf: "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Sulawesi/PLTD_Mahengetang.pdf",
   },
   {
     id: 38,
@@ -449,8 +417,7 @@ export const Markers: MarkerData[] = [
     landSize: "6.1155 hectares",
     status: "Confirmed",
     region: "North Sulawesi",
-    image:
-      "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Sulawesi/PLTD_Siau.pdf",
+    pdf: "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Sulawesi/PLTD_Siau.pdf",
   },
   {
     id: 39,
@@ -461,8 +428,7 @@ export const Markers: MarkerData[] = [
     landSize: "2.0574 hectares",
     status: "Pending",
     region: "North Sulawesi",
-    image:
-      "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Sulawesi/PLTD_Bangkurung.pdf",
+    pdf: "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Sulawesi/PLTD_Bangkurung.pdf",
   },
   {
     id: 40,
@@ -473,8 +439,7 @@ export const Markers: MarkerData[] = [
     landSize: "1.3236 hectares",
     status: "Planned",
     region: "North Sulawesi",
-    image:
-      "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Sulawesi/PLTD_Siladen.pdf",
+    pdf: "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Sulawesi/PLTD_Siladen.pdf",
   },
   {
     id: 41,
@@ -485,8 +450,7 @@ export const Markers: MarkerData[] = [
     landSize: "27.7383 hectares",
     status: "Confirmed",
     region: "NTT",
-    image:
-      "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/NTT/NTT_Waibalun.pdf",
+    pdf: "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/NTT/NTT_Waibalun.pdf",
   },
   {
     id: 42,
@@ -497,8 +461,7 @@ export const Markers: MarkerData[] = [
     landSize: "2.3641 hectares",
     status: "Planned",
     region: "Maluku",
-    image:
-      "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Maluku/PLTD_Kedi.pdf",
+    pdf: "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Maluku/PLTD_Kedi.pdf",
   },
   {
     id: 43,
@@ -509,8 +472,7 @@ export const Markers: MarkerData[] = [
     landSize: "4.8357 hectares",
     status: "Pending",
     region: "Maluku",
-    image:
-      "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Maluku/PLTD_Dagasuli.pdf",
+    pdf: "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Maluku/PLTD_Dagasuli.pdf",
   },
   {
     id: 44,
@@ -521,8 +483,7 @@ export const Markers: MarkerData[] = [
     landSize: "2.3392 hectares",
     status: "Confirmed",
     region: "Maluku",
-    image:
-      "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Maluku/PLTD_Dama.pdf",
+    pdf: "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Maluku/PLTD_Dama.pdf",
   },
   {
     id: 45,
@@ -533,8 +494,7 @@ export const Markers: MarkerData[] = [
     landSize: "2.7649 hectares",
     status: "Pending",
     region: "Maluku",
-    image:
-      "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Maluku/PLTD_Lonthoir.pdf",
+    pdf: "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Maluku/PLTD_Lonthoir.pdf",
   },
   {
     id: 46,
@@ -545,8 +505,7 @@ export const Markers: MarkerData[] = [
     landSize: "8.44 hectares",
     status: "Planned",
     region: "Maluku",
-    image:
-      "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Maluku/PLTD_Saparua.pdf",
+    pdf: "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Maluku/PLTD_Saparua.pdf",
   },
   {
     id: 47,
@@ -557,8 +516,7 @@ export const Markers: MarkerData[] = [
     landSize: "12.6698 hectares",
     status: "Confirmed",
     region: "Maluku",
-    image:
-      "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Maluku/PLTD_Wahai.pdf",
+    pdf: "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Maluku/PLTD_Wahai.pdf",
   },
 
   {
@@ -570,8 +528,7 @@ export const Markers: MarkerData[] = [
     landSize: "2,7737 hectares",
     status: "Confirmed",
     region: "Sulawesi",
-    image:
-      "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Sulawesi/PLTD_Tarun.pdf",
+    pdf: "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Sulawesi/PLTD_Tarun.pdf",
   },
   {
     id: 49,
@@ -582,8 +539,7 @@ export const Markers: MarkerData[] = [
     landSize: "25 hectares",
     status: "Confirmed",
     region: "Maluku",
-    image:
-      "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Maluku/PLTD_Weda.pdf",
+    pdf: "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Maluku/PLTD_Weda.pdf",
   },
   {
     id: 50,
@@ -594,7 +550,6 @@ export const Markers: MarkerData[] = [
     landSize: "5 hectares",
     status: "Confirmed",
     region: "Maluku",
-    image:
-      "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Maluku/PLTD_Letwurung.pdf",
+    pdf: "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Maluku/PLTD_Letwurung.pdf",
   },
 ];

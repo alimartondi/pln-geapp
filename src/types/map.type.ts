@@ -7,5 +7,5 @@ export interface MarkerData {
   landSize: string;
   status: "Confirmed" | "Pending" | "Cancelled" | "Planned";
   region: string;
-  image: string;
+  pdf: string;
 }

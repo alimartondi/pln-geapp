@@ -28,18 +28,40 @@ export default function Map() {
   const [geoData, setGeoData] = useState<FeatureCollection | null>(null);
   const [downloading, setDownloading] = useState(false);
 
-  const handleDownload = (marker: MarkerData) => {
+  const handleDownload = async (marker: MarkerData) => {
     if (downloading) return;
     setDownloading(true);
 
-    const link = document.createElement("a");
-    link.href = marker.image;
-    link.download = `${marker.name}.webp`;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    try {
+      // Ambil nama file dari URL (contoh: PLTD_Jongkong.pdf)
+      const urlParts = marker.pdf.split("/");
+      const fileName = urlParts[urlParts.length - 1]; // ambil bagian terakhir URL
 
-    setTimeout(() => setDownloading(false), 2000);
+      // Panggil API proxy dengan file name & URL
+      const response = await fetch(
+        `/api/proxy-pdf?url=${encodeURIComponent(
+          marker.pdf
+        )}&name=${encodeURIComponent(fileName)}`
+      );
+
+      if (!response.ok) throw new Error("Gagal mengambil file PDF");
+
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(blob);
+
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = fileName; // nama dari URL
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+
+      window.URL.revokeObjectURL(url);
+    } catch (error) {
+      console.error("Gagal mengunduh PDF:", error);
+    } finally {
+      setTimeout(() => setDownloading(false), 2000);
+    }
   };
 
   useEffect(() => {
