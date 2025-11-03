@@ -38,7 +38,7 @@ export default function ClusterDetailSheet({ cluster, onClose }: Props) {
         </SheetHeader>
 
         <div className="px-4 pb-4 space-y-6 overflow-y-auto">
-          <Card>
+          {/* <Card>
             <CardHeader>
               <CardTitle>Statistic</CardTitle>
             </CardHeader>
@@ -79,7 +79,7 @@ export default function ClusterDetailSheet({ cluster, onClose }: Props) {
                 </div>
               </div>
             </CardContent>
-          </Card>
+          </Card> */}
 
           {/* Data Table */}
           <DataTable<ClusterTableRow, unknown>
