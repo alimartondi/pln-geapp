@@ -63,13 +63,8 @@ export default function DataTableSectionFilter<TData>({
 
   useEffect(() => {
     if (groups.length > 0 && !isInitialized) {
-      // Use the first available group as default, or "project_overview" if it exists
-      const availableGroupIds = groups.map((g) => g.id);
-      const defaultSections = availableGroupIds.includes("project_overview")
-        ? ["project_overview"]
-        : availableGroupIds.length > 0
-        ? [availableGroupIds[0]]
-        : [];
+      // Default to showing all sections (empty array means all visible)
+      const defaultSections: string[] = [];
 
       setSelectedSections(defaultSections);
       applyFiltering(defaultSections);
