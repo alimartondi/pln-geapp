@@ -87,7 +87,7 @@ export const Markers: MarkerData[] = [
     landSize: "10.1602 hectares",
     status: "Planned",
     region: "Riau & Kepri",
-    pdf: "/images/pltd-images/pltd-ladan-zoom.webp",
+    pdf: "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/PLTD_Ladan.pdf",
   },
   {
     id: 9,
@@ -186,7 +186,7 @@ export const Markers: MarkerData[] = [
     landSize: "0.3976 hectares",
     status: "Pending",
     region: "Riau & Kepri",
-    pdf: "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Riau_Kepri/PLTD_Ngal.pdf",
+    pdf: "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/PLTD_Ngal.pdf",
   },
   {
     id: 18,
@@ -252,7 +252,7 @@ export const Markers: MarkerData[] = [
     landSize: "1.1491 hectares",
     status: "Planned",
     region: "Riau & Kepri",
-    pdf: "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Riau_Kepri/PLTD_Belibak.pdf",
+    pdf: "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/PLTD_Belibak.pdf",
   },
   {
     id: 24,
@@ -340,7 +340,7 @@ export const Markers: MarkerData[] = [
     landSize: "4.4966 hectares",
     status: "Pending",
     region: "Kalimantan",
-    pdf: "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/Kalimantan/PLTD_Sei_Menggaris.pdf",
+    pdf: "https://eria-archive-media-library.sgp1.cdn.digitaloceanspaces.com/pln/PLTD_Sei_Menggaris.pdf",
   },
   {
     id: 32,
