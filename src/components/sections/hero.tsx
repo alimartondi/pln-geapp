@@ -79,10 +79,8 @@ export default function Hero() {
             <div className="absolute inset-0 flex items-center justify-center z-10">
               <div className="p-6 space-y-2 w-full text-white">
                 <h2 className="relative text-4xl lg:text-5xl font-bold">
-                  <AnimatedCounter start={0} end={54902} duration={2000} />
-                  <span className="absolute text-xs bg-tertiary px-1 py-.5 text-gray-900 rounded ml-1">
-                    kWh
-                  </span>
+                  <AnimatedCounter start={0} end={139} duration={2000} />
+                  <span className="ml-2">MW</span>
                 </h2>
                 <span className="block">Total Capacity</span>
               </div>
