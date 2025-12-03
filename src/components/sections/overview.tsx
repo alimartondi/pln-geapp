@@ -9,7 +9,7 @@ export default function Overview() {
         className="container-wrapper flex flex-col lg:flex-row gap-4 lg:gap-8"
       >
         <div className="w-full lg:w-4/12">
-          <h3 className="font-semibold">
+          <h3 className="font-semibold sticky top-28">
             <span className="relative  inline-flex size-3 mr-2">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75"></span>
               <span className="relative inline-flex size-3 rounded-full bg-primary"></span>
@@ -20,8 +20,9 @@ export default function Overview() {
         <div className="w-full lg:w-8/12 grid grid-cols-1 gap-6 lg:gap-12">
           <div className="space-y-4">
             <h2 className="text-3xl font-semibold lg:text-4xl lg:leading-tight">
-              In partnership with PLN, GEAPP is bringing 50 island microgrid
-              projects to market—ready for private investment.
+              In partnership with PLN, the Global Energy Alliance for People &
+              Planet is bringing 52 island microgrid projects to market—ready
+              for private investment.
             </h2>
             <p className="max-w-2xl text-pretty">
               The program bridges financing gaps, reduces risk, and delivers

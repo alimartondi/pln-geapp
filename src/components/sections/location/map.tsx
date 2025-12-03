@@ -180,7 +180,21 @@ export default function Map() {
 
                       <div className="flex flex-col gap-3">
                         <div className="flex justify-between items-center">
-                          <span className="text-sm">Capacity</span>
+                          <span className="text-sm">PLTD Capacity</span>
+                          <span className="text-sm font-semibold">
+                            {info.capacity}
+                          </span>
+                        </div>
+
+                        <div className="flex justify-between items-center">
+                          <span className="text-sm">Peak Load</span>
+                          <span className="text-sm font-semibold">
+                            {info.capacity}
+                          </span>
+                        </div>
+
+                        <div className="flex justify-between items-center">
+                          <span className="text-sm">GHI</span>
                           <span className="text-sm font-semibold">
                             {info.capacity}
                           </span>

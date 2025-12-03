@@ -14,8 +14,7 @@ export default function Hero() {
                 Driving a Greener Indonesia: The Diesel Replacement Program
               </h1>
               <p className="text-lg text-pretty">
-                Your gateway to 50 bankable renewable projects across
-                Indonesia&apos;s islands.
+                Your gateway to 52 renewable energy projects across Indonesia.
               </p>
 
               <ScrollTo
@@ -78,11 +77,22 @@ export default function Hero() {
           >
             <div className="absolute inset-0 flex items-center justify-center z-10">
               <div className="p-6 space-y-2 w-full text-white">
-                <h2 className="relative text-4xl lg:text-5xl font-bold">
-                  <AnimatedCounter start={0} end={139} duration={2000} />
-                  <span className="ml-2">MW</span>
-                </h2>
-                <span className="block">Total Capacity</span>
+                <div className="-space-y-0.5">
+                  <h2 className="relative text-3xl font-bold">
+                    <span className="mr-2">PV:</span>
+                    <AnimatedCounter start={0} end={139} duration={2000} />
+                    <span className="ml-2">MWp</span>
+                  </h2>
+                  <h2 className="relative text-3xl font-bold">
+                    <span className="mr-2">BESS:</span>
+
+                    <AnimatedCounter start={0} end={303} duration={2000} />
+                    <span className="ml-2">MWh</span>
+                  </h2>
+                </div>
+                <span className="block italic text-sm">
+                  estimated potential capacity
+                </span>
               </div>
             </div>
           </ScrollTo>

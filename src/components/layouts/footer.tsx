@@ -1,21 +1,23 @@
 "use client";
 
-import { Zap } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
+
 import { Link as ScrollTo } from "react-scroll";
 
 export default function Footer() {
   return (
     <footer className="pt-10 pb-6 lg:pb-8 bg-secondary">
-      <div className="container-wrapper flex flex-col gap-4 lg:gap-8">
-        <div className="flex items-center justify-between">
+      <div className="container-wrapper flex flex-col gap-6 lg:gap-8">
+        <div className="flex items-center flex-col lg:flex-row gap-6 justify-between">
           <div className="flex gap-2 items-center">
-            <div className="h-10 w-10 bg-yellow-400 flex items-center justify-center rounded-md">
-              <Zap fill="#D34036" stroke="#D34036" className="size-4" />
-            </div>
-            <h3 className="text-2xl font-semibold tracking-wider text-white">
-              PLN
-            </h3>
+            <Image
+              src="/images/GEAPP-PLN-Logo.svg"
+              width={317}
+              height={36}
+              alt="GEAPP - PLN Logo"
+              className="w-full h-auto"
+            />
           </div>
           <ul className="justify-between gap-6 hidden md:flex">
             {footerLinks.map((link, i) => (
