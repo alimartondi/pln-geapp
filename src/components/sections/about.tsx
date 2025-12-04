@@ -1,10 +1,29 @@
+import ScrollWrapper from "@/components/layouts/scroll-wrapper";
+
 export default function About() {
   return (
-    <section className="py-12 lg:py-20">
-      <div className="container-wrapper">
-        <div className="grid gap-6">
-          <div className="grid grid-cols-2 gap-6">
-            <div className="bg-accent p-8 rounded-lg space-y-4">
+    <section className="py-16 lg:py-24">
+      <ScrollWrapper
+        name="about"
+        className="container-wrapper flex flex-col gap-6 md:gap-12"
+      >
+        <div className="flex flex-col md:flex-row gap-6 md:gap-12 md:justify-between">
+          <div className="basis-full lg:basis-7/12 max-w-xl">
+            <h2 className="text-4xl lg:text-5xl font-semibold text-pretty">
+              Accelerating Indonesia&apos;s Clean Energy Transition
+            </h2>
+          </div>
+          <div className="basis-full lg:basis-5/12 max-w-lg">
+            <p className="text-pretty">
+              Understanding the Strategy, Scope, and Data behind Our Renewable
+              Project Portfolio.
+            </p>
+          </div>
+        </div>
+
+        <div className="grid gap-8">
+          <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
+            <div className="bg-muted/50 px-6 py-8 lg:p-12 rounded-lg space-y-4">
               <h2 className="text-3xl font-semibold lg:text-4xl lg:leading-tight text-pretty">
                 National Energy Vision (RUPTL)
               </h2>
@@ -16,7 +35,7 @@ export default function About() {
                 capacity.
               </p>
             </div>
-            <div className="bg-accent p-8 rounded-lg space-y-4">
+            <div className="bg-muted/50 px-6 py-8 lg:p-12 rounded-lg space-y-4">
               <h2 className="text-3xl font-semibold lg:text-4xl lg:leading-tight text-pretty">
                 The Diesel Replacement Program
               </h2>
@@ -30,12 +49,13 @@ export default function About() {
               </p>
             </div>
           </div>
-          <div className="bg-accent flex gap-16 p-8 rounded-lg">
-            <div className="basis-5/12 space-y-4">
+
+          <div className="bg-muted/50 flex md:flex-row flex-col gap-16 px-6 py-8 lg:p-12 rounded-lg">
+            <div className="basis-1/2 space-y-4">
               <h2 className="text-3xl font-semibold lg:text-4xl lg:leading-tight text-pretty">
                 Data Methodology & Sources
               </h2>
-              <p>
+              <p className="max-w-md text-pretty">
                 A core component of the RUPTL is the PLN’s De-dieselization
                 Program. This program aims to reduce diesel fuel consumption
                 across 2,130 isolated power grids by integrating renewable
@@ -44,7 +64,7 @@ export default function About() {
                 with cumulative installed capacity of 2,370 MW.
               </p>
             </div>
-            <div className="basis-7/12 space-y-6">
+            <div className="basis-1/2 space-y-6">
               <p>
                 The data displayed on the website are gathered, collected, and
                 processed through a sophisticated, multi-layered approach
@@ -52,9 +72,9 @@ export default function About() {
                 Mosaic Risk Analytics:
               </p>
 
-              <ul className="space-y-4">
+              <ul className="space-y-4 max-w-lg">
                 <li className="flex gap-4">
-                  <div className="h-10 w-10 flex items-center justify-center rounded-md bg-accent">
+                  <div className="h-10 w-10 flex items-center justify-center rounded-md bg-primary">
                     1
                   </div>
                   <p className="flex-1">
@@ -66,7 +86,7 @@ export default function About() {
                   </p>
                 </li>
                 <li className="flex gap-4">
-                  <div className="h-10 w-10 flex items-center justify-center rounded-md bg-accent">
+                  <div className="h-10 w-10 flex items-center justify-center rounded-md bg-primary">
                     2
                   </div>
                   <p className="flex-1">
@@ -77,7 +97,7 @@ export default function About() {
                   </p>
                 </li>
                 <li className="flex gap-4">
-                  <div className="h-10 w-10 flex items-center justify-center rounded-md bg-accent">
+                  <div className="h-10 w-10 flex items-center justify-center rounded-md bg-primary">
                     3
                   </div>
                   <p className="flex-1">
@@ -89,7 +109,7 @@ export default function About() {
                   </p>
                 </li>
                 <li className="flex gap-4">
-                  <div className="h-10 w-10 flex items-center justify-center rounded-md bg-accent">
+                  <div className="h-10 w-10 flex items-center justify-center rounded-md bg-primary">
                     4
                   </div>
                   <p className="flex-1">
@@ -106,7 +126,7 @@ export default function About() {
             </div>
           </div>
         </div>
-      </div>
+      </ScrollWrapper>
     </section>
   );
 }

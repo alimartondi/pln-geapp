@@ -98,7 +98,7 @@ export default function Hero() {
           </ScrollTo>
         </div>
 
-        <hr className="mt-8" />
+        <span className="bg-radial from-muted h-px max-w-7xl mt-10 lg:mt-16"></span>
       </div>
     </section>
   );
