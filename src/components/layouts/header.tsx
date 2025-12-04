@@ -49,7 +49,7 @@ export default function Header() {
               <Zap fill="#f04438" stroke="#f04438" className="size-4" />
             </div>
             <h3 className="text-xl font-semibold tracking-wider text-primary">
-              PLN
+              PLN - GEAPP
             </h3>
           </div>
           <div className="lg:hidden">
@@ -71,8 +71,12 @@ export default function Header() {
 
 const navLinks = [
   {
-    to: "about",
+    to: "overview",
     label: "Overview",
+  },
+  {
+    to: "about",
+    label: "About",
   },
   {
     to: "location",
