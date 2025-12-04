@@ -41,6 +41,14 @@ import {
   SelectItem,
   SelectTrigger,
 } from "@/components/ui/select";
+import {
+  Dialog,
+  DialogTrigger,
+  DialogContent,
+  DialogTitle,
+  DialogDescription,
+  DialogHeader,
+} from "@/components/ui/dialog";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
@@ -103,7 +111,7 @@ export function DataTable<TData extends { clusterId: number }, TValue>({
                   .getColumn("projectName")
                   ?.setFilterValue(event.target.value)
               }
-              className="min-w-[260px] max-w-full pl-9"
+              className="max-w-full pl-9"
             />
           </div>
 
@@ -125,7 +133,7 @@ export function DataTable<TData extends { clusterId: number }, TValue>({
           </div>
         </div>
 
-        <div className="flex gap-4 justify-between md:justify-end w-full">
+        <div className="flex gap-4 justify-between md:justify-end w-full overflow-x-auto">
           <div className="lg:hidden w-full md:w-auto">
             <MultiSelect
               options={clusters.map((c) => ({
@@ -233,51 +241,129 @@ export function DataTable<TData extends { clusterId: number }, TValue>({
       </CardContent>
 
       {/* Pagination */}
-      <CardFooter className="flex items-center justify-between gap-4">
-        <div className="flex items-center space-x-2">
-          <span className="text-sm hidden md:block">Rows per page</span>
-          <Select
-            value={String(table.getState().pagination.pageSize)}
-            onValueChange={(value) => table.setPageSize(Number(value))}
-          >
-            <SelectTrigger className="w-[80px]">
-              {table.getState().pagination.pageSize}
-            </SelectTrigger>
-            <SelectContent>
-              {[10, 25, 50].map((size) => (
-                <SelectItem key={size} value={String(size)}>
-                  {size}
-                </SelectItem>
-              ))}
-            </SelectContent>
-          </Select>
+      <CardFooter className="flex flex-col gap-6">
+        <div className="w-full flex items-center justify-between gap-4">
+          <div className="flex items-center space-x-2">
+            <span className="text-sm hidden md:block">Rows per page</span>
+            <Select
+              value={String(table.getState().pagination.pageSize)}
+              onValueChange={(value) => table.setPageSize(Number(value))}
+            >
+              <SelectTrigger className="w-[80px]">
+                {table.getState().pagination.pageSize}
+              </SelectTrigger>
+              <SelectContent>
+                {[10, 25, 50].map((size) => (
+                  <SelectItem key={size} value={String(size)}>
+                    {size}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+          </div>
+
+          <div className="text-sm">
+            Page {table.getState().pagination.pageIndex + 1} of{" "}
+            {table.getPageCount()}
+          </div>
+
+          <div className="flex items-center gap-2 md:gap-4">
+            <Button
+              variant="outline"
+              size="lg"
+              className="w-11"
+              onClick={() => table.previousPage()}
+              disabled={!table.getCanPreviousPage()}
+            >
+              <ChevronLeft />
+            </Button>
+            <Button
+              variant="outline"
+              size="lg"
+              className="w-11"
+              onClick={() => table.nextPage()}
+              disabled={!table.getCanNextPage()}
+            >
+              <ChevronRight />
+            </Button>
+          </div>
         </div>
 
-        <div className="text-sm">
-          Page {table.getState().pagination.pageIndex + 1} of{" "}
-          {table.getPageCount()}
-        </div>
-
-        <div className="flex items-center gap-2 md:gap-4">
-          <Button
-            variant="outline"
-            size="lg"
-            className="w-11"
-            onClick={() => table.previousPage()}
-            disabled={!table.getCanPreviousPage()}
-          >
-            <ChevronLeft />
-          </Button>
-          <Button
-            variant="outline"
-            size="lg"
-            className="w-11"
-            onClick={() => table.nextPage()}
-            disabled={!table.getCanNextPage()}
-          >
-            <ChevronRight />
-          </Button>
-        </div>
+        <Dialog>
+          <DialogTrigger asChild>
+            <Button
+              variant="outline"
+              size="lg"
+              className="w-full lg:w-auto lg:ml-auto"
+            >
+              About the Data
+            </Button>
+          </DialogTrigger>
+          <DialogContent className="h-[85dvh] px-0">
+            <DialogHeader className="px-6 lg:px-8">
+              <DialogTitle>About the Data</DialogTitle>
+              <DialogDescription>Data Context & Limitations</DialogDescription>
+            </DialogHeader>
+            <div className="space-y-4 overflow-y-auto px-6 lg:px-8 pb-6 lg:pb-8">
+              <p>
+                All data displayed on this website has been curated from four
+                principal sources:
+              </p>
+              <ul className="list-decimal pl-4">
+                <li>
+                  ITP–Synkrona Consortium Feasibility Study: including energy
+                  system modelling, economic and financial analysis, PLN load
+                  and diesel-generation data, and field surveys conducted by
+                  trained grid engineers.
+                </li>
+                <li>
+                  Mosaic Risk Analytics’ site-suitability assessments: applying
+                  advanced satellite imaging, computer vision, and
+                  location-intelligence techniques to process and evaluate
+                  siting constraints, land characteristics, technical
+                  suitability, and infrastructure access.
+                </li>
+                <li>
+                  Open-source information including Government of Indonesia
+                  ministry and agency portals, OpenStreetMap, national and
+                  international hazard inventories, and IPCC climate change
+                  projection datasets.
+                </li>
+                <li>
+                  Mosaic’s environmental and social impact scoping identifying
+                  preliminary impacts, regulatory pathways, and IFC safeguards
+                  project categorisation using BPS statistics and village-level
+                  informants.
+                </li>
+              </ul>
+              <p>
+                Portfolio information was compiled using the latest available
+                datasets during <strong>Q1–Q2 2025</strong>.
+              </p>
+              <p>
+                <strong>Limitation & Disclaimer</strong>
+              </p>
+              <p>
+                Data coverage, original collection dates, and accuracy vary
+                across all sources. Ground conditions, regulatory requirements,
+                and agency datasets may change without notice. Some indicators
+                rely on secondary data, community-level insights, or modelling
+                assumptions that may be refined in subsequent phases.
+              </p>
+              <p>
+                Accordingly, all figures are <strong>indicative</strong> and for{" "}
+                <strong>planning purposes only,</strong> and are{" "}
+                <strong>
+                  not warranted for construction, permitting, land acquisition,
+                  or legal use.
+                </strong>{" "}
+                No responsibility can be taken for discrepancies arising from
+                site changes, regulatory updates, or data revisions occurring
+                after the compilation date.
+              </p>
+            </div>
+          </DialogContent>
+        </Dialog>
       </CardFooter>
     </Card>
   );

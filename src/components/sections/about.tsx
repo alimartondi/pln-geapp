@@ -74,7 +74,7 @@ export default function About() {
 
               <ul className="space-y-4 max-w-lg">
                 <li className="flex gap-4">
-                  <div className="h-10 w-10 flex items-center justify-center rounded-md bg-primary">
+                  <div className="h-10 w-10 flex items-center justify-center rounded-md bg-primary text-primary-foreground">
                     1
                   </div>
                   <p className="flex-1">
@@ -86,7 +86,7 @@ export default function About() {
                   </p>
                 </li>
                 <li className="flex gap-4">
-                  <div className="h-10 w-10 flex items-center justify-center rounded-md bg-primary">
+                  <div className="h-10 w-10 flex items-center justify-center rounded-md bg-primary text-primary-foreground">
                     2
                   </div>
                   <p className="flex-1">
@@ -97,7 +97,7 @@ export default function About() {
                   </p>
                 </li>
                 <li className="flex gap-4">
-                  <div className="h-10 w-10 flex items-center justify-center rounded-md bg-primary">
+                  <div className="h-10 w-10 flex items-center justify-center rounded-md bg-primary text-primary-foreground">
                     3
                   </div>
                   <p className="flex-1">
@@ -109,7 +109,7 @@ export default function About() {
                   </p>
                 </li>
                 <li className="flex gap-4">
-                  <div className="h-10 w-10 flex items-center justify-center rounded-md bg-primary">
+                  <div className="h-10 w-10 flex items-center justify-center rounded-md bg-primary text-primary-foreground">
                     4
                   </div>
                   <p className="flex-1">
