@@ -51,7 +51,7 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
                   size="sm"
                   className="ml-auto shadow-none"
                 >
-                  <span className="block">Capacity</span>
+                  <span className="block">Existing Diesel<br/>Capacity (kW)</span>
                   <ChevronsUpDown className="h-4 w-4" />
                 </Button>
               </DropdownMenuTrigger>
@@ -110,7 +110,7 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
         accessorKey: "pltdDist",
         header: () => (
           <div className="space-y-1">
-            <span className="block">PLTD Distance</span>
+            <span className="block">PLTD from Distance </span>
             <Badge variant={"glass"}>(m)</Badge>
           </div>
         ),
@@ -135,7 +135,7 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
         accessorKey: "bpp",
         header: () => (
           <div className="space-y-1">
-            <span className="block">BPP</span>
+            <span className="block">BPP </span>
             <Badge variant={"glass"}>($/kWh)</Badge>
           </div>
         ),
@@ -149,7 +149,7 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
         accessorKey: "ace",
         header: () => (
           <div className="space-y-1">
-            <span className="block">ACE</span>
+            <span className="block">Indicative Yield </span>
             <Badge variant={"glass"}>(MWh/yr)</Badge>
           </div>
         ),
@@ -192,7 +192,7 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
         header: () => (
           <div className="space-y-1">
             <span className="block">
-              Renewable <br /> Penetration
+              % Renewable <br/>Penetration Target
             </span>
             <Badge variant={"glass"}>(%)</Badge>
           </div>
@@ -268,7 +268,7 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
         accessorKey: "offsiteShading",
         header: () => (
           <div className="space-y-1">
-            <span className="block">Off-site Shading</span>
+            <span className="block">Potential Off-site <br/>Shading</span>
           </div>
         ),
         cell: ({ row }) => {
@@ -303,7 +303,7 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
         accessorKey: "distPort",
         header: () => (
           <div className="space-y-1">
-            <span className="block">Distance Port</span>
+            <span className="block">Distance to Port </span>
             <Badge variant={"glass"}>(m)</Badge>
           </div>
         ),
@@ -317,7 +317,7 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
         accessorKey: "distRoad",
         header: () => (
           <div className="space-y-1">
-            <span className="block">Distance Road</span>
+            <span className="block">Distance to Road</span>
             <Badge variant={"glass"}>(m)</Badge>
           </div>
         ),
@@ -336,7 +336,7 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
         accessorKey: "distCoast",
         header: () => (
           <div className="space-y-1">
-            <span className="block">Distance Coast</span>
+            <span className="block">Distance to Coast</span>
             <Badge variant={"glass"}>(m)</Badge>
           </div>
         ),
@@ -376,7 +376,7 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
         accessorKey: "registerLand",
         header: () => (
           <div className="space-y-1">
-            <span className="block">Registered Land</span>
+            <span className="block">Indicative Registered<br/> Land % ~Q2 2025 </span>
             <Badge variant={"glass"}>(%)</Badge>
           </div>
         ),
@@ -393,7 +393,7 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
       },
       {
         accessorKey: "disputedLand",
-        header: "Disputed Lands",
+        header: "Disputed Lands (TORA, PIAP)",
         cell: ({ row }) => {
           const disputed = row.original.disputedLand;
           return (
