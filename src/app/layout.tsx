@@ -16,7 +16,7 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "PLN | Diesel Replacement Program",
+  title: "PLN - GEAPP | Diesel Replacement Program",
   description:
     "Transforming Indonesia's energy landscape through renewable solar PV and battery energy storage systems",
 };

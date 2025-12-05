@@ -32,8 +32,8 @@ import { Badge, Check, X } from "lucide-react";
 const formSchema = z.object({
   username: z
     .string()
-    .min(2, {
-      message: "Username must be at least 2 characters.",
+    .min(3, {
+      message: "Username must be at least 3 characters.",
     })
     .max(30, {
       message: "Username must be less than 30 characters.",
@@ -44,7 +44,7 @@ const formSchema = z.object({
   company: z
     .string()
     .min(3, {
-      message: "Company name must be at least 2 characters.",
+      message: "Company name must be at least 3 characters.",
     })
     .max(30, {
       message: "Company name must be less than 30 characters.",
