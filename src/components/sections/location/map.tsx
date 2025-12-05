@@ -185,6 +185,12 @@ export default function Map() {
                             {info.capacity}
                           </span>
                         </div>
+                        <div className="flex justify-between items-center">
+                          <span className="text-sm">Peak Load</span>
+                          <span className="text-sm font-semibold">
+                            {info.peakLoad}
+                          </span>
+                        </div>
 
                         <div className="flex justify-between items-center">
                           <span className="text-sm">Land Size</span>

@@ -31,6 +31,12 @@ export const clusters: Cluster[] = [
     shortName: "Maluku",
     alias: "MMU",
   },
+  {
+    id: 6,
+    name: "UID Papua",
+    shortName: "Papua",
+    alias: "PPA",
+  },
 ];
 
 export const clusterDetails: ClusterDetail[] = [
@@ -47,7 +53,7 @@ export const clusterDetails: ClusterDetail[] = [
             lng: 103.58886,
           },
         ],
-        landSize: 1.4253,
+        landSize: 1.4,
         pltdDist: ["110"],
 
         bpp: 30.55,
@@ -73,7 +79,7 @@ export const clusterDetails: ClusterDetail[] = [
         preliminaryClimateRisk: ["Medium"],
 
         goiApprovalsProfile:
-          "STANDARD - District UKL/UPL + Mangrove (spatial plan)",
+          "B – UKL/UPL + mangrove spatial plan",
         preliminaryPositiveImpacts: [["Mangrove Loss"]],
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
         ifcRiskCategory: [["Category B - Enhanced management required"]],
@@ -85,7 +91,7 @@ export const clusterDetails: ClusterDetail[] = [
         cluster: "Riau & Kepri",
         capacity: 217,
         coordinates: [{ lat: -0.41682, lng: 103.59338 }],
-        landSize: 0.7302,
+        landSize: 0.7,
         pltdDist: ["1000"],
 
         bpp: 29.53,
@@ -111,7 +117,7 @@ export const clusterDetails: ClusterDetail[] = [
         preliminaryClimateRisk: ["Medium"],
 
         goiApprovalsProfile:
-          "HIGH - Ministry Forestry Permit (IPKKH) + Mangrove (spatial plan)",
+          "D – IPKKH + mangrove (state forest + coastal sensitivity)",
         preliminaryPositiveImpacts: [["Mangrove Loss"]],
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
         ifcRiskCategory: [["Category B - Enhanced management required"]],
@@ -123,7 +129,7 @@ export const clusterDetails: ClusterDetail[] = [
         cluster: "Riau & Kepri",
         capacity: 329,
         coordinates: [{ lat: -0.50706, lng: 103.50688 }],
-        landSize: 0.8759,
+        landSize: 0.9,
         pltdDist: ["250"],
 
         bpp: 25.17,
@@ -148,7 +154,7 @@ export const clusterDetails: ClusterDetail[] = [
         keyHazards: [["Floods (MED)"]],
         preliminaryClimateRisk: ["Medium"],
 
-        goiApprovalsProfile: "HIGH - Ministry Forestry Permit (IPKKH)",
+        goiApprovalsProfile: "C – IPKKH (state forest permit)",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
         preliminaryNegativeImpacts: [["Jobs, Electricity"]],
         ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
@@ -160,7 +166,7 @@ export const clusterDetails: ClusterDetail[] = [
         cluster: "Riau & Kepri",
         capacity: 200,
         coordinates: [{ lat: -0.51684, lng: 103.40774 }],
-        landSize: 0.85,
+        landSize: 0.9,
         pltdDist: ["540"],
 
         bpp: 30.84,
@@ -186,7 +192,7 @@ export const clusterDetails: ClusterDetail[] = [
         preliminaryClimateRisk: ["Medium"],
 
         goiApprovalsProfile:
-          "STANDARD - District UKL/UPL + Mangrove (spatial plan)",
+          "B – UKL/UPL + mangrove spatial plan",
         preliminaryPositiveImpacts: [["Mangrove Loss"]],
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
         ifcRiskCategory: [["Category B - Enhanced management required"]],
@@ -202,7 +208,7 @@ export const clusterDetails: ClusterDetail[] = [
           { lat: 0.65503, lng: 103.48224 },
           { lat: 0.65434, lng: 103.48283 },
         ],
-        landSize: 2.1915,
+        landSize: 2.2,
         pltdDist: ["75", "180"],
 
         bpp: 24.11,
@@ -237,8 +243,8 @@ export const clusterDetails: ClusterDetail[] = [
           ["Jobs", "Electricity"],
         ],
         ifcRiskCategory: [
-          ["Category C - Standard mitigation sufficient"],
-          ["Category C - Standard mitigation sufficient"],
+          ["A – Routine UKL/UPL only"],
+          ["A – Routine UKL/UPL only"],
         ],
         keyEAndSManagementPlans: [
           ["PS1", "PS4", "PS5"],
@@ -251,7 +257,7 @@ export const clusterDetails: ClusterDetail[] = [
         cluster: "Riau & Kepri",
         capacity: 200,
         coordinates: [{ lat: 0.73786, lng: 102.84745 }],
-        landSize: 2.2767,
+        landSize: 2.3,
         pltdDist: ["440"],
 
         bpp: 37.21,
@@ -276,7 +282,7 @@ export const clusterDetails: ClusterDetail[] = [
         keyHazards: [["Fire (HIGH)", "Floods (LOW)"]],
         preliminaryClimateRisk: ["High"],
 
-        goiApprovalsProfile: "STANDARD - District UKL/UPL",
+        goiApprovalsProfile: "A – Routine UKL/UPL",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
         ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
@@ -288,7 +294,7 @@ export const clusterDetails: ClusterDetail[] = [
         cluster: "Riau & Kepri",
         capacity: 3.778,
         coordinates: [{ lat: -0.18241, lng: 104.6762 }],
-        landSize: 10.4892,
+        landSize: 10.5,
         pltdDist: ["680"],
 
         bpp: 22.53,
@@ -313,7 +319,7 @@ export const clusterDetails: ClusterDetail[] = [
         keyHazards: [["None Detected"]],
         preliminaryClimateRisk: ["Low"],
 
-        goiApprovalsProfile: "STANDARD - District UKL/UPL",
+        goiApprovalsProfile: "A – Routine UKL/UPL",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
         ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
@@ -325,7 +331,7 @@ export const clusterDetails: ClusterDetail[] = [
         cluster: "Riau & Kepri",
         capacity: 3.194,
         coordinates: [{ lat: 3.31524, lng: 106.261 }],
-        landSize: 10.1602,
+        landSize: 10.2,
         pltdDist: ["2080"],
 
         bpp: 23.69,
@@ -350,7 +356,7 @@ export const clusterDetails: ClusterDetail[] = [
         keyHazards: [["None Detected"]],
         preliminaryClimateRisk: ["Low"],
 
-        goiApprovalsProfile: "STANDARD - District UKL/UPL",
+        goiApprovalsProfile: "A – Routine UKL/UPL",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
         ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
@@ -365,7 +371,7 @@ export const clusterDetails: ClusterDetail[] = [
           { lat: 3.22498, lng: 106.23243 },
           { lat: 3.22103, lng: 106.23243 },
         ],
-        landSize: 2.5802,
+        landSize: 2.6,
         pltdDist: ["980", "700"],
 
         bpp: 23.7,
@@ -390,7 +396,7 @@ export const clusterDetails: ClusterDetail[] = [
         keyHazards: [["None Detected"], ["None Detected"]],
         preliminaryClimateRisk: ["Low", "Low"],
 
-        goiApprovalsProfile: "STANDARD - District UKL/UPL",
+        goiApprovalsProfile: "A – Routine UKL/UPL",
         preliminaryPositiveImpacts: [
           ["Agricultural Conversion"],
           ["Agricultural Conversion"],
@@ -411,7 +417,7 @@ export const clusterDetails: ClusterDetail[] = [
         cluster: "Riau & Kepri",
         capacity: 700,
         coordinates: [{ lat: 0.80615, lng: 103.52073 }],
-        landSize: 5.6853,
+        landSize: 5.7,
         pltdDist: ["1320"],
 
         bpp: 26.8,
@@ -436,7 +442,7 @@ export const clusterDetails: ClusterDetail[] = [
         keyHazards: [["None Detected"]],
         preliminaryClimateRisk: ["Low"],
 
-        goiApprovalsProfile: "HIGH - BPN Disputed Lands (TORA PIAP)",
+        goiApprovalsProfile: "C – TORA/PIAP disputed land",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
         ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
@@ -448,7 +454,7 @@ export const clusterDetails: ClusterDetail[] = [
         cluster: "Riau & Kepri",
         capacity: 250,
         coordinates: [{ lat: -0.32183, lng: 104.45169 }],
-        landSize: 3.0091,
+        landSize: 3.0,
         pltdDist: ["188"],
 
         bpp: 27.66,
@@ -473,7 +479,7 @@ export const clusterDetails: ClusterDetail[] = [
         keyHazards: [["None Detected"]],
         preliminaryClimateRisk: ["Low"],
 
-        goiApprovalsProfile: "STANDARD - District UKL/UPL",
+        goiApprovalsProfile: "A – Routine UKL/UPL",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
         preliminaryNegativeImpacts: [["Jobs, Electricity"]],
         ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
@@ -485,7 +491,7 @@ export const clusterDetails: ClusterDetail[] = [
         cluster: "Riau & Kepri",
         capacity: 279,
         coordinates: [{ lat: 0.82063, lng: 104.35882 }],
-        landSize: 1.1717,
+        landSize: 1.2,
         pltdDist: ["140"],
 
         bpp: 27.1,
@@ -510,7 +516,7 @@ export const clusterDetails: ClusterDetail[] = [
         keyHazards: [["None Detected"]],
         preliminaryClimateRisk: ["Medium"],
 
-        goiApprovalsProfile: "STANDARD - District UKL/UPL",
+        goiApprovalsProfile: "A – Routine UKL/UPL",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
         preliminaryNegativeImpacts: [["Jobs, Electricity"]],
         ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
@@ -522,7 +528,7 @@ export const clusterDetails: ClusterDetail[] = [
         cluster: "Riau & Kepri",
         capacity: 492,
         coordinates: [{ lat: 3.13915, lng: 106.33099 }],
-        landSize: 2.251,
+        landSize: 2.3,
         pltdDist: ["210"],
 
         bpp: 35.06,
@@ -547,7 +553,7 @@ export const clusterDetails: ClusterDetail[] = [
         keyHazards: [["None Detected"]],
         preliminaryClimateRisk: ["Low"],
 
-        goiApprovalsProfile: "STANDARD - District UKL/UPL",
+        goiApprovalsProfile: "A – Routine UKL/UPL",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
         preliminaryNegativeImpacts: [["Jobs, Electricity"]],
         ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
@@ -559,7 +565,7 @@ export const clusterDetails: ClusterDetail[] = [
         cluster: "Riau & Kepri",
         capacity: 400,
         coordinates: [{ lat: 3.29985, lng: 106.21735 }],
-        landSize: 0.5505,
+        landSize: 0.6,
         pltdDist: ["230"],
 
         bpp: 37.76,
@@ -584,7 +590,7 @@ export const clusterDetails: ClusterDetail[] = [
         keyHazards: [["None Detected"]],
         preliminaryClimateRisk: ["Low"],
 
-        goiApprovalsProfile: "STANDARD - District UKL/UPL",
+        goiApprovalsProfile: "A – Routine UKL/UPL",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
         preliminaryNegativeImpacts: [["Jobs, Electricity"]],
         ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
@@ -596,7 +602,7 @@ export const clusterDetails: ClusterDetail[] = [
         cluster: "Riau & Kepri",
         capacity: 300,
         coordinates: [{ lat: 0.61753, lng: 103.7031 }],
-        landSize: 0.3949,
+        landSize: 0.4,
         pltdDist: ["200"],
 
         bpp: 40.56,
@@ -621,7 +627,7 @@ export const clusterDetails: ClusterDetail[] = [
         keyHazards: [["None Detected"]],
         preliminaryClimateRisk: ["Low"],
 
-        goiApprovalsProfile: "STANDARD - District UKL/UPL",
+        goiApprovalsProfile: "A – Routine UKL/UPL",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
         preliminaryNegativeImpacts: [["Jobs, Electricity"]],
         ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
@@ -633,7 +639,7 @@ export const clusterDetails: ClusterDetail[] = [
         cluster: "Riau & Kepri",
         capacity: 100,
         coordinates: [{ lat: 0.78048, lng: 103.93801 }],
-        landSize: 2.2041,
+        landSize: 2.2,
         pltdDist: ["190"],
 
         bpp: 47.06,
@@ -658,7 +664,7 @@ export const clusterDetails: ClusterDetail[] = [
         keyHazards: [["Fire (MED)", "Floods (MED)"]],
         preliminaryClimateRisk: ["Medium"],
 
-        goiApprovalsProfile: "STANDARD - District UKL/UPL",
+        goiApprovalsProfile: "A – Routine UKL/UPL",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
         preliminaryNegativeImpacts: [["Jobs, Electricity"]],
         ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
@@ -670,7 +676,7 @@ export const clusterDetails: ClusterDetail[] = [
         cluster: "Riau & Kepri",
         capacity: 100,
         coordinates: [{ lat: 0.67913, lng: 103.586 }],
-        landSize: 0.3976,
+        landSize: 0.4,
         pltdDist: ["90"],
 
         bpp: 57.76,
@@ -695,7 +701,7 @@ export const clusterDetails: ClusterDetail[] = [
         keyHazards: [["Fire (MED), Floods (MED)"]],
         preliminaryClimateRisk: ["Medium"],
 
-        goiApprovalsProfile: "STANDARD - District UKL/UPL",
+        goiApprovalsProfile: "A – Routine UKL/UPL",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
         preliminaryNegativeImpacts: [["Jobs, Electricity"]],
         ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
@@ -707,7 +713,7 @@ export const clusterDetails: ClusterDetail[] = [
         cluster: "Riau & Kepri",
         capacity: 50,
         coordinates: [{ lat: 0.35741, lng: 104.47036 }],
-        landSize: 1.0355,
+        landSize: 1.0,
         pltdDist: ["170"],
 
         bpp: 47.27,
@@ -732,7 +738,7 @@ export const clusterDetails: ClusterDetail[] = [
         keyHazards: [["Fire (MED)"]],
         preliminaryClimateRisk: ["Low"],
 
-        goiApprovalsProfile: "STANDARD - District UKL/UPL",
+        goiApprovalsProfile: "A – Routine UKL/UPL",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
         preliminaryNegativeImpacts: [["Jobs, Electricity"]],
         ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
@@ -744,7 +750,7 @@ export const clusterDetails: ClusterDetail[] = [
         cluster: "Riau & Kepri",
         capacity: 65,
         coordinates: [{ lat: 0.44705, lng: 104.4325 }],
-        landSize: 0.952,
+        landSize: 1.0,
         pltdDist: ["120"],
 
         bpp: 54.6,
@@ -769,7 +775,7 @@ export const clusterDetails: ClusterDetail[] = [
         keyHazards: [["None Detected"]],
         preliminaryClimateRisk: ["Low"],
 
-        goiApprovalsProfile: "STANDARD - District UKL/UPL",
+        goiApprovalsProfile: "A – Routine UKL/UPL",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
         preliminaryNegativeImpacts: [["Jobs, Electricity"]],
         ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
@@ -781,7 +787,7 @@ export const clusterDetails: ClusterDetail[] = [
         cluster: "Riau & Kepri",
         capacity: 100,
         coordinates: [{ lat: 3.08915, lng: 105.7245 }],
-        landSize: 1.5132,
+        landSize: 1.5,
         pltdDist: ["<50"],
 
         bpp: 47.86,
@@ -806,7 +812,7 @@ export const clusterDetails: ClusterDetail[] = [
         keyHazards: [["None Detected"]],
         preliminaryClimateRisk: ["Low"],
 
-        goiApprovalsProfile: "STANDARD - District UKL/UPL",
+        goiApprovalsProfile: "A – Routine UKL/UPL",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
         preliminaryNegativeImpacts: [["Jobs, Electricity"]],
         ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
@@ -818,7 +824,7 @@ export const clusterDetails: ClusterDetail[] = [
         cluster: "Riau & Kepri",
         capacity: 8.288,
         coordinates: [{ lat: -0.48124, lng: 104.55826 }],
-        landSize: 10.9121,
+        landSize: 10.9,
         pltdDist: ["100", "200"],
 
         bpp: 22.72,
@@ -843,7 +849,7 @@ export const clusterDetails: ClusterDetail[] = [
         keyHazards: [["None Detected"], ["None Detected"]],
         preliminaryClimateRisk: ["Low", "Low"],
 
-        goiApprovalsProfile: "STANDARD - District UKL/UPL",
+        goiApprovalsProfile: "A – Routine UKL/UPL",
         preliminaryPositiveImpacts: [
           ["Agricultural Conversion"],
           ["Agricultural Conversion"],
@@ -864,7 +870,7 @@ export const clusterDetails: ClusterDetail[] = [
         cluster: "Riau & Kepri",
         capacity: 43,
         coordinates: [{ lat: -0.85853, lng: 104.40707 }],
-        landSize: 0.9104,
+        landSize: 0.9,
         pltdDist: ["250"],
 
         bpp: 28.46,
@@ -889,7 +895,7 @@ export const clusterDetails: ClusterDetail[] = [
         keyHazards: [["Floods (LOW)"]],
         preliminaryClimateRisk: ["Low"],
 
-        goiApprovalsProfile: "STANDARD - District UKL/UPL",
+        goiApprovalsProfile: "A – Routine UKL/UPL",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
         preliminaryNegativeImpacts: [["Jobs, Electricity"]],
         ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
@@ -901,7 +907,7 @@ export const clusterDetails: ClusterDetail[] = [
         cluster: "Riau & Kepri",
         capacity: 50,
         coordinates: [{ lat: 3.30644, lng: 106.3051 }],
-        landSize: 1.1491,
+        landSize: 1.1,
         pltdDist: ["<50"],
 
         bpp: 23.66,
@@ -926,7 +932,7 @@ export const clusterDetails: ClusterDetail[] = [
         keyHazards: [["None Detected"]],
         preliminaryClimateRisk: ["Low"],
 
-        goiApprovalsProfile: "HIGH - BPN Disputed Lands (TORA PIAP)",
+        goiApprovalsProfile: "C – TORA/PIAP disputed land",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
         preliminaryNegativeImpacts: [["Jobs, Electricity"]],
         ifcRiskCategory: [["Category B - Enhanced management required"]],
@@ -938,7 +944,7 @@ export const clusterDetails: ClusterDetail[] = [
         cluster: "Riau & Kepri",
         capacity: 50,
         coordinates: [{ lat: 3.13662, lng: 106.3051 }],
-        landSize: 1.2346,
+        landSize: 1.2,
         pltdDist: ["350"],
 
         bpp: 70.97,
@@ -964,7 +970,7 @@ export const clusterDetails: ClusterDetail[] = [
         preliminaryClimateRisk: ["Low"],
 
         goiApprovalsProfile:
-          "HIGH - BPN Disputed Lands (TORA PIAP) + Forest Moratorium",
+          "D – TORA/PIAP + forest moratorium",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
         preliminaryNegativeImpacts: [["Jobs, Electricity"]],
         ifcRiskCategory: [["Category B - Enhanced management required"]],
@@ -974,7 +980,7 @@ export const clusterDetails: ClusterDetail[] = [
       {
         projectName: "Kundur",
         cluster: "Riau & Kepri",
-        capacity: 22.2,
+        capacity: 22.200,
         coordinates: [{ lat: 0.84123, lng: 103.37314 }],
         landSize: 24.5,
         pltdDist: ["250"],
@@ -992,16 +998,16 @@ export const clusterDetails: ClusterDetail[] = [
         distPort: 32300,
         distRoad: ["200"],
         distCoast: ["1200"],
-        landUseSensitivity: [["Farmland", "Open Land"]],
+        landUseSensitivity: [["Farmland", "Scrub"]],
         registerLand: [26.38],
-        disputedLand: ["No"],
+        disputedLand: ["Yes"],
         stateForesty: ["No"],
         forestMoratorium: ["No"],
 
         keyHazards: [["Fire (LOW)"]],
         preliminaryClimateRisk: ["Low"],
 
-        goiApprovalsProfile: "ENHANCED - Provincial AMDAL (>10MW)",
+        goiApprovalsProfile: "B – Provincial AMDAL (>10 MW)",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
         preliminaryNegativeImpacts: [["Jobs, Electricity"]],
         ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
@@ -1016,9 +1022,9 @@ export const clusterDetails: ClusterDetail[] = [
       {
         projectName: "Jongkong",
         cluster: "Kalimantan",
-        capacity: 1.19,
+        capacity: 1.190,
         coordinates: [{ lat: -0.6403, lng: 112.27895 }],
-        landSize: 4.7795,
+        landSize: 4.8,
         pltdDist: ["2500"],
 
         bpp: 32.85,
@@ -1042,7 +1048,7 @@ export const clusterDetails: ClusterDetail[] = [
 
         keyHazards: [["None Detected"]],
         preliminaryClimateRisk: ["Low"],
-        goiApprovalsProfile: "STANDARD - District UKL/UPL",
+        goiApprovalsProfile: "A – Routine UKL/UPL",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
         ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
@@ -1054,7 +1060,7 @@ export const clusterDetails: ClusterDetail[] = [
         cluster: "Kalimantan",
         capacity: 500,
         coordinates: [{ lat: 1.79959, lng: 114.90442 }],
-        landSize: 30.438,
+        landSize: 3.0,
         pltdDist: ["1750", "125"],
 
         bpp: 94.76,
@@ -1079,7 +1085,7 @@ export const clusterDetails: ClusterDetail[] = [
         keyHazards: [["None Detected"]],
         preliminaryClimateRisk: ["Low"],
         goiApprovalsProfile:
-          "HIGH - Ministry Forestry + BPN Disputed (IPKKH + TORA PIAP)",
+          "C – IPKKH + TORA/PIAP (multiple land issues)",
         preliminaryPositiveImpacts: [
           ["Agricultural Conversion"],
           ["Agricultural Conversion"],
@@ -1097,7 +1103,7 @@ export const clusterDetails: ClusterDetail[] = [
         cluster: "Kalimantan",
         capacity: 40,
         coordinates: [{ lat: 4.29836, lng: 116.90442 }],
-        landSize: 0.9674,
+        landSize: 1.0,
         pltdDist: ["250"],
 
         bpp: 115.68,
@@ -1121,7 +1127,7 @@ export const clusterDetails: ClusterDetail[] = [
 
         keyHazards: [["None Detected"]],
         preliminaryClimateRisk: ["Low"],
-        goiApprovalsProfile: "STANDARD - District UKL/UPL",
+        goiApprovalsProfile: "A – Routine UKL/UPL",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
         ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
@@ -1133,7 +1139,7 @@ export const clusterDetails: ClusterDetail[] = [
         cluster: "Kalimantan",
         capacity: 50,
         coordinates: [{ lat: 3.61341, lng: 115.69567 }],
-        landSize: 1.2228,
+        landSize: 1.2,
         pltdDist: ["1400"],
 
         bpp: 87.44,
@@ -1157,7 +1163,7 @@ export const clusterDetails: ClusterDetail[] = [
 
         keyHazards: [["None Detected"]],
         preliminaryClimateRisk: ["Low"],
-        goiApprovalsProfile: "HIGH - BPN Disputed Lands (TORA PIAP)",
+        goiApprovalsProfile: "C – TORA/PIAP disputed land",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
         ifcRiskCategory: [["Category B - Enhanced management required"]],
@@ -1169,7 +1175,7 @@ export const clusterDetails: ClusterDetail[] = [
         cluster: "Kalimantan",
         capacity: 58,
         coordinates: [{ lat: 3.56165, lng: 115.75979 }],
-        landSize: 1.4788,
+        landSize: 1.5,
         pltdDist: ["<100"],
 
         bpp: 58.88,
@@ -1193,7 +1199,7 @@ export const clusterDetails: ClusterDetail[] = [
 
         keyHazards: [["Fire (LOW)"]],
         preliminaryClimateRisk: ["Low"],
-        goiApprovalsProfile: "HIGH - BPN Disputed Lands (TORA PIAP)",
+        goiApprovalsProfile: "C – TORA/PIAP disputed land",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
         ifcRiskCategory: [["Category B - Enhanced management required"]],
@@ -1205,7 +1211,7 @@ export const clusterDetails: ClusterDetail[] = [
         cluster: "Kalimantan",
         capacity: 900,
         coordinates: [{ lat: 4.16664, lng: 117.26233 }],
-        landSize: 4.4966,
+        landSize: 4.5,
         pltdDist: ["500"],
 
         bpp: 29.52,
@@ -1229,7 +1235,7 @@ export const clusterDetails: ClusterDetail[] = [
 
         keyHazards: [["None Detected"]],
         preliminaryClimateRisk: ["Low"],
-        goiApprovalsProfile: "STANDARD - District UKL/UPL",
+        goiApprovalsProfile: "A – Routine UKL/UPL",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
         ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
@@ -1241,7 +1247,7 @@ export const clusterDetails: ClusterDetail[] = [
         cluster: "Kalimantan",
         capacity: 750,
         coordinates: [{ lat: 3.66716, lng: 117.54281 }],
-        landSize: 4.0598, // dari 4,0598 → dikali 10000 jika ini ha misal
+        landSize: 4.1, // dari 4,0598 → dikali 10000 jika ini ha misal
         pltdDist: ["1500"],
 
         bpp: 29.34,
@@ -1265,7 +1271,7 @@ export const clusterDetails: ClusterDetail[] = [
 
         keyHazards: [["None Detected"]],
         preliminaryClimateRisk: ["Low"],
-        goiApprovalsProfile: "STANDARD - District UKL/UPL",
+        goiApprovalsProfile: "A – Routine UKL/UPL",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
         ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
@@ -1306,7 +1312,7 @@ export const clusterDetails: ClusterDetail[] = [
 
         keyHazards: [["None Detected"]],
         preliminaryClimateRisk: ["Low"],
-        goiApprovalsProfile: "STANDARD - District UKL/UPL",
+        goiApprovalsProfile: "A – Routine UKL/UPL",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
         ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
@@ -1318,7 +1324,7 @@ export const clusterDetails: ClusterDetail[] = [
         cluster: "Sulawesi",
         capacity: 100,
         coordinates: [{ lat: 3.33744, lng: 125.57096 }],
-        landSize: 1.0453,
+        landSize: 1.0,
         pltdDist: ["400"],
 
         bpp: 145.5,
@@ -1342,7 +1348,7 @@ export const clusterDetails: ClusterDetail[] = [
 
         keyHazards: [["None Detected"]],
         preliminaryClimateRisk: ["Low"],
-        goiApprovalsProfile: "STANDARD - District UKL/UPL",
+        goiApprovalsProfile: "A – Routine UKL/UPL",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
         ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
@@ -1357,7 +1363,7 @@ export const clusterDetails: ClusterDetail[] = [
           { lat: 2.73528, lng: 125.16525 },
           { lat: 2.74073, lng: 125.16827 },
         ],
-        landSize: 2.7737,
+        landSize: 2.8,
         pltdDist: ["120", "900"],
 
         bpp: 32.16,
@@ -1384,7 +1390,7 @@ export const clusterDetails: ClusterDetail[] = [
 
         keyHazards: [["None Detected"], ["None Detected"]],
         preliminaryClimateRisk: ["Low", "Low"],
-        goiApprovalsProfile: "STANDARD - District UKL/UPL",
+        goiApprovalsProfile: "A – Routine UKL/UPL",
         preliminaryPositiveImpacts: [
           ["Agricultural Conversion"],
           ["Agricultural Conversion"],
@@ -1406,9 +1412,9 @@ export const clusterDetails: ClusterDetail[] = [
       {
         projectName: "Tarun",
         cluster: "Sulawesi",
-        capacity: 8.9,
+        capacity: 8.900,
         coordinates: [{ lat: 4.07457, lng: 126.69772 }],
-        landSize: 10.203, // 10,203 → disesuaikan
+        landSize: 10.2, // 10,203 → disesuaikan
         pltdDist: ["250"],
 
         bpp: 25.72,
@@ -1432,7 +1438,7 @@ export const clusterDetails: ClusterDetail[] = [
 
         keyHazards: [["None Detected"]],
         preliminaryClimateRisk: ["Low"],
-        goiApprovalsProfile: "STANDARD - District UKL/UPL",
+        goiApprovalsProfile: "A – Routine UKL/UPL",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
         ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
@@ -1468,7 +1474,7 @@ export const clusterDetails: ClusterDetail[] = [
 
         keyHazards: [["None Detected"]],
         preliminaryClimateRisk: ["Low"],
-        goiApprovalsProfile: "STANDARD - District UKL/UPL",
+        goiApprovalsProfile: "A – Routine UKL/UPL",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
         ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
@@ -1480,7 +1486,7 @@ export const clusterDetails: ClusterDetail[] = [
         cluster: "Sulawesi",
         capacity: 100,
         coordinates: [{ lat: 3.14496, lng: 125.45415 }],
-        landSize: 1.4987,
+        landSize: 1.5,
         pltdDist: ["360"],
 
         bpp: 62.1,
@@ -1504,7 +1510,7 @@ export const clusterDetails: ClusterDetail[] = [
 
         keyHazards: [["None Detected"]],
         preliminaryClimateRisk: ["Low"],
-        goiApprovalsProfile: "STANDARD - District UKL/UPL",
+        goiApprovalsProfile: "A – Routine UKL/UPL",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
         ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
@@ -1514,9 +1520,9 @@ export const clusterDetails: ClusterDetail[] = [
       {
         projectName: "Siau",
         cluster: "Sulawesi",
-        capacity: 5.56,
+        capacity: 5.560,
         coordinates: [{ lat: 2.76063, lng: 125.37924 }],
-        landSize: 6.1155,
+        landSize: 6.1,
         pltdDist: ["2000"],
 
         bpp: 25.87,
@@ -1533,14 +1539,14 @@ export const clusterDetails: ClusterDetail[] = [
         distRoad: ["100"],
         distCoast: ["2100"],
         landUseSensitivity: [["Farmland", "Forest"]],
-        registerLand: [7, 9],
+        registerLand: [7.9],
         disputedLand: ["No"],
         stateForesty: ["No"],
         forestMoratorium: ["No"],
 
         keyHazards: [["None Detected"]],
         preliminaryClimateRisk: ["Low"],
-        goiApprovalsProfile: "STANDARD - District UKL/UPL",
+        goiApprovalsProfile: "A – Routine UKL/UPL",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
         ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
@@ -1550,9 +1556,9 @@ export const clusterDetails: ClusterDetail[] = [
       {
         projectName: "Bangkurung",
         cluster: "Sulawesi",
-        capacity: 1.32,
+        capacity: 1.320,
         coordinates: [{ lat: -1.91343, lng: 123.08117 }],
-        landSize: 2.0574,
+        landSize: 2.1,
         pltdDist: ["920"],
 
         bpp: 31.45,
@@ -1576,7 +1582,7 @@ export const clusterDetails: ClusterDetail[] = [
 
         keyHazards: [["None Detected"]],
         preliminaryClimateRisk: ["Low"],
-        goiApprovalsProfile: "STANDARD - District UKL/UPL",
+        goiApprovalsProfile: "A – Routine UKL/UPL",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
         ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
@@ -1588,7 +1594,7 @@ export const clusterDetails: ClusterDetail[] = [
         cluster: "Sulawesi",
         capacity: 200,
         coordinates: [{ lat: 1.63135, lng: 124.80381 }],
-        landSize: 1.3236,
+        landSize: 1.3,
         pltdDist: ["350"],
 
         bpp: 40.81,
@@ -1612,7 +1618,7 @@ export const clusterDetails: ClusterDetail[] = [
 
         keyHazards: [["None Detected"]],
         preliminaryClimateRisk: ["Low"],
-        goiApprovalsProfile: "STANDARD - District UKL/UPL",
+        goiApprovalsProfile: "A – Routine UKL/UPL",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
         ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
@@ -1627,9 +1633,9 @@ export const clusterDetails: ClusterDetail[] = [
       {
         projectName: "Waibalun",
         cluster: "NTT",
-        capacity: 9.36,
+        capacity: 9.360,
         coordinates: [{ lat: -8.31703, lng: 122.91943 }],
-        landSize: 27.7383, // dari 27,7383 → disesuaikan
+        landSize: 27.7, // dari 27,7383 → disesuaikan
         pltdDist: ["3200"],
 
         bpp: 20.23,
@@ -1653,12 +1659,48 @@ export const clusterDetails: ClusterDetail[] = [
 
         keyHazards: [["None Detected"]],
         preliminaryClimateRisk: ["Low"],
-        goiApprovalsProfile: "STANDARD - District UKL/UPL",
+        goiApprovalsProfile: "A – Routine UKL/UPL",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
         ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
         keyEAndSManagementPlans: [["PS1", "PS4", "PS5"]],
         developmentFeasibilityClass: ["Favourable"],
+      },
+      {
+        projectName: "Pemana",
+        cluster: "NTT",
+        capacity: 940,
+        coordinates: [{ lat: -8.351443, lng: 122.319564 }],
+        landSize: 7.9, // dari 27,7383 → disesuaikan
+        pltdDist: ["2800"],
+
+        bpp: 30.68,
+        ace: 1460,
+        peakLoad: 227,
+        meanLoad: 182,
+        renewablePenetration: "91%",
+        connectionVoltage: 20,
+
+        avgSlope: [3.09],
+        slopeAspect: [150],
+        offsiteShading: ["Yes"],
+        distPort: 9950,
+        distRoad: ["3520"],
+        distCoast: ["150"],
+        landUseSensitivity: [["Open land", "Farmland"]],
+        registerLand: [0],
+        disputedLand: ["No"],
+        stateForesty: ["No"],
+        forestMoratorium: ["Yes"],
+
+        keyHazards: [["None Detected"]],
+        preliminaryClimateRisk: ["Low"],
+        goiApprovalsProfile: "D – Forest moratorium (delisting required)",
+        preliminaryPositiveImpacts: [["Agricultural Conversion"]],
+        preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
+        ifcRiskCategory: [["Category B - Enhanced management required"]],
+        keyEAndSManagementPlans: [["PS1", "PS4", "PS5"]],
+        developmentFeasibilityClass: ["Critical"],
       },
     ],
   },
@@ -1668,9 +1710,9 @@ export const clusterDetails: ClusterDetail[] = [
       {
         projectName: "Letwurung",
         cluster: "Maluku",
-        capacity: 1.6,
+        capacity: 1.600,
         coordinates: [{ lat: -7.90104, lng: 129.86183 }],
-        landSize: 5, // dari 5 → disesuaikan (misal ha → m²)
+        landSize: 5.0, // dari 5 → disesuaikan (misal ha → m²)
         pltdDist: ["300"],
 
         bpp: 79.33,
@@ -1694,7 +1736,7 @@ export const clusterDetails: ClusterDetail[] = [
 
         keyHazards: [["None Detected"]],
         preliminaryClimateRisk: ["Low"],
-        goiApprovalsProfile: "STANDARD - District UKL/UPL",
+        goiApprovalsProfile: "A – Routine UKL/UPL",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
         ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
@@ -1706,7 +1748,7 @@ export const clusterDetails: ClusterDetail[] = [
         cluster: "Maluku",
         capacity: 707,
         coordinates: [{ lat: 1.67139, lng: 127.5898 }],
-        landSize: 2.3641,
+        landSize: 2.4,
         pltdDist: ["370"],
 
         bpp: 36.43,
@@ -1730,7 +1772,7 @@ export const clusterDetails: ClusterDetail[] = [
 
         keyHazards: [["None Detected"]],
         preliminaryClimateRisk: ["Low"],
-        goiApprovalsProfile: "STANDARD - District UKL/UPL",
+        goiApprovalsProfile: "A – Routine UKL/UPL",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
         ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
@@ -1742,7 +1784,7 @@ export const clusterDetails: ClusterDetail[] = [
         cluster: "Maluku",
         capacity: 300,
         coordinates: [{ lat: 2.18527, lng: 127.74855 }],
-        landSize: 4.8357,
+        landSize: 4.8,
         pltdDist: ["505"],
 
         bpp: 51.75,
@@ -1766,7 +1808,7 @@ export const clusterDetails: ClusterDetail[] = [
 
         keyHazards: [["None Detected"]],
         preliminaryClimateRisk: ["Low"],
-        goiApprovalsProfile: "STANDARD - District UKL/UPL",
+        goiApprovalsProfile: "A – Routine UKL/UPL",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
         ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
@@ -1778,7 +1820,7 @@ export const clusterDetails: ClusterDetail[] = [
         cluster: "Maluku",
         capacity: 430,
         coordinates: [{ lat: 2.22715, lng: 127.79978 }],
-        landSize: 2.3392,
+        landSize: 2.3,
         pltdDist: ["852"],
 
         bpp: 32.75,
@@ -1803,7 +1845,7 @@ export const clusterDetails: ClusterDetail[] = [
         keyHazards: [["None Detected"]],
         preliminaryClimateRisk: ["Low"],
         goiApprovalsProfile:
-          "HIGH - Ministry Forestry + BPN Disputed (IPKKH + TORA PIAP)",
+          "D – IPKKH + TORA/PIAP (multiple high-level issues)",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
         ifcRiskCategory: [["Category B - Enhanced management required"]],
@@ -1813,9 +1855,9 @@ export const clusterDetails: ClusterDetail[] = [
       {
         projectName: "Lonthoir",
         cluster: "Maluku",
-        capacity: 1.15,
+        capacity: 1.150,
         coordinates: [{ lat: -4.5475, lng: 129.89515 }],
-        landSize: 2.7649,
+        landSize: 2.8,
         pltdDist: ["150"],
 
         bpp: 25.13,
@@ -1839,7 +1881,7 @@ export const clusterDetails: ClusterDetail[] = [
 
         keyHazards: [["None Detected"]],
         preliminaryClimateRisk: ["Low"],
-        goiApprovalsProfile: "STANDARD - District UKL/UPL",
+        goiApprovalsProfile: "A – Routine UKL/UPL",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
         ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
@@ -1851,7 +1893,7 @@ export const clusterDetails: ClusterDetail[] = [
         cluster: "Maluku",
         capacity: 3.274,
         coordinates: [{ lat: -3.57365, lng: 128.64346 }],
-        landSize: 8.44,
+        landSize: 8.4,
         pltdDist: ["142", "685"],
 
         bpp: 25.64,
@@ -1875,7 +1917,7 @@ export const clusterDetails: ClusterDetail[] = [
 
         keyHazards: [["None Detected"], ["None Detected"]],
         preliminaryClimateRisk: ["Low", "Low"],
-        goiApprovalsProfile: "STANDARD - District UKL/UPL",
+        goiApprovalsProfile: "A – Routine UKL/UPL",
         preliminaryPositiveImpacts: [
           ["Agricultural Conversion"],
           ["Agricultural Conversion"],
@@ -1899,7 +1941,7 @@ export const clusterDetails: ClusterDetail[] = [
         cluster: "Maluku",
         capacity: 1.682,
         coordinates: [{ lat: -2.79591, lng: 129.5029 }],
-        landSize: 12.6698,
+        landSize: 12.7,
         pltdDist: ["1050"],
 
         bpp: 28.34,
@@ -1923,7 +1965,7 @@ export const clusterDetails: ClusterDetail[] = [
 
         keyHazards: [["None Detected"]],
         preliminaryClimateRisk: ["Low"],
-        goiApprovalsProfile: "STANDARD - District UKL/UPL",
+        goiApprovalsProfile: "A – Routine UKL/UPL",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
         ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
@@ -1935,7 +1977,7 @@ export const clusterDetails: ClusterDetail[] = [
         cluster: "Maluku",
         capacity: 8.952,
         coordinates: [{ lat: 0.306282, lng: 127.862818 }],
-        landSize: 25,
+        landSize: 25.0,
         pltdDist: ["1080"],
 
         bpp: 35.65,
@@ -1959,12 +2001,65 @@ export const clusterDetails: ClusterDetail[] = [
 
         keyHazards: [["None Detected"]],
         preliminaryClimateRisk: ["Low"],
-        goiApprovalsProfile: "STANDARD - District UKL/UPL",
+        goiApprovalsProfile: "A – Routine UKL/UPL",
         preliminaryPositiveImpacts: [["Agricultural Conversion"]],
         preliminaryNegativeImpacts: [["Jobs", "Electricity"]],
         ifcRiskCategory: [["Category C - Standard mitigation sufficient"]],
         keyEAndSManagementPlans: [["PS1", "PS4", "PS5"]],
         developmentFeasibilityClass: ["Moderate"],
+      },
+    ],
+  },
+  {
+    clusterId: 6,
+    table: [
+      {
+        projectName: "Jefman",
+        cluster: "Papua",
+        capacity: 200,
+        coordinates: [{ lat: -0.923765, lng: 131.123957 }],
+        landSize: 0.3,
+        pltdDist: ["<50"],
+
+        bpp: 28.15,
+        ace: 344,
+        peakLoad: 54,
+        meanLoad: 39,
+        renewablePenetration: "46%",
+        connectionVoltage: 0.4,
+
+        avgSlope: [4.01, 3.8],
+        slopeAspect: [315, 314],
+        offsiteShading: ["Yes", "Yes"],
+        distPort: 128,
+        distRoad: ["<50", "<50"],
+        distCoast: ["50", "40"],
+        landUseSensitivity: [["Scrub"], ["Scrub"]],
+        registerLand: [0, 0],
+        disputedLand: ["No", "No"],
+        stateForesty: ["No", "No"],
+        forestMoratorium: ["Yes", "Yes"],
+
+        keyHazards: [["None Detected"], ["None Detected"]],
+        preliminaryClimateRisk: ["Low", "Low"],
+        goiApprovalsProfile: "D – Forest moratorium (delisting required)",
+        preliminaryPositiveImpacts: [
+          ["Agricultural Conversion"],
+          ["Agricultural Conversion"],
+        ],
+        preliminaryNegativeImpacts: [
+          ["Jobs", "Electricity"],
+          ["Jobs", "Electricity"],
+        ],
+        ifcRiskCategory: [
+          ["Category B - Enhanced management required"],
+          ["Category B - Enhanced management required"],
+        ],
+        keyEAndSManagementPlans: [
+          ["PS1", "PS4", "PS5"],
+          ["PS1", "PS4", "PS5"],
+        ],
+        developmentFeasibilityClass: ["Critical"],
       },
     ],
   },
