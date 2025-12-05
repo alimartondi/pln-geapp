@@ -22,7 +22,7 @@ export default function Overview() {
                 Planet is bringing 52 island microgrid projects to market—ready
                 for private investment.
               </h2>
-              <p className="max-w-2xl text-pretty">
+              <p className="max-w-2xl">
                 The program bridges financing gaps, reduces risk, and delivers
                 affordable, reliable power to where it&apos;s needed most.
                 Investors gain vetted, shovel-ready projects with strong returns

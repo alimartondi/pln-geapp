@@ -13,7 +13,7 @@ export default function Contact() {
             Download the 50-Site Portfolio — Invest in Indonesia&apos;s Clean
             Energy Future
           </h2>
-          <p className="text-pretty">
+          <p>
             Access the full technical, financial, and social impact details for
             50 ready-to-build projects replacing diesel with renewables.
             Register now to download the portfolio report and secure your

@@ -10,7 +10,7 @@ export default function ClusterSection() {
           <h2 className="text-4xl lg:text-5xl font-semibold">
             Regional Clusters
           </h2>
-          <p className="text-pretty">
+          <p>
             Transforming Indonesia&apos;s energy landscape through renewable
             solar PV and battery energy storage systems.
           </p>

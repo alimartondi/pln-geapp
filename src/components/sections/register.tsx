@@ -13,7 +13,7 @@ export default function Register() {
               <h2 className="text-4xl lg:text-5xl lg:leading-tight font-bold">
                 Let&apos;s Build a Brighter Future. Together.
               </h2>
-              <p className="text-pretty">
+              <p>
                 Transforming Indonesia&apos;s energy landscape through renewable
                 solar PV <br className="hidden lg:block" /> and battery energy
                 storage systems.

@@ -13,7 +13,7 @@ export default function Hero() {
               <h1 className="text-4xl lg:text-5xl lg:leading-tight font-bold">
                 Driving a Greener Indonesia: The Diesel Replacement Program
               </h1>
-              <p className="text-lg text-pretty">
+              <p className="text-lg">
                 Your gateway to 52 renewable energy projects across Indonesia.
               </p>
 

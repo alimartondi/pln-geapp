@@ -14,7 +14,7 @@ export default function About() {
             </h2>
           </div>
           <div className="basis-full lg:basis-5/12 max-w-lg">
-            <p className="text-pretty">
+            <p>
               Understanding the Strategy, Scope, and Data behind Our Renewable
               Project Portfolio.
             </p>
@@ -28,9 +28,9 @@ export default function About() {
                 National Energy Vision (RUPTL)
               </h2>
               <p>
-                The Electricity Supply Business Plan (RUPTL) is Indonesia’s
-                central planning document for the national power sector.  The
-                2025–2034 RUPTL set a target of installing 53 GW of renewable
+                The Electricity Supply Business Plan (RUPTL) is Indonesia&apos;s
+                central planning document for the national power sector. The
+                2025—2034 RUPTL set a target of installing 53 GW of renewable
                 energy generation capacity, accounting for 76% of forecast new
                 capacity.
               </p>
@@ -40,7 +40,7 @@ export default function About() {
                 The Diesel Replacement Program
               </h2>
               <p>
-                A core component of the RUPTL is the PLN’s De-dieselization
+                A core component of the RUPTL is the PLN&apos;s De-dieselization
                 Program. This program aims to reduce diesel fuel consumption
                 across 2,130 isolated power grids by integrating renewable
                 energy, replacing diesel with gas, or interconnecting with
@@ -55,8 +55,8 @@ export default function About() {
               <h2 className="text-3xl font-semibold lg:text-4xl lg:leading-tight text-pretty">
                 Data Methodology & Sources
               </h2>
-              <p className="max-w-md text-pretty">
-                A core component of the RUPTL is the PLN’s De-dieselization
+              <p className="max-w-md">
+                A core component of the RUPTL is the PLN&apos;s De-dieselization
                 Program. This program aims to reduce diesel fuel consumption
                 across 2,130 isolated power grids by integrating renewable
                 energy, replacing diesel with gas, or interconnecting with
@@ -121,7 +121,7 @@ export default function About() {
               </ul>
               <p>
                 The portfolio information was compiled using the latest
-                available datasets during Q1–Q2 20257.
+                available datasets during Q1—Q2 20257.
               </p>
             </div>
           </div>
