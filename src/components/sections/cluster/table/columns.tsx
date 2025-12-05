@@ -2,7 +2,14 @@
 
 import { ColumnDef } from "@tanstack/react-table";
 import { ClusterTableRow } from "@/types/cluster.type";
-import { Check, X, ChevronsUpDown, ArrowUp, ArrowDown } from "lucide-react";
+import {
+  Check,
+  X,
+  ChevronsUpDown,
+  ArrowUp,
+  ArrowDown,
+  Info,
+} from "lucide-react";
 import clsx from "clsx";
 
 import { Badge } from "@/components/ui/badge";
@@ -13,6 +20,11 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
 } from "@/components/ui/dropdown-menu";
+import {
+  Popover,
+  PopoverTrigger,
+  PopoverContent,
+} from "@/components/ui/popover";
 
 export const columns: ColumnDef<ClusterTableRow>[] = [
   {
@@ -589,9 +601,52 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
       {
         accessorKey: "developmentFeasibilityClass",
         header: () => (
-          <span className="block">
-            Development <br /> Feasibility Class
-          </span>
+          <div className="relative">
+            <div className="absolute -top-6 -right-3">
+              <Popover>
+                <PopoverTrigger asChild>
+                  <Button
+                    className="bg-transparent hover:bg-transparent hover:text-white/50"
+                    size="sm"
+                  >
+                    <Info size={16} />
+                  </Button>
+                </PopoverTrigger>
+                <PopoverContent side="left">
+                  <div className="text-sm space-y-3 opacity-75 p-1 lg:p-2">
+                    <p>
+                      <strong>Development Feasibility Index (DFI)</strong> is a
+                      weighted, composite score used to indicate the overall
+                      development complexity of each renewable project. It
+                      combines key factors related to{" "}
+                      <strong>
+                        land conditions, hazards and climate, regulatory and
+                        permitting complexity, and environmental and social
+                        considerations.
+                      </strong>
+                    </p>
+                    <p>
+                      Each site is classified as{" "}
+                      <span className="font-bold">Favourable,</span>{" "}
+                      <span className="font-bold">Moderate,</span>{" "}
+                      <span className="font-bold">Challenging,</span> or{" "}
+                      <span className="font-bold">Critical,</span> providing a
+                      quick, consistent signal of likely development effort and
+                      potential risk.
+                    </p>
+                    <p>
+                      The DFI is an <strong>early-stage planning tool</strong>{" "}
+                      and should not be used as a substitute for detailed
+                      engineering, ESIA, or permitting assessments.
+                    </p>
+                  </div>
+                </PopoverContent>
+              </Popover>
+            </div>
+            <span className="block">
+              Development <br /> Feasibility Class
+            </span>
+          </div>
         ),
         cell: ({ row }) => {
           const development = row.original.developmentFeasibilityClass;

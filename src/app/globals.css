@@ -152,6 +152,9 @@
   body {
     @apply bg-background text-foreground;
   }
+  p {
+    @apply text-pretty;
+  }
 }
 
 @layer utilities {
