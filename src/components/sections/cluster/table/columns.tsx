@@ -63,7 +63,11 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
                   size="sm"
                   className="ml-auto shadow-none"
                 >
-                  <span className="block">Existing Diesel<br/>Capacity (kW)</span>
+                  <span className="block">
+                    Existing Diesel
+                    <br />
+                    Capacity
+                  </span>
                   <ChevronsUpDown className="h-4 w-4" />
                 </Button>
               </DropdownMenuTrigger>
@@ -204,7 +208,8 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
         header: () => (
           <div className="space-y-1">
             <span className="block">
-              % Renewable <br/>Penetration Target
+              Renewable <br />
+              Penetration Target
             </span>
             <Badge variant={"glass"}>(%)</Badge>
           </div>
@@ -222,7 +227,7 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
             <span className="block">
               Connection <br /> Voltage
             </span>
-            <Badge variant={"glass"}>(kW)</Badge>
+            <Badge variant={"glass"}>(kV)</Badge>
           </div>
         ),
         cell: ({ row }) => (
@@ -280,7 +285,10 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
         accessorKey: "offsiteShading",
         header: () => (
           <div className="space-y-1">
-            <span className="block">Potential Off-site <br/>Shading</span>
+            <span className="block">
+              Potential Off-site <br />
+              Shading
+            </span>
           </div>
         ),
         cell: ({ row }) => {
@@ -388,7 +396,10 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
         accessorKey: "registerLand",
         header: () => (
           <div className="space-y-1">
-            <span className="block">Indicative Registered<br/> Land % ~Q2 2025 </span>
+            <span className="block">
+              Indicative Registered
+              <br /> Land <sup>~</sup>Q2 2025
+            </span>
             <Badge variant={"glass"}>(%)</Badge>
           </div>
         ),
@@ -519,7 +530,7 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
   {
     header: "Approvals & Execution Pathway",
     columns: [
-      { accessorKey: "goiApprovalsProfile", header: "GOI Approvals Profile" },
+      { accessorKey: "goiApprovalsProfile", header: "GOI Approvals Class" },
       {
         accessorKey: "preliminaryPositiveImpacts",
         header: "Preliminary Positive Impacts ",
