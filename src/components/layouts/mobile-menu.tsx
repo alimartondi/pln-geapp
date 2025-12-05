@@ -43,11 +43,11 @@ export default function MobileMenu({ links }: MobileMenuProps) {
           <SheetDescription />
         </SheetHeader>
 
-        <ul className="px-4 space-y-1">
+        <ul className="px-4 space-y-3">
           {links.map((link, i) => (
             <li key={i}>
               <ScrollTo
-                className="text-2xl cursor-pointer"
+                className="text-3xl font-medium cursor-pointer"
                 to={link.to}
                 spy={true}
                 smooth={true}

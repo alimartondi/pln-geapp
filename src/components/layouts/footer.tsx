@@ -1,80 +1,47 @@
 "use client";
 
-import { Zap } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
-import { Link as ScrollTo } from "react-scroll";
 
 export default function Footer() {
   return (
-    <footer className="pt-10 pb-6 lg:pb-8 bg-secondary">
-      <div className="container-wrapper flex flex-col gap-4 lg:gap-8">
-        <div className="flex items-center justify-between">
-          <div className="flex gap-2 items-center">
-            <div className="h-10 w-10 bg-yellow-400 flex items-center justify-center rounded-md">
-              <Zap fill="#D34036" stroke="#D34036" className="size-4" />
-            </div>
-            <h3 className="text-2xl font-semibold tracking-wider text-white">
-              PLN
-            </h3>
+    <footer className="py-8 xl:py-10 bg-secondary">
+      <div className="container-wrapper flex flex-col gap-6 lg:gap-8">
+        <div className="flex items-center flex-col lg:flex-row gap-8 justify-between">
+          <div className="flex items-center divide-x">
+            <Link
+              href="https://web.pln.co.id/"
+              target="_blank"
+              className="pr-5"
+            >
+              <Image
+                src="/images/PLN-Logo.svg"
+                alt="GEAPP - PLN Logo"
+                width={101}
+                height={36}
+                className="w-full h-auto"
+              />
+            </Link>
+            <Link
+              href="https://energyalliance.org/"
+              target="_blank"
+              className="pl-4"
+            >
+              <Image
+                src="/images/GEAPP-LOGO-HORIZONTAL-REVERSED.svg"
+                alt="GEAPP Logo"
+                width={192}
+                height={36}
+                className="w-full h-auto"
+              />
+            </Link>
           </div>
-          <ul className="justify-between gap-6 hidden md:flex">
-            {footerLinks.map((link, i) => (
-              <li key={i}>
-                <ScrollTo
-                  className="text-white/75 hover:underline hover:text-white transition-all duration-300 cursor-pointer"
-                  to={link.to}
-                  spy={true}
-                  smooth={true}
-                  offset={-130}
-                  duration={500}
-                >
-                  {link.label}
-                </ScrollTo>
-              </li>
-            ))}
-          </ul>
-          <Link
-            href="/"
-            className="text-white/75 hover:underline hover:text-white transition-all duration-300"
-          >
-            info@company.com
-          </Link>
-        </div>
 
-        <div className="space-y-3">
-          <hr className="opacity-75" />
-
-          <div className="flex justify-between gap-4 items-center text-gray-500">
-            <div>
-              <small className="text-gray-300">
-                &copy; {new Date().getFullYear()} Company | All rights reserved.
-              </small>
-            </div>
-            <div className="flex-1 flex gap-2 justify-end">
-              <small className="text-gray-300">Privacy Policy</small>
-            </div>
-          </div>
+          <p className="text-gray-300 text-sm">
+            &copy; {new Date().getFullYear()} PLN - GEAPP | All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
   );
 }
-
-const footerLinks = [
-  {
-    to: "about",
-    label: "Overview",
-  },
-  {
-    to: "location",
-    label: "Locations",
-  },
-  {
-    to: "cluster",
-    label: "Clusters",
-  },
-  {
-    to: "register",
-    label: "Register",
-  },
-];

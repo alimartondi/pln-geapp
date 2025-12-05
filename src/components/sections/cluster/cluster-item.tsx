@@ -17,7 +17,9 @@ export default function ClusterItem({ index, cluster, onClick }: Props) {
         {String(index).padStart(2, "0")}
       </h2>
       <div className="flex-1 space-y-1 text-left">
-        <h2 className="font-semibold text-xl lg:text-2xl">{cluster.name}</h2>
+        <h2 className="font-semibold text-xl lg:text-2xl text-pretty">
+          {cluster.name}
+        </h2>
         <span className="block text-sm text-gray-500 group-hover:text-gray-300">
           ({cluster.alias})
         </span>

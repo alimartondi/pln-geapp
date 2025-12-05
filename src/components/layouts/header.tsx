@@ -1,11 +1,15 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
-import { Zap } from "lucide-react";
+import Image from "next/image";
+
 import MobileMenu from "@/components/layouts/mobile-menu";
 import DesktopMenu from "@/components/layouts/desktop-menu";
 import HeaderAction from "@/components/layouts/header-action";
+
+import { Separator } from "@/components/ui/separator";
 import clsx from "clsx";
+
 import { animateScroll as scroll } from "react-scroll";
 
 export default function Header() {
@@ -35,22 +39,29 @@ export default function Header() {
   return (
     <header
       className={clsx(
-        isScrolled && "border-b shadow-xs",
+        isScrolled && "border-b shadow-xs backdrop-blur-xl bg-background/75",
         "sticky top-0 z-50 bg-background"
       )}
     >
       <div className="container-wrapper">
         <nav className="flex justify-between py-2 items-center lg:py-6">
           <div
-            className="flex gap-2 items-center cursor-pointer"
+            className="flex gap-2 items-center cursor-pointer h-9"
             onClick={scrollToTop}
           >
-            <div className="h-8 w-8 bg-tertiary flex items-center justify-center rounded-md">
-              <Zap fill="#f04438" stroke="#f04438" className="size-4" />
-            </div>
-            <h3 className="text-xl font-semibold tracking-wider text-primary">
-              PLN
-            </h3>
+            <Image
+              src="/images/PLN-Logo-Mark.svg"
+              alt="PLN Logo"
+              width={36}
+              height={36}
+            />
+            <Separator orientation="vertical" className="ml-1" />
+            <Image
+              src="/images/GEAPP-Logo-Mark.svg"
+              alt="GEAPP Logo"
+              width={38}
+              height={36}
+            />
           </div>
           <div className="lg:hidden">
             <MobileMenu links={navLinks} />
@@ -71,8 +82,12 @@ export default function Header() {
 
 const navLinks = [
   {
-    to: "about",
+    to: "overview",
     label: "Overview",
+  },
+  {
+    to: "about",
+    label: "About",
   },
   {
     to: "location",
