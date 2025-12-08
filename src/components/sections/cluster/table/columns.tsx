@@ -63,11 +63,7 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
                   size="sm"
                   className="ml-auto shadow-none"
                 >
-                  <span className="block">
-                    Existing Diesel
-                    <br />
-                    Capacity
-                  </span>
+                  <span className="block">Existing Diesel Capacity</span>
                   <ChevronsUpDown className="h-4 w-4" />
                 </Button>
               </DropdownMenuTrigger>
@@ -86,7 +82,7 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
           </DropdownMenu>
         ),
         cell: ({ row }) => (
-          <div>
+          <div className="text-center">
             <span>{row.original.capacity}</span>
           </div>
         ),

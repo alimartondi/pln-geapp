@@ -93,7 +93,7 @@ export function DataTable<TData extends { clusterId: number }, TValue>({
     (table.getColumn("clusterId")?.getFilterValue() as string[]) ?? [];
 
   return (
-    <Card>
+    <Card className="h-full">
       {/* Top toolbar */}
       <CardHeader className="flex flex-col md:flex-row gap-4">
         <div className="flex flex-col md:flex-row gap-4 w-full">
@@ -158,9 +158,9 @@ export function DataTable<TData extends { clusterId: number }, TValue>({
       </CardHeader>
 
       {/* Table */}
-      <CardContent>
-        <div className="border rounded-md overflow-hidden">
-          <Table>
+      <CardContent className="h-full overflow-hidden">
+        <div className="border rounded-md overflow-hidden h-full">
+          <Table className="border-separate border-spacing-0">
             <TableHeader>
               {table.getHeaderGroups().map((headerGroup) => (
                 <TableRow key={headerGroup.id}>
@@ -174,10 +174,10 @@ export function DataTable<TData extends { clusterId: number }, TValue>({
                             "text-center uppercase font-semibold",
                           header.column.id === "projectName" &&
                             !header.isPlaceholder &&
-                            "sticky left-0 bg-primary border-t border-[#e5e7eb] dark:border-[#27a9c2] after:absolute after:right-0 after:h-full after:w-[0.1px] after:bg-border after:top-0 translate-z-0 text-left will-change-transform z-10",
+                            "sticky left-0 bg-primary will-change-transform z-30",
                           headerGroup.headers.indexOf(header) === 0 &&
                             headerGroup.headers[0].isPlaceholder &&
-                            "sticky left-0 bg-primary after:absolute after:right-0 after:h-full after:w-[0.1px] after:bg-border after:top-0 border-[#e5e7eb] dark:border-[#27a9c2] will-change-transform z-10",
+                            "sticky left-0 bg-primary will-change-transform z-30",
                           "tex-center text-white"
                         )}
                       >
@@ -201,17 +201,15 @@ export function DataTable<TData extends { clusterId: number }, TValue>({
                     data-state={row.getIsSelected() && "selected"}
                   >
                     {row.getVisibleCells().map((cell, index) => {
-                      const isFirst = index === 0; // cek kolom pertama
+                      const isFirst = index === 0;
 
                       return (
-                        // Di dalam loop table.getRowModel().rows.map((row, actualIndex) =>
                         <TableCell
                           key={cell.id}
                           className={clsx(
+                            isFirst && "sticky left-0 z-10",
                             isFirst &&
-                              "sticky left-0 z-10 after:absolute after:inset-y-0 after:right-0 after:w-[0.1px] after:bg-border",
-                            isFirst &&
-                              (actualIndex % 2 === 0 // Gunakan actualIndex dari map
+                              (actualIndex % 2 === 0
                                 ? "bg-[#ffffff] dark:bg-[#18181a]"
                                 : "bg-[#f6f7f9] dark:bg-[#232227]")
                           )}
@@ -292,7 +290,7 @@ export function DataTable<TData extends { clusterId: number }, TValue>({
         <Dialog>
           <DialogTrigger asChild>
             <Button
-              variant="outline"
+              variant="default"
               size="lg"
               className="w-full lg:w-auto lg:ml-auto"
             >

@@ -35,7 +35,7 @@ export default function ClusterDetailSheet({ cluster, onClose }: Props) {
           <SheetDescription />
         </SheetHeader>
 
-        <div className="px-4 pb-4 space-y-6 overflow-y-auto">
+        <div className="px-4 space-y-6 h-full overflow-hidden">
           {/* Data Table */}
           <DataTable<ClusterTableRow, unknown>
             columns={columns}
