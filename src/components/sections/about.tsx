@@ -21,107 +21,212 @@ export default function About() {
           </div>
         </div>
 
-        <div className="grid gap-8">
-          <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
-            <div className="bg-muted/50 px-6 py-8 lg:p-12 rounded-lg space-y-4">
+        <div className="grid gap-6">
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="bg-muted/50 px-6 py-8 rounded-lg space-y-4">
               <h2 className="text-3xl font-semibold lg:text-4xl lg:leading-tight text-pretty">
-                National Energy Vision (RUPTL)
+                About the Program
               </h2>
               <p>
-                The Electricity Supply Business Plan (RUPTL) is Indonesia&apos;s
-                central planning document for the national power sector. The
-                2025—2034 RUPTL set a target of installing 53 GW of renewable
-                energy generation capacity, accounting for 76% of forecast new
-                capacity.
+                Indonesia&apos;s isolated microgrids offer a major opportunity
+                for renewable energy, but developers often face unclear land
+                status, varying permitting pathways, and limited visibility of
+                environmental, social, and hazard risks. These uncertainties
+                slow bidding, raise costs, and delay diesel-replacement
+                outcomes.
+              </p>
+              <p>
+                To address this,{" "}
+                <strong>
+                  GEAPP and PLN partnered with ITP Renewables, Synkrona, and
+                  Mosaic Risk Analytics
+                </strong>{" "}
+                to strengthen site preparation and improve risk transparency
+                across the De-dieselization Program. This platform provides{" "}
+                <strong>consistent, indicative information</strong> from the
+                Portfolio Feasibility Study—the first unified view of technical,
+                geospatial, and E&S conditions at each PLTD—giving developers a
+                clearer basis for preparing competitive bids.
               </p>
             </div>
-            <div className="bg-muted/50 px-6 py-8 lg:p-12 rounded-lg space-y-4">
+
+            <div className="bg-muted/50 px-6 py-8 rounded-lg space-y-4">
               <h2 className="text-3xl font-semibold lg:text-4xl lg:leading-tight text-pretty">
-                The Diesel Replacement Program
+                Technical Approach
               </h2>
               <p>
-                A core component of the RUPTL is the PLN&apos;s De-dieselization
-                Program. This program aims to reduce diesel fuel consumption
-                across 2,130 isolated power grids by integrating renewable
-                energy, replacing diesel with gas, or interconnecting with
-                larger power grids. The program covers 5,200 diesel generators,
-                with cumulative installed capacity of 2,370 MW.
+                The technical partners combined{" "}
+                <strong>
+                  energy-system engineering, geospatial intelligence, and
+                  environmental & social screening
+                </strong>{" "}
+                into a single comparable dataset. Surfacing key risks early
+                reduces uncertainty, improves comparability across sites, and
+                enables faster investment decisions in remote microgrids.
+              </p>
+              <p>
+                This work was delivered by ITP Renewables, Synkrona, and Mosaic
+                Risk Analytics, with support from PLN&apos;s regional teams and
+                community informants.
               </p>
             </div>
           </div>
 
-          <div className="bg-muted/50 flex md:flex-row flex-col gap-16 px-6 py-8 lg:p-12 rounded-lg">
-            <div className="basis-1/2 space-y-4">
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="bg-muted/50 px-6 py-8 rounded-lg space-y-4">
               <h2 className="text-3xl font-semibold lg:text-4xl lg:leading-tight text-pretty">
-                Data Methodology & Sources
+                Methodology & Data Sources
               </h2>
-              <p className="max-w-md">
-                A core component of the RUPTL is the PLN&apos;s De-dieselization
-                Program. This program aims to reduce diesel fuel consumption
-                across 2,130 isolated power grids by integrating renewable
-                energy, replacing diesel with gas, or interconnecting with
-                larger power grids. The program covers 5,200 diesel generators,
-                with cumulative installed capacity of 2,370 MW.
-              </p>
-            </div>
-            <div className="basis-1/2 space-y-6">
-              <p>
-                The data displayed on the website are gathered, collected, and
-                processed through a sophisticated, multi-layered approach
-                involving ITP Synkrona consortium and its technical experts and
-                Mosaic Risk Analytics:
-              </p>
+              <p>The assessment integrates four inputs:</p>
 
               <ul className="space-y-4 max-w-lg">
                 <li className="flex gap-4">
                   <div className="h-10 w-10 flex items-center justify-center rounded-md bg-primary text-primary-foreground">
                     1
                   </div>
-                  <p className="flex-1">
-                    Core Data Gathering (Feasibility Study): The foundational
-                    layer includes energy system modelling, economic and
-                    financial analysis, direct PLN load and diesel-generation
-                    data, and initial field surveys conducted by trained grid
-                    engineers.
-                  </p>
+                  <div className="flex-1 space-y-2">
+                    <p className="font-medium">Geo-AI Desktop Assessments</p>
+                    <p>
+                      Core Data Gathering (Feasibility Study): The foundational
+                      layer includes energy system modelling, economic and
+                      financial analysis, direct PLN load and diesel-generation
+                      data, and initial field surveys conducted by trained grid
+                      engineers.
+                    </p>
+                  </div>
                 </li>
                 <li className="flex gap-4">
                   <div className="h-10 w-10 flex items-center justify-center rounded-md bg-primary text-primary-foreground">
                     2
                   </div>
-                  <p className="flex-1">
-                    Geospatial Processing: Technical suitability and siting
-                    constraints are evaluated by applying advanced satellite
-                    imaging, computer vision, and location-intelligence
-                    techniques.
-                  </p>
+                  <div className="flex-1 space-y-2">
+                    <p className="font-medium">Field Validation</p>
+                    <p>
+                      Targeted on-site checks by grid engineers to confirm
+                      access, local conditions, infrastructure, and operational
+                      context.
+                    </p>
+                  </div>
                 </li>
                 <li className="flex gap-4">
                   <div className="h-10 w-10 flex items-center justify-center rounded-md bg-primary text-primary-foreground">
                     3
                   </div>
-                  <p className="flex-1">
-                    Open-Source Collection: Data is compiled from open-source
-                    public domain sources, including Government of Indonesia
-                    ministry portals, OpenStreetMap, national and international
-                    hazard inventories, and IPCC climate change projection
-                    datasets.
-                  </p>
+                  <div className="flex-1 space-y-2">
+                    <p className="font-medium">
+                      Energy Modelling & Feasibility Analysis
+                    </p>
+                    <p>
+                      Energy-system modelling, economic screening, and
+                      integration of PLN load and diesel-generation data to
+                      establish consistent technical and financial baselines.
+                    </p>
+                  </div>
                 </li>
                 <li className="flex gap-4">
                   <div className="h-10 w-10 flex items-center justify-center rounded-md bg-primary text-primary-foreground">
                     4
                   </div>
-                  <p className="flex-1">
-                    Environmental & Social (E&S) Screening: Preliminary impacts
-                    and regulatory pathways are scoped using BPS statistics and
-                    insights gathered from village-level informants.
-                  </p>
+                  <div className="flex-1 space-y-2">
+                    <p className="font-medium">
+                      Portfolio Integration & E&S Screening
+                    </p>
+                    <p>
+                      Consolidation of technical, regulatory, socioeconomic,
+                      community and preliminary climate-risk inputs to produce
+                      comparable site profiles and development-risk
+                      classifications, including considerations of land and
+                      permitting, environmental sensitivity, social context, and
+                      technical suitability.
+                    </p>
+                  </div>
                 </li>
               </ul>
+              {/* <div className="basis-1/2 space-y-6">
+                <p>The assessment integrates four inputs:</p>
+
+                <ul className="space-y-4 max-w-lg">
+                  <li className="flex gap-4">
+                    <div className="h-10 w-10 flex items-center justify-center rounded-md bg-primary text-primary-foreground">
+                      1
+                    </div>
+                    <div className="flex-1 space-y-2">
+                      <p className="font-medium">Geo-AI Desktop Assessments</p>
+                      <p>
+                        Core Data Gathering (Feasibility Study): The
+                        foundational layer includes energy system modelling,
+                        economic and financial analysis, direct PLN load and
+                        diesel-generation data, and initial field surveys
+                        conducted by trained grid engineers.
+                      </p>
+                    </div>
+                  </li>
+                  <li className="flex gap-4">
+                    <div className="h-10 w-10 flex items-center justify-center rounded-md bg-primary text-primary-foreground">
+                      2
+                    </div>
+                    <div className="flex-1 space-y-2">
+                      <p className="font-medium">Field Validation</p>
+                      <p>
+                        Targeted on-site checks by grid engineers to confirm
+                        access, local conditions, infrastructure, and
+                        operational context.
+                      </p>
+                    </div>
+                  </li>
+                  <li className="flex gap-4">
+                    <div className="h-10 w-10 flex items-center justify-center rounded-md bg-primary text-primary-foreground">
+                      3
+                    </div>
+                    <div className="flex-1 space-y-2">
+                      <p className="font-medium">
+                        Energy Modelling & Feasibility Analysis
+                      </p>
+                      <p>
+                        Energy-system modelling, economic screening, and
+                        integration of PLN load and diesel-generation data to
+                        establish consistent technical and financial baselines.
+                      </p>
+                    </div>
+                  </li>
+                  <li className="flex gap-4">
+                    <div className="h-10 w-10 flex items-center justify-center rounded-md bg-primary text-primary-foreground">
+                      4
+                    </div>
+                    <div className="flex-1 space-y-2">
+                      <p className="font-medium">
+                        Portfolio Integration & E&S Screening
+                      </p>
+                      <p>
+                        Consolidation of technical, regulatory, socioeconomic,
+                        community and preliminary climate-risk inputs to produce
+                        comparable site profiles and development-risk
+                        classifications, including considerations of land and
+                        permitting, environmental sensitivity, social context,
+                        and technical suitability.
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+              </div> */}
+            </div>
+            <div className="bg-muted/50 px-6 py-8 rounded-lg space-y-4">
+              <h2 className="text-3xl font-semibold lg:text-4xl lg:leading-tight text-pretty">
+                Outcome
+              </h2>
               <p>
-                The portfolio information was compiled using the latest
-                available datasets during Q1—Q2 20257.
+                The program prepared{" "}
+                <strong>
+                  52 auction-ready solar—BESS hybrid projects (~139 MW),
+                </strong>{" "}
+                each supported with development feasibility information. By
+                improving risk visibility upfront, GEAPP and PLN enable
+                developers to bid more accurately, reduce contingencies, and
+                accelerate renewable deployment in Indonesia&apos;s remote
+                microgrids.
+              </p>
+              <p>
+                <strong>Data Vintage:</strong> Q1—Q2 2025
               </p>
             </div>
           </div>
