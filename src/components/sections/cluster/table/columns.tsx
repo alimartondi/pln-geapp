@@ -107,7 +107,29 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
       {
         accessorKey: "landSize",
         header: () => (
-          <div className="space-y-1">
+          <div className="relative space-y-1">
+            <div className="absolute -top-7 -right-5">
+              <Popover>
+                <PopoverTrigger asChild>
+                  <Button
+                    className="bg-transparent hover:bg-transparent hover:text-white/50"
+                    size="sm"
+                  >
+                    <Info size={16} />
+                  </Button>
+                </PopoverTrigger>
+                <PopoverContent side="left">
+                  <div className="text-sm space-y-3 opacity-75 p-1 lg:p-2">
+                    <p>
+                      The area available for development was identified by
+                      Mosaic Risk Analytics desktop study then validated and
+                      refined by Synkrona Enjiniring Nusantara&apos;s field
+                      teams in consultation with local communities.
+                    </p>
+                  </div>
+                </PopoverContent>
+              </Popover>
+            </div>
             <span className="block">Project Land Size</span>
             <Badge variant={"glass"}>(ha)</Badge>
           </div>
@@ -526,26 +548,85 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
   {
     header: "Approvals & Execution Pathway",
     columns: [
-      { accessorKey: "goiApprovalsProfile", header: "GOI Approvals Class" },
       {
-        accessorKey: "preliminaryPositiveImpacts",
-        header: "Preliminary Positive Impacts ",
-        cell: ({ row }) => {
-          const preliminary = row.original.preliminaryPositiveImpacts;
-          return (
-            <div className="flex flex-col gap-4">
-              {preliminary.map((p, i) => (
-                <span key={i}>{p}</span>
-              ))}
+        accessorKey: "goiApprovalsProfile",
+        header: () => (
+          <div className="relative">
+            <div className="absolute -top-6 -right-3">
+              <Popover>
+                <PopoverTrigger asChild>
+                  <Button
+                    className="bg-transparent hover:bg-transparent hover:text-white/50"
+                    size="sm"
+                  >
+                    <Info size={16} />
+                  </Button>
+                </PopoverTrigger>
+                <PopoverContent side="left">
+                  <div className="text-sm space-y-3 opacity-75 p-1 lg:p-2">
+                    <p>
+                      Government approval requirements vary by site conditions
+                      and range from straightforward to complex. The pathway is
+                      determined by land status, environmental sensitivity, and
+                      forest clearance needs:
+                    </p>
+                    <ul className="space-y-2">
+                      <li>
+                        <strong>Category A — Routine</strong> | Simple
+                        district-level permits (UKL/UPL), clear land status
+                      </li>
+                      <li>
+                        <strong>Category B — Enhanced</strong> | One additional
+                        study required (Mangrove assessment or AMDAL), standard
+                        permitting
+                      </li>
+                      <li>
+                        <strong>Category C — Complex</strong> | One major land
+                        issue (TORA, forest rights/PIAP, or forest clearance),
+                        Ministry-level coordination
+                      </li>
+                      <li>
+                        <strong>Category D — Critical</strong> | Multiple
+                        overlapping barriers (Moratorium, combined land and
+                        forest issues), extended timeline
+                      </li>
+                    </ul>
+                  </div>
+                </PopoverContent>
+              </Popover>
             </div>
-          );
-        },
+            <span>GOI Approvals Class</span>
+          </div>
+        ),
       },
+
       {
         accessorKey: "preliminaryNegativeImpacts",
         header: "Preliminary Negative Impacts",
         cell: ({ row }) => {
           const preliminary = row.original.preliminaryNegativeImpacts;
+          return (
+            <div className="flex flex-col gap-4">
+              {preliminary.map((group, i) => (
+                <div key={i} className="flex gap-1">
+                  {group.map((item, j) => (
+                    <span key={j}>
+                      {item}
+                      {j !== group.length - 1 && ","}
+                    </span>
+                  ))}
+                </div>
+              ))}
+            </div>
+          );
+        },
+      },
+
+      {
+        accessorKey: "preliminaryPositiveImpacts",
+        header: "Preliminary Positive Impacts ",
+        cell: ({ row }) => {
+          const preliminary = row.original.preliminaryPositiveImpacts;
           return (
             <div className="flex flex-col gap-4">
               {preliminary.map((group, i) => (

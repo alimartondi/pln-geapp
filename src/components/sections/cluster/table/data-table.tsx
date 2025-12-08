@@ -158,8 +158,8 @@ export function DataTable<TData extends { clusterId: number }, TValue>({
       </CardHeader>
 
       {/* Table */}
-      <CardContent className="h-full overflow-hidden">
-        <div className="border rounded-md overflow-hidden h-full">
+      <CardContent className="h-full overflow-hidden max-h-fit">
+        <div className="border rounded-md overflow-hidden h-full min-h-fit max-h-fit">
           <Table className="border-separate border-spacing-0">
             <TableHeader>
               {table.getHeaderGroups().map((headerGroup) => (
