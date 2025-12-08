@@ -66,32 +66,54 @@ export default function Map() {
     setDownloading(true);
 
     try {
-      const urlParts = marker.pdf.split("/");
-      const fileName = urlParts[urlParts.length - 1];
+      const fileUrl = marker.pdf;
 
+      // Dapatkan nama file
+      const fileName = fileUrl.split("/").pop() || "file.pdf";
+
+      // --- CASE 1: Local file (dalam folder public) ---
+      if (fileUrl.startsWith("/")) {
+        // 1) Buka di tab baru
+        window.open(fileUrl, "_blank");
+
+        // 2) Download secara langsung
+        const link = document.createElement("a");
+        link.href = fileUrl;
+        link.download = fileName;
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+
+        setDownloading(false);
+        return;
+      }
+
+      // --- CASE 2: File Eksternal (CDN) → gunakan proxy API ---
       const response = await fetch(
         `/api/proxy-pdf?url=${encodeURIComponent(
-          marker.pdf
+          fileUrl
         )}&name=${encodeURIComponent(fileName)}`
       );
 
       if (!response.ok) throw new Error("Failed to download PDF file");
 
       const blob = await response.blob();
-      const url = window.URL.createObjectURL(blob);
+      const blobUrl = window.URL.createObjectURL(blob);
 
+      // 1) Buka file di tab baru
+      window.open(blobUrl, "_blank");
+
+      // 2) Download file
       const link = document.createElement("a");
-      link.href = url;
+      link.href = blobUrl;
       link.download = fileName;
-      document.body.appendChild(link);
       link.click();
-      document.body.removeChild(link);
 
-      window.URL.revokeObjectURL(url);
+      window.URL.revokeObjectURL(blobUrl);
     } catch (error) {
       console.error("Failed to download PDF:", error);
     } finally {
-      setTimeout(() => setDownloading(false), 2000);
+      setTimeout(() => setDownloading(false), 1200);
     }
   };
 
