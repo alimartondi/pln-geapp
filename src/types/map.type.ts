@@ -4,7 +4,8 @@ export interface MarkerData {
   lat: number;
   lng: number;
   capacity: string;
-  peakLoad: string,
+  peakLoad: string;
+  ghi: string;
   landSize: string;
   status: "Confirmed" | "Pending" | "Cancelled" | "Planned";
   region: string;

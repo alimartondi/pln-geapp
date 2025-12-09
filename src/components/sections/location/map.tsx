@@ -216,6 +216,13 @@ export default function Map() {
                         </div>
 
                         <div className="flex justify-between items-center">
+                          <span className="text-sm">GHI</span>
+                          <span className="text-sm font-semibold">
+                            {info.ghi} kWh/sqm/yr
+                          </span>
+                        </div>
+
+                        <div className="flex justify-between items-center">
                           <span className="text-sm">Land Size</span>
                           <span className="text-sm font-semibold">
                             {info.landSize}
