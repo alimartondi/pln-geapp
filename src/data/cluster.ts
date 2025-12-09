@@ -57,6 +57,7 @@ export const clusterDetails: ClusterDetail[] = [
         pltdDist: ["110"],
 
         bpp: 30.55,
+        ghi: 1.655,
         ace: 400,
         peakLoad: 141,
         meanLoad: 101,
@@ -94,6 +95,7 @@ export const clusterDetails: ClusterDetail[] = [
         pltdDist: ["1000"],
 
         bpp: 29.53,
+        ghi: 1.655,
         ace: 260,
         peakLoad: 89,
         meanLoad: 65,
@@ -132,6 +134,7 @@ export const clusterDetails: ClusterDetail[] = [
         pltdDist: ["250"],
 
         bpp: 25.17,
+        ghi: 1.658,
         ace: 290,
         peakLoad: 119,
         meanLoad: 89,
@@ -169,6 +172,7 @@ export const clusterDetails: ClusterDetail[] = [
         pltdDist: ["540"],
 
         bpp: 30.84,
+        ghi: 1.662,
         ace: 140,
         peakLoad: 61,
         meanLoad: 42,
@@ -210,6 +214,7 @@ export const clusterDetails: ClusterDetail[] = [
         pltdDist: ["75", "180"],
 
         bpp: 24.11,
+        ghi: 1.668,
         ace: 930,
         peakLoad: 412,
         meanLoad: 295,
@@ -259,6 +264,7 @@ export const clusterDetails: ClusterDetail[] = [
         pltdDist: ["440"],
 
         bpp: 37.21,
+        ghi: 1.686,
         ace: 260,
         peakLoad: 77,
         meanLoad: 55,
@@ -296,6 +302,7 @@ export const clusterDetails: ClusterDetail[] = [
         pltdDist: ["680"],
 
         bpp: 22.53,
+        ghi: 1.662,
         ace: 4900,
         peakLoad: 2376,
         meanLoad: 1831,
@@ -333,6 +340,7 @@ export const clusterDetails: ClusterDetail[] = [
         pltdDist: ["2080"],
 
         bpp: 23.69,
+        ghi: 1.808,
         ace: 2700,
         peakLoad: 1221,
         meanLoad: 946,
@@ -373,6 +381,7 @@ export const clusterDetails: ClusterDetail[] = [
         pltdDist: ["980", "700"],
 
         bpp: 23.7,
+        ghi: 1.807,
         ace: 3200,
         peakLoad: 1735,
         meanLoad: 1388,
@@ -419,6 +428,7 @@ export const clusterDetails: ClusterDetail[] = [
         pltdDist: ["1320"],
 
         bpp: 26.8,
+        ghi: 1.657,
         ace: 710,
         peakLoad: 296,
         meanLoad: 219,
@@ -456,6 +466,7 @@ export const clusterDetails: ClusterDetail[] = [
         pltdDist: ["188"],
 
         bpp: 27.66,
+        ghi: 1.628,
         ace: 950,
         peakLoad: 347,
         meanLoad: 266,
@@ -493,6 +504,7 @@ export const clusterDetails: ClusterDetail[] = [
         pltdDist: ["140"],
 
         bpp: 27.1,
+        ghi: 1.692,
         ace: 250,
         peakLoad: 81,
         meanLoad: 56,
@@ -530,6 +542,7 @@ export const clusterDetails: ClusterDetail[] = [
         pltdDist: ["210"],
 
         bpp: 35.06,
+        ghi: 1.809,
         ace: 610,
         peakLoad: 166,
         meanLoad: 122,
@@ -567,6 +580,7 @@ export const clusterDetails: ClusterDetail[] = [
         pltdDist: ["230"],
 
         bpp: 37.76,
+        ghi: 1.806,
         ace: 690,
         peakLoad: 135,
         meanLoad: 93,
@@ -604,6 +618,7 @@ export const clusterDetails: ClusterDetail[] = [
         pltdDist: ["200"],
 
         bpp: 40.56,
+        ghi: 1.67,
         ace: 270,
         peakLoad: 82,
         meanLoad: 46,
@@ -641,6 +656,7 @@ export const clusterDetails: ClusterDetail[] = [
         pltdDist: ["190"],
 
         bpp: 47.06,
+        ghi: 1.668,
         ace: 230,
         peakLoad: 46,
         meanLoad: 30,
@@ -678,6 +694,7 @@ export const clusterDetails: ClusterDetail[] = [
         pltdDist: ["90"],
 
         bpp: 57.76,
+        ghi: 1.665,
         ace: 54,
         peakLoad: 13,
         meanLoad: 8,
@@ -715,6 +732,7 @@ export const clusterDetails: ClusterDetail[] = [
         pltdDist: ["170"],
 
         bpp: 47.27,
+        ghi: 1.727,
         ace: 110,
         peakLoad: 26,
         meanLoad: 18,
@@ -752,6 +770,7 @@ export const clusterDetails: ClusterDetail[] = [
         pltdDist: ["120"],
 
         bpp: 54.6,
+        ghi: 1.717,
         ace: 100,
         peakLoad: 20,
         meanLoad: 14,
@@ -789,6 +808,7 @@ export const clusterDetails: ClusterDetail[] = [
         pltdDist: ["<50"],
 
         bpp: 47.86,
+        ghi: 1.827,
         ace: 130,
         peakLoad: 30,
         meanLoad: 20,
@@ -826,6 +846,7 @@ export const clusterDetails: ClusterDetail[] = [
         pltdDist: ["100", "200"],
 
         bpp: 22.72,
+        ghi: 1.617,
         ace: 15000,
         peakLoad: 4385,
         meanLoad: 3663,
@@ -872,6 +893,7 @@ export const clusterDetails: ClusterDetail[] = [
         pltdDist: ["250"],
 
         bpp: 28.46,
+        ghi: 1.632,
         ace: 99,
         peakLoad: 18,
         meanLoad: 14,
@@ -909,6 +931,7 @@ export const clusterDetails: ClusterDetail[] = [
         pltdDist: ["<50"],
 
         bpp: 23.66,
+        ghi: 1.808,
         ace: 67,
         peakLoad: 28,
         meanLoad: 20,
@@ -946,6 +969,7 @@ export const clusterDetails: ClusterDetail[] = [
         pltdDist: ["350"],
 
         bpp: 70.97,
+        ghi: 1.809,
         ace: 31,
         peakLoad: 8,
         meanLoad: 4,
@@ -983,6 +1007,7 @@ export const clusterDetails: ClusterDetail[] = [
         pltdDist: ["250"],
 
         bpp: 27.07,
+        ghi: 1.659,
         ace: 24000,
         peakLoad: 7421,
         meanLoad: 5975,
@@ -1025,6 +1050,7 @@ export const clusterDetails: ClusterDetail[] = [
         pltdDist: ["2500"],
 
         bpp: 32.85,
+        ghi: 1.83,
         ace: 2600,
         peakLoad: 461,
         meanLoad: 348,
@@ -1061,6 +1087,7 @@ export const clusterDetails: ClusterDetail[] = [
         pltdDist: ["1750", "125"],
 
         bpp: 94.76,
+        ghi: 1.987,
         ace: 620,
         peakLoad: 114,
         meanLoad: 79,
@@ -1103,6 +1130,7 @@ export const clusterDetails: ClusterDetail[] = [
         pltdDist: ["250"],
 
         bpp: 115.68,
+        ghi: 2.004,
         ace: 59,
         peakLoad: 8,
         meanLoad: 7,
@@ -1139,6 +1167,7 @@ export const clusterDetails: ClusterDetail[] = [
         pltdDist: ["1400"],
 
         bpp: 87.44,
+        ghi: 1.947,
         ace: 290,
         peakLoad: 50,
         meanLoad: 38,
@@ -1175,6 +1204,7 @@ export const clusterDetails: ClusterDetail[] = [
         pltdDist: ["<100"],
 
         bpp: 58.88,
+        ghi: 1.958,
         ace: 100,
         peakLoad: 25,
         meanLoad: 14,
@@ -1211,6 +1241,7 @@ export const clusterDetails: ClusterDetail[] = [
         pltdDist: ["500"],
 
         bpp: 29.52,
+        ghi: 1.947,
         ace: 2700,
         peakLoad: 485,
         meanLoad: 379,
@@ -1247,6 +1278,7 @@ export const clusterDetails: ClusterDetail[] = [
         pltdDist: ["1500"],
 
         bpp: 29.34,
+        ghi: 1.862,
         ace: 1200,
         peakLoad: 278,
         meanLoad: 230,
@@ -1288,6 +1320,7 @@ export const clusterDetails: ClusterDetail[] = [
         pltdDist: ["500"],
 
         bpp: 109.77,
+        ghi: 1.913,
         ace: 45,
         peakLoad: 9,
         meanLoad: 6,
@@ -1324,6 +1357,7 @@ export const clusterDetails: ClusterDetail[] = [
         pltdDist: ["400"],
 
         bpp: 145.5,
+        ghi: 1.888,
         ace: 30,
         peakLoad: 6,
         meanLoad: 4,
@@ -1363,6 +1397,7 @@ export const clusterDetails: ClusterDetail[] = [
         pltdDist: ["120", "900"],
 
         bpp: 32.16,
+        ghi: 2.02,
         ace: 340,
         peakLoad: 61,
         meanLoad: 55,
@@ -1414,6 +1449,7 @@ export const clusterDetails: ClusterDetail[] = [
         pltdDist: ["250"],
 
         bpp: 25.72,
+        ghi: 2.04,
         ace: 9300,
         peakLoad: 1349,
         meanLoad: 1299,
@@ -1450,6 +1486,7 @@ export const clusterDetails: ClusterDetail[] = [
         pltdDist: ["740"],
 
         bpp: 106.94,
+        ghi: 1.893,
         ace: 110,
         peakLoad: 25,
         meanLoad: 14,
@@ -1486,6 +1523,7 @@ export const clusterDetails: ClusterDetail[] = [
         pltdDist: ["360"],
 
         bpp: 62.1,
+        ghi: 1.924,
         ace: 99,
         peakLoad: 23,
         meanLoad: 13,
@@ -1522,6 +1560,7 @@ export const clusterDetails: ClusterDetail[] = [
         pltdDist: ["2000"],
 
         bpp: 25.87,
+        ghi: 2.016,
         ace: 6900,
         peakLoad: 3285,
         meanLoad: 2471,
@@ -1558,6 +1597,7 @@ export const clusterDetails: ClusterDetail[] = [
         pltdDist: ["920"],
 
         bpp: 31.45,
+        ghi: 1.97,
         ace: 1400,
         peakLoad: 324,
         meanLoad: 219,
@@ -1594,6 +1634,7 @@ export const clusterDetails: ClusterDetail[] = [
         pltdDist: ["350"],
 
         bpp: 40.81,
+        ghi: 2.086,
         ace: 290,
         peakLoad: 85,
         meanLoad: 43,
@@ -1635,6 +1676,7 @@ export const clusterDetails: ClusterDetail[] = [
         pltdDist: ["3200"],
 
         bpp: 20.23,
+        ghi: 2.1,
         ace: 20000,
         peakLoad: 6564,
         meanLoad: 4870,
@@ -1671,6 +1713,7 @@ export const clusterDetails: ClusterDetail[] = [
         pltdDist: ["2800"],
 
         bpp: 30.68,
+        ghi: 2.142,
         ace: 1460,
         peakLoad: 227,
         meanLoad: 182,
@@ -1712,6 +1755,7 @@ export const clusterDetails: ClusterDetail[] = [
         pltdDist: ["300"],
 
         bpp: 79.33,
+        ghi: 2.104,
         ace: 2600,
         peakLoad: 421,
         meanLoad: 339,
@@ -1748,6 +1792,7 @@ export const clusterDetails: ClusterDetail[] = [
         pltdDist: ["370"],
 
         bpp: 36.43,
+        ghi: 2.011,
         ace: 1400,
         peakLoad: 269,
         meanLoad: 189,
@@ -1784,6 +1829,7 @@ export const clusterDetails: ClusterDetail[] = [
         pltdDist: ["505"],
 
         bpp: 51.75,
+        ghi: 2.031,
         ace: 250,
         peakLoad: 66,
         meanLoad: 33,
@@ -1820,6 +1866,7 @@ export const clusterDetails: ClusterDetail[] = [
         pltdDist: ["852"],
 
         bpp: 32.75,
+        ghi: 2.024,
         ace: 630,
         peakLoad: 141,
         meanLoad: 87,
@@ -1857,6 +1904,7 @@ export const clusterDetails: ClusterDetail[] = [
         pltdDist: ["150"],
 
         bpp: 25.13,
+        ghi: 2.027,
         ace: 1800,
         peakLoad: 536,
         meanLoad: 407,
@@ -1893,6 +1941,7 @@ export const clusterDetails: ClusterDetail[] = [
         pltdDist: ["142", "685"],
 
         bpp: 25.64,
+        ghi: 2.017,
         ace: 8200,
         peakLoad: 1510,
         meanLoad: 1205,
@@ -1941,6 +1990,7 @@ export const clusterDetails: ClusterDetail[] = [
         pltdDist: ["1050"],
 
         bpp: 28.34,
+        ghi: 2.023,
         ace: 3400,
         peakLoad: 556,
         meanLoad: 464,
@@ -1977,6 +2027,7 @@ export const clusterDetails: ClusterDetail[] = [
         pltdDist: ["1080"],
 
         bpp: 35.65,
+        ghi: 2.015,
         ace: 26000,
         peakLoad: 4209,
         meanLoad: 3664,
@@ -2018,6 +2069,7 @@ export const clusterDetails: ClusterDetail[] = [
         pltdDist: ["<50"],
 
         bpp: 28.15,
+        ghi: 2.075,
         ace: 344,
         peakLoad: 54,
         meanLoad: 39,

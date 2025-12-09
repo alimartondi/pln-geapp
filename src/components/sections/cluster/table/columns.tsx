@@ -180,6 +180,20 @@ export const columns: ColumnDef<ClusterTableRow>[] = [
         ),
       },
       {
+        accessorKey: "ghi",
+        header: () => (
+          <div className="space-y-1">
+            <span className="block">GHI </span>
+            <Badge variant={"glass"}>(kWh/sqm/yr)</Badge>
+          </div>
+        ),
+        cell: ({ row }) => (
+          <div>
+            <span>{row.original.ghi}</span>
+          </div>
+        ),
+      },
+      {
         accessorKey: "ace",
         header: () => (
           <div className="space-y-1">

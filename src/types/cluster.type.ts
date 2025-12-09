@@ -24,6 +24,7 @@ export type ClusterDetail = {
     pltdDist: string[];
 
     bpp: number;
+    ghi: number;
     ace: number;
     peakLoad: number;
     meanLoad: number;
@@ -65,6 +66,7 @@ export type ClusterTableRow = {
   pltdDist: string[];
 
   bpp: number;
+  ghi: number;
   ace: number;
   peakLoad: number;
   meanLoad: number;
