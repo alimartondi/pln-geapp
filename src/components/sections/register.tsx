@@ -5,7 +5,7 @@ import ScrollWrapper from "@/components/layouts/scroll-wrapper";
 
 export default function Register() {
   return (
-    <section className="pb-12 lg:pb-20">
+    <section className="py-12 lg:py-20">
       <ScrollWrapper name="register" className="container-wrapper">
         <div className="relative aspect-3/4 rounded-lg md:aspect-16/11 lg:aspect-16/8 bg-[url('/images/register-image-background.png')] bg-cover bg-center after:absolute after:inset-0 after:bg-secondary/75 overflow-hidden">
           <div className="absolute inset-0 flex flex-col items-center justify-center px-4 z-10">

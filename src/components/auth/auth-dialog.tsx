@@ -15,18 +15,25 @@ import SignUpForm from "@/components/auth/sign-up-form";
 
 type Mode = "signin" | "signup";
 
-export default function AuthDialog({ trigger }: { trigger: React.ReactNode }) {
-  const [mode, setMode] = React.useState<Mode>("signin");
+type AuthDialogProps = {
+  trigger?: React.ReactNode;
+  open: boolean;
+  onOpenChange: (open: boolean) => void;
+};
 
+export default function AuthDialog({
+  trigger,
+  open,
+  onOpenChange,
+}: AuthDialogProps) {
+  const [mode, setMode] = React.useState<Mode>("signin");
   const [showPassword, setShowPassword] = React.useState(false);
 
-  const togglePasswordVisibility = () => {
-    setShowPassword(!showPassword);
-  };
+  const togglePasswordVisibility = () => setShowPassword((prev) => !prev);
 
   return (
-    <Dialog>
-      <DialogTrigger asChild>{trigger}</DialogTrigger>
+    <Dialog open={open} onOpenChange={onOpenChange}>
+      {trigger && <DialogTrigger asChild>{trigger}</DialogTrigger>}
 
       <DialogContent>
         <DialogHeader>

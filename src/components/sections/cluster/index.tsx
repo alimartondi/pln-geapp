@@ -17,8 +17,6 @@ export default function ClusterSection() {
             Transforming Indonesia&apos;s energy landscape through renewable
             solar PV and battery energy storage systems.
           </p>
-
-          <AuthDialog trigger={<Button>Sign In</Button>} />
         </div>
 
         <div>
