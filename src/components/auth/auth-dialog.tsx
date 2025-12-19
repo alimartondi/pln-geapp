@@ -18,6 +18,12 @@ type Mode = "signin" | "signup";
 export default function AuthDialog({ trigger }: { trigger: React.ReactNode }) {
   const [mode, setMode] = React.useState<Mode>("signin");
 
+  const [showPassword, setShowPassword] = React.useState(false);
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
+
   return (
     <Dialog>
       <DialogTrigger asChild>{trigger}</DialogTrigger>
@@ -37,9 +43,17 @@ export default function AuthDialog({ trigger }: { trigger: React.ReactNode }) {
         </DialogHeader>
 
         {mode === "signin" ? (
-          <SignInForm onSwitch={() => setMode("signup")} />
+          <SignInForm
+            showPassword={showPassword}
+            onTogglePassword={togglePasswordVisibility}
+            onSwitch={() => setMode("signup")}
+          />
         ) : (
-          <SignUpForm onSwitch={() => setMode("signin")} />
+          <SignUpForm
+            showPassword={showPassword}
+            onTogglePassword={togglePasswordVisibility}
+            onSwitch={() => setMode("signin")}
+          />
         )}
       </DialogContent>
     </Dialog>

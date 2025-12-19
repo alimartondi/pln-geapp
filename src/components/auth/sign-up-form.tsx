@@ -13,6 +13,8 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "../ui/button";
 
+import { Eye, EyeClosed } from "lucide-react";
+
 const FormSchema = z.object({
   name: z.string().min(5, {
     message: "Name must be at least 5 characters.",
@@ -23,11 +25,17 @@ const FormSchema = z.object({
   }),
 });
 
-const onSubmit = (values: z.infer<typeof FormSchema>) => {
-  console.log(values);
+type SignUpForm = {
+  showPassword: boolean;
+  onTogglePassword: () => void;
+  onSwitch: () => void;
 };
 
-export default function SignUpForm({ onSwitch }: { onSwitch: () => void }) {
+export default function SignUpForm({
+  showPassword,
+  onTogglePassword,
+  onSwitch,
+}: SignUpForm) {
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
@@ -37,6 +45,11 @@ export default function SignUpForm({ onSwitch }: { onSwitch: () => void }) {
     },
     // mode: "onBlur",
   });
+
+  const onSubmit = (values: z.infer<typeof FormSchema>) => {
+    console.log(values);
+    form.reset();
+  };
 
   return (
     <form onSubmit={form.handleSubmit(onSubmit)} className="grid gap-8">
@@ -85,14 +98,25 @@ export default function SignUpForm({ onSwitch }: { onSwitch: () => void }) {
           render={({ field, fieldState }) => (
             <Field data-invalid={fieldState.invalid}>
               <FieldLabel htmlFor="password">Password *</FieldLabel>
-              <Input
-                {...field}
-                id="password"
-                type="password"
-                aria-invalid={fieldState.invalid}
-                placeholder="Enter your password"
-                autoComplete="off"
-              />
+              <div className="relative">
+                <Input
+                  {...field}
+                  id="password"
+                  type={showPassword ? "text" : "password"}
+                  aria-invalid={fieldState.invalid}
+                  placeholder="Enter your password"
+                  autoComplete="off"
+                />
+                <Button
+                  type="button"
+                  size={"sm"}
+                  variant="ghost"
+                  onClick={onTogglePassword}
+                  className="absolute right-0.5 top-1/2 -translate-y-1/2"
+                >
+                  {showPassword ? <Eye /> : <EyeClosed />}
+                </Button>
+              </div>
               {fieldState.invalid && <FieldError errors={[fieldState.error]} />}
             </Field>
           )}
