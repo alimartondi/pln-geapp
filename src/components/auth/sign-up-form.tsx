@@ -111,7 +111,7 @@ export default function SignUpForm({ onSwitch }: { onSwitch: () => void }) {
             Already have an account?{" "}
             <span
               onClick={onSwitch}
-              className="underline cursor-pointer hover:text-white underline-offset-4"
+              className="underline cursor-pointer hover:text-foreground underline-offset-4"
             >
               Sign in
             </span>
