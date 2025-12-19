@@ -1,6 +1,9 @@
 import ScrollWrapper from "@/components/layouts/scroll-wrapper";
 import ClusterDetailSheetWrapper from "./cluster-detail-sheet-wrapper";
 import { clusters } from "@/data/cluster";
+import SignIn from "@/components/blocks/sign-in";
+import AuthDialog from "@/components/auth/auth-dialog";
+import { Button } from "@/components/ui/button";
 
 export default function ClusterSection() {
   return (
@@ -14,6 +17,8 @@ export default function ClusterSection() {
             Transforming Indonesia&apos;s energy landscape through renewable
             solar PV and battery energy storage systems.
           </p>
+
+          <AuthDialog trigger={<Button>Sign In</Button>} />
         </div>
 
         <div>

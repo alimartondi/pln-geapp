@@ -1,3 +1,5 @@
+"use client";
+
 import * as React from "react";
 
 import { useForm } from "react-hook-form";
@@ -128,7 +130,7 @@ export default function SignIn() {
 
             <Link
               href="/forgot-password"
-              className="block text-sm text-muted-foreground hover:underline hover:text-white"
+              className="block text-sm text-muted-foreground hover:underline"
             >
               Forgot Password?
             </Link>
@@ -136,6 +138,15 @@ export default function SignIn() {
             <Button type="submit" size={"lg"} className="w-full">
               Sign In
             </Button>
+            <p className="text-sm text-muted-foreground">
+              Already have an account?{" "}
+              <Link
+                href="/forgot-password"
+                className="inline-flex hover:underline"
+              >
+                Sign in
+              </Link>
+            </p>
           </form>
         </Form>
       </DialogContent>
