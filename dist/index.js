@@ -1,0 +1,23 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+var _a;
+Object.defineProperty(exports, "__esModule", { value: true });
+const dotenv_1 = __importDefault(require("dotenv"));
+dotenv_1.default.config();
+const express_1 = __importDefault(require("express"));
+const helmet_1 = __importDefault(require("helmet"));
+const cors_1 = __importDefault(require("cors"));
+const users_1 = __importDefault(require("./routes/users"));
+const errorHandler_1 = require("./middleware/errorHandler");
+const app = (0, express_1.default)();
+app.use((0, helmet_1.default)());
+app.use((0, cors_1.default)());
+app.use(express_1.default.json());
+app.use('/api/users', users_1.default);
+app.get('/', (req, res) => res.send('Geapp API running'));
+app.use(errorHandler_1.errorHandler);
+const PORT = (_a = process.env.PORT) !== null && _a !== void 0 ? _a : 4000;
+app.listen(Number(PORT), () => console.log(`API server listening on port ${PORT}`));
+exports.default = app;
