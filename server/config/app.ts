@@ -1,8 +1,6 @@
-// nextjs/server/app.ts
 import dotenv from 'dotenv';
-dotenv.config({ path: '../.env' }); // ⬅️ PENTING (karena beda folder)
+dotenv.config({ path: '../.env' }); 
 
-// ⛔ HARD FAIL SERVER
 const REQUIRED_ENVS = [
   'JWT_SECRET',
   'DB_HOST',
@@ -18,9 +16,6 @@ for (const key of REQUIRED_ENVS) {
   }
 }
 
-// ===============================
-// BARU EXPRESS
-// ===============================
 import express from 'express';
 import helmet from 'helmet';
 import cors from 'cors';
