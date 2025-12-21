@@ -42,10 +42,40 @@ export default function SignInForm({
     // mode: "onBlur",
   });
 
-  const onSubmit = (values: z.infer<typeof FormSchema>) => {
-    console.log(values);
-    form.reset();
+  const onSubmit = async (values: z.infer<typeof FormSchema>) => {
+    try {
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_API_URL}/api/auth/login`,
+        {
+          method: "POST",
+          credentials: "include",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(values),
+        }
+      );
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        throw new Error(data.message || "Login failed");
+      }
+
+      console.log("Login success:", data);
+
+      if (data.token) {
+        localStorage.setItem("token", data.token);
+      }
+
+      form.reset();
+    } catch (error: any) {
+      form.setError("password", {
+        message: error.message || "Invalid email or password",
+      });
+    }
   };
+
 
   return (
     <form onSubmit={form.handleSubmit(onSubmit)} className="grid gap-8">
