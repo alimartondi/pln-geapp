@@ -1,7 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.errorHandler = errorHandler;
-function errorHandler(err, req, res, next) {
+export function errorHandler(err, req, res, next) {
     console.error(err);
     if (res.headersSent)
         return next(err);

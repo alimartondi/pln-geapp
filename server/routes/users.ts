@@ -3,9 +3,9 @@ import express, { Request, Response, NextFunction } from 'express';
 import { body, validationResult } from 'express-validator';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
-import pool from '../db';
+import pool from '../db.js';
 import type { RowDataPacket, ResultSetHeader } from 'mysql2';
-import { requireJwtConfig } from '../middleware/requireJwtConfig';
+import { requireJwtConfig } from '../middleware/requireJwtConfig.js';
 
 const router = express.Router();
 

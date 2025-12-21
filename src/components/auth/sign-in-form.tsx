@@ -69,7 +69,7 @@ export default function SignInForm({
       }
 
       form.reset();
-    } catch (error: any) {
+    } catch (error: unknown) {
       form.setError("password", {
         message: error.message || "Invalid email or password",
       });

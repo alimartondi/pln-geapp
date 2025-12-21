@@ -75,7 +75,7 @@ export default function SignUpForm({
       setSuccess(true);
       form.reset();
 
-    } catch (err: any) {
+    } catch (err: unknown) {
       setApiError(err.message);
     }
   };

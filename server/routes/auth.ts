@@ -3,10 +3,10 @@ import express, { Request, Response, NextFunction } from 'express';
 import { body, validationResult } from 'express-validator';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
-import pool from '../db';
+import pool from '../db.js';
 import type { RowDataPacket, ResultSetHeader } from 'mysql2';
-import { requireJwtConfig } from '../middleware/requireJwtConfig';
-import { authMiddleware } from '../middleware/authMiddleware';
+import { requireJwtConfig } from '../middleware/requireJwtConfig.js';
+import { authMiddleware } from '../middleware/authMiddleware.js';
 
 const router = express.Router();
 
