@@ -9,6 +9,10 @@ import { requireJwtConfig } from '../middleware/requireJwtConfig';
 
 const router = express.Router();
 
+/**
+ * POST /api/users/register
+ */
+
 router.post(
   '/register',
   requireJwtConfig,
@@ -55,6 +59,5 @@ router.post(
     }
   }
 );
-
 
 export default router;
