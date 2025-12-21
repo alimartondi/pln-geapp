@@ -1,6 +1,6 @@
-import './config/env';
+// import './config/env';
 
-import app from '../server/app';
+import app from './app.js';
 
 const PORT = Number(process.env.PORT || 4000);
 
