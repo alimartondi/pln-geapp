@@ -7,6 +7,7 @@ type AuthContextType = {
   loading: boolean;
   refreshAuth: () => Promise<void>;
   logout: () => Promise<void>;
+  setAuthenticated: (value: boolean) => void;
 };
 
 const AuthContext = createContext<AuthContextType | null>(null);
@@ -15,6 +16,10 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [loading, setLoading] = useState(true);
 
+  const setAuthenticated = (value: boolean) => {
+    setIsAuthenticated(value);
+  };
+
   const refreshAuth = async () => {
     try {
       const res = await fetch(
@@ -22,6 +27,8 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         { credentials: "include" }
       );
       setIsAuthenticated(res.ok);
+    } catch {
+      setIsAuthenticated(false);
     } finally {
       setLoading(false);
     }
@@ -33,7 +40,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   const logout = async () => {
     await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/auth/logout`, {
-      method: "POST",
+      method: "GET",
       credentials: "include",
     });
 
@@ -42,7 +49,13 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   return (
     <AuthContext.Provider
-      value={{ isAuthenticated, loading, refreshAuth, logout }}
+      value={{
+        isAuthenticated,
+        loading,
+        refreshAuth,
+        logout,
+        setAuthenticated, // ✅ sekarang valid
+      }}
     >
       {children}
     </AuthContext.Provider>
