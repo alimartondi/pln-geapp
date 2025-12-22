@@ -13,6 +13,8 @@ import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react";
 import { Link as ScrollTo } from "react-scroll";
 import { SwitchToggleTheme } from "@/components/theme/switch-toggle-theme";
+import { useAuth } from "@/components/auth/auth-context";
+import { LogOut } from "lucide-react";
 
 type NavLink = {
   to: string;
@@ -25,6 +27,7 @@ type MobileMenuProps = {
 
 export default function MobileMenu({ links }: MobileMenuProps) {
   const [open, setOpen] = useState(false);
+  const { isAuthenticated, logout } = useAuth();
 
   return (
     <Sheet open={open} onOpenChange={setOpen}>
@@ -60,8 +63,20 @@ export default function MobileMenu({ links }: MobileMenuProps) {
             </li>
           ))}
         </ul>
-        <div className="p-4 mt-auto">
+        <div className="p-4 mt-auto flex justify-between items-center">
           <SwitchToggleTheme />
+          {isAuthenticated && (
+            <Button
+              variant="outline"
+              aria-label="Logout button"
+              onClick={async () => {
+                setOpen(false);
+                await logout();
+              }}
+            >
+              <LogOut className="h-[1.2rem] w-[1.2rem]" />
+            </Button>
+          )}
         </div>
       </SheetContent>
     </Sheet>

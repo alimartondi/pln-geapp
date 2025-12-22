@@ -1,12 +1,11 @@
-
-import express, { Request, Response, NextFunction } from 'express';
-import { body, validationResult } from 'express-validator';
-import bcrypt from 'bcryptjs';
-import jwt from 'jsonwebtoken';
-import pool from '../db.js';
-import type { RowDataPacket, ResultSetHeader } from 'mysql2';
-import { requireJwtConfig } from '../middleware/requireJwtConfig.js';
-import { authMiddleware } from '../middleware/authMiddleware.js';
+import express, { Request, Response, NextFunction } from "express";
+import { body, validationResult } from "express-validator";
+import bcrypt from "bcryptjs";
+import jwt from "jsonwebtoken";
+import pool from "../db.js";
+import type { RowDataPacket, ResultSetHeader } from "mysql2";
+import { requireJwtConfig } from "../middleware/requireJwtConfig.js";
+import { authMiddleware } from "../middleware/authMiddleware.js";
 
 const router = express.Router();
 
@@ -73,7 +72,6 @@ router.post(
         `,
         [user.id]
       );
-      
 
       const token = jwt.sign(
         {
@@ -132,8 +130,15 @@ router.get(
         [userId]
       );
 
-      res.clearCookie("access_token");
-      return res.status(200).json({ message: "You have successfully logged out" });
+      res.clearCookie("access_token", {
+        httpOnly: true,
+        secure: process.env.NODE_ENV === "production",
+        sameSite: "none",
+        path: "/",
+      });
+      return res
+        .status(200)
+        .json({ message: "You have successfully logged out" });
     } catch (err) {
       next(err);
     }
@@ -143,42 +148,38 @@ router.get(
 /**
  * GET /api/auth/check
  */
-router.get(
-  "/check",
-  authMiddleware,
-  async (req, res, next) => {
-    try {
-      if (!req.user) {
-        return res.status(401).json({ message: "Unauthorized" });
-      }
+router.get("/check", authMiddleware, async (req, res, next) => {
+  try {
+    if (!req.user) {
+      return res.status(401).json({ message: "Unauthorized" });
+    }
 
-      const userId = req.user.id;
+    const userId = req.user.id;
 
-      const [rows] = await pool.query<RowDataPacket[]>(
-        `
+    const [rows] = await pool.query<RowDataPacket[]>(
+      `
         SELECT is_login
         FROM users
         WHERE id = ?
         LIMIT 1
         `,
-        [userId]
-      );
+      [userId]
+    );
 
-      console.log("is_login value:", rows[0]);
+    console.log("is_login value:", rows[0]);
 
-      return res.status(200).json({
-        loggedIn: true,
-      });
-    } catch (err) {
-      next(err);
-    }
+    return res.status(200).json({
+      loggedIn: true,
+    });
+  } catch (err) {
+    next(err);
   }
-);
+});
 
 /*
-** Route testing API
-*/ 
-router.post('/ping', (_req, res) => {
+ ** Route testing API
+ */
+router.post("/ping", (_req, res) => {
   res.json({ ok: true });
 });
 
