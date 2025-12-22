@@ -37,6 +37,9 @@ export default function SignInForm({
   onSwitch,
   onSuccess,
 }: SignInFormProps) {
+
+  const { setAuthenticated } = useAuth();
+  
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
@@ -65,6 +68,8 @@ export default function SignInForm({
       if (!res.ok) {
         throw new Error(data.message || "Login failed");
       }
+
+      setAuthenticated(true);
 
       // 🔥 PENTING
       onSuccess(); // tutup dialog
