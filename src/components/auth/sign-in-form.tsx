@@ -1,3 +1,7 @@
+"use client";
+
+import { useState } from "react";
+
 import {
   Field,
   FieldGroup,
@@ -5,6 +9,7 @@ import {
   FieldLabel,
   FieldDescription,
 } from "@/components/ui/field";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Input } from "@/components/ui/input";
 
 import { Controller, useForm } from "react-hook-form";
@@ -13,7 +18,7 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "../ui/button";
 
-import { Eye, EyeClosed } from "lucide-react";
+import { Eye, EyeClosed, Info } from "lucide-react";
 
 import { useAuth } from "./auth-context";
 
@@ -46,6 +51,8 @@ export default function SignInForm({
     // mode: "onBlur",
   });
 
+  const [errorMessage, setErrorMessage] = useState("");
+
   const onSubmit = async (values: z.infer<typeof FormSchema>) => {
     try {
       const res = await fetch(
@@ -70,14 +77,19 @@ export default function SignInForm({
       onSuccess(); // tutup dialog
       form.reset();
     } catch (error: any) {
-      form.setError("password", {
-        message: error.message || "Invalid email or password",
-      });
+      setErrorMessage(error.message || "Email or password is incorrect.");
     }
   };
 
   return (
-    <form onSubmit={form.handleSubmit(onSubmit)} className="grid gap-8">
+    <form onSubmit={form.handleSubmit(onSubmit)} className="grid gap-6">
+      {errorMessage && (
+        <Alert variant="destructive">
+          <Info className="h-4 w-4" />
+          <AlertTitle>Something went wrong!</AlertTitle>
+          <AlertDescription>{errorMessage}</AlertDescription>
+        </Alert>
+      )}
       <FieldGroup>
         <Controller
           name="email"

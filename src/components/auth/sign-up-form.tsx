@@ -31,12 +31,14 @@ type SignUpFormProps = {
   showPassword: boolean;
   onTogglePassword: () => void;
   onSwitch: () => void;
+  onSuccess: () => void;
 };
 
 export default function SignUpForm({
   showPassword,
   onTogglePassword,
   onSwitch,
+  onSuccess,
 }: SignUpFormProps) {
   const [apiError, setApiError] = useState<string | null>(null);
   const [success, setSuccess] = useState(false);
@@ -53,7 +55,7 @@ export default function SignUpForm({
   const onSubmit = async (values: z.infer<typeof FormSchema>) => {
     setApiError(null);
     setSuccess(false);
-    
+
     try {
       const res = await fetch(
         `${process.env.NEXT_PUBLIC_API_URL}/api/users/register`,
@@ -72,20 +74,17 @@ export default function SignUpForm({
         throw new Error(data.message || "Registration failed");
       }
 
-      setSuccess(true);
+      onSuccess();
       form.reset();
-
     } catch (err: unknown) {
-      setApiError(err.message);
+      // setApiError(err.message);
     }
   };
 
   return (
     <form onSubmit={form.handleSubmit(onSubmit)} className="grid gap-8">
       <FieldGroup>
-        {apiError && (
-          <p className="text-sm text-red-600">{apiError}</p>
-        )}
+        {apiError && <p className="text-sm text-red-600">{apiError}</p>}
 
         {success && (
           <p className="text-sm text-green-600">
@@ -105,9 +104,7 @@ export default function SignUpForm({
                 aria-invalid={fieldState.invalid}
                 placeholder="Enter your full name"
               />
-              {fieldState.invalid && (
-                <FieldError errors={[fieldState.error]} />
-              )}
+              {fieldState.invalid && <FieldError errors={[fieldState.error]} />}
             </Field>
           )}
         />
@@ -124,9 +121,7 @@ export default function SignUpForm({
                 aria-invalid={fieldState.invalid}
                 placeholder="m@example.com"
               />
-              {fieldState.invalid && (
-                <FieldError errors={[fieldState.error]} />
-              )}
+              {fieldState.invalid && <FieldError errors={[fieldState.error]} />}
             </Field>
           )}
         />
@@ -154,9 +149,7 @@ export default function SignUpForm({
                   {showPassword ? <Eye /> : <EyeClosed />}
                 </Button>
               </div>
-              {fieldState.invalid && (
-                <FieldError errors={[fieldState.error]} />
-              )}
+              {fieldState.invalid && <FieldError errors={[fieldState.error]} />}
             </Field>
           )}
         />
@@ -168,12 +161,10 @@ export default function SignUpForm({
             disabled={form.formState.isSubmitting}
             className="w-full lg:w-auto"
           >
-            {form.formState.isSubmitting
-              ? "Creating account..."
-              : "Sign Up"}
+            {form.formState.isSubmitting ? "Creating account..." : "Sign Up"}
           </Button>
 
-          <FieldDescription>
+          <FieldDescription className="pt-2">
             Already have an account?{" "}
             <span
               onClick={onSwitch}

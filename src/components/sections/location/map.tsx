@@ -66,22 +66,6 @@ export default function Map() {
     setDownloading(true);
 
     try {
-      const authRes = await fetch(
-        `${process.env.NEXT_PUBLIC_API_URL}/api/auth/check`,
-        {
-          method: "GET",
-          credentials: "include",
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
-
-      if (!authRes.ok) {
-        alert("You must be logged in to download this file.");
-        return;
-      }
-
       const fileUrl = marker.pdf;
       const fileName = fileUrl.split("/").pop() || "file.pdf";
 

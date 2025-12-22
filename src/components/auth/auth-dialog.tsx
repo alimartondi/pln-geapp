@@ -60,7 +60,7 @@ export default function AuthDialog({ open, onOpenChange }: AuthDialogProps) {
             showPassword={showPassword}
             onTogglePassword={() => setShowPassword((p) => !p)}
             onSwitch={() => setMode("signin")}
-            // onSuccess={() => onOpenChange(false)} // 🔥
+            onSuccess={() => onOpenChange(false)} // 🔥
           />
         )}
       </DialogContent>
