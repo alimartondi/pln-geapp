@@ -66,44 +66,57 @@ export default function Map() {
     setDownloading(true);
 
     try {
-      const fileUrl = marker.pdf;
+      const authRes = await fetch(
+        `${process.env.NEXT_PUBLIC_API_URL}/api/auth/check`,
+        {
+          method: "GET",
+          credentials: "include",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
 
-      // Dapatkan nama file
+      if (!authRes.ok) {
+        alert("You must be logged in to download this file.");
+        return;
+      }
+
+      const fileUrl = marker.pdf;
       const fileName = fileUrl.split("/").pop() || "file.pdf";
 
-      // --- CASE 1: Local file (dalam folder public) ---
+      // --- CASE 1: File lokal (public) ---
       if (fileUrl.startsWith("/")) {
-        // 1) Buka di tab baru
         window.open(fileUrl, "_blank");
 
-        // 2) Download secara langsung
         const link = document.createElement("a");
         link.href = fileUrl;
         link.download = fileName;
         document.body.appendChild(link);
         link.click();
         link.remove();
-
-        setDownloading(false);
         return;
       }
 
-      // --- CASE 2: File Eksternal (CDN) → gunakan proxy API ---
+      // --- CASE 2: File eksternal via proxy ---
       const response = await fetch(
         `/api/proxy-pdf?url=${encodeURIComponent(
           fileUrl
-        )}&name=${encodeURIComponent(fileName)}`
+        )}&name=${encodeURIComponent(fileName)}`,
+        {
+          credentials: "include",
+        }
       );
 
-      if (!response.ok) throw new Error("Failed to download PDF file");
+      if (!response.ok) {
+        throw new Error("Failed to download PDF file");
+      }
 
       const blob = await response.blob();
       const blobUrl = window.URL.createObjectURL(blob);
 
-      // 1) Buka file di tab baru
       window.open(blobUrl, "_blank");
 
-      // 2) Download file
       const link = document.createElement("a");
       link.href = blobUrl;
       link.download = fileName;
@@ -112,6 +125,7 @@ export default function Map() {
       window.URL.revokeObjectURL(blobUrl);
     } catch (error) {
       console.error("Failed to download PDF:", error);
+      alert("Something went wrong while downloading the file.");
     } finally {
       setTimeout(() => setDownloading(false), 1200);
     }
