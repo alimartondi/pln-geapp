@@ -15,6 +15,8 @@ import { Button } from "../ui/button";
 
 import { Eye, EyeClosed } from "lucide-react";
 
+import { useAuth } from "./auth-context";
+
 const FormSchema = z.object({
   email: z.email({ message: "Please enter a valid email address." }),
   password: z.string().min(6, {
@@ -26,12 +28,14 @@ type SignInFormProps = {
   showPassword: boolean;
   onTogglePassword: () => void;
   onSwitch: () => void;
+  onSuccess: () => void;
 };
 
 export default function SignInForm({
   showPassword,
   onTogglePassword,
   onSwitch,
+  onSuccess,
 }: SignInFormProps) {
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
@@ -62,20 +66,15 @@ export default function SignInForm({
         throw new Error(data.message || "Login failed");
       }
 
-      console.log("Login success:", data);
-
-      if (data.token) {
-        localStorage.setItem("token", data.token);
-      }
-
+      // 🔥 PENTING
+      onSuccess(); // tutup dialog
       form.reset();
-    } catch (error: unknown) {
+    } catch (error: any) {
       form.setError("password", {
         message: error.message || "Invalid email or password",
       });
     }
   };
-
 
   return (
     <form onSubmit={form.handleSubmit(onSubmit)} className="grid gap-8">

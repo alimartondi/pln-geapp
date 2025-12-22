@@ -17,6 +17,9 @@
 /.next/
 /out/
 
+# express.js
+/dist
+
 # production
 /build
 

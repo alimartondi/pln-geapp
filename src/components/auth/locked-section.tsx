@@ -11,33 +11,35 @@ export function LockedSection({
   children: React.ReactNode;
   onLockedClick?: () => void;
 }) {
-  const { isAuthenticated } = useAuth();
+  const { isAuthenticated, loading } = useAuth();
+
+  if (loading) return null;
 
   return (
     <div className="relative">
-      {/* CONTENT (yang akan diblur) */}
-      <div>{children}</div>
+      {/* CONTENT */}
+      <div className={!isAuthenticated ? "pointer-events-none" : ""}>
+        {children}
+      </div>
 
-      {/* OVERLAY (yang melakukan backdrop blur) */}
+      {/* OVERLAY */}
       {!isAuthenticated && (
         <div
           className={cn(
-            "absolute inset-0 z-10",
+            "absolute inset-0 z-20",
             "bg-background/40",
             "backdrop-blur-lg",
-            "flex items-center justify-center"
+            "flex items-center justify-center",
+            "pointer-events-auto"
           )}
         >
-          <div className="h-full py-20">
-            {" "}
-            <Button
-              size={"lg"}
-              onClick={onLockedClick}
-              className="sticky top-[100px] lg:top-[200px]"
-            >
-              Login to View Data
-            </Button>
-          </div>
+          <Button
+            size="lg"
+            onClick={onLockedClick}
+            className="sticky top-[120px]"
+          >
+            Login to View Data
+          </Button>
         </div>
       )}
     </div>

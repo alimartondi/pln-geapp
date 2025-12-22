@@ -1,33 +1,58 @@
 "use client";
 
-import * as React from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 
 type AuthContextType = {
   isAuthenticated: boolean;
-  login: () => void;
-  logout: () => void;
+  loading: boolean;
+  refreshAuth: () => Promise<void>;
+  logout: () => Promise<void>;
 };
 
-const AuthContext = React.createContext<AuthContextType | null>(null);
+const AuthContext = createContext<AuthContextType | null>(null);
 
 export function AuthProvider({ children }: { children: React.ReactNode }) {
-  const [isAuthenticated, setIsAuthenticated] = React.useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [loading, setLoading] = useState(true);
+
+  const refreshAuth = async () => {
+    try {
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_API_URL}/api/auth/check`,
+        { credentials: "include" }
+      );
+      setIsAuthenticated(res.ok);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    refreshAuth();
+  }, []);
+
+  const logout = async () => {
+    await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/auth/logout`, {
+      method: "POST",
+      credentials: "include",
+    });
+
+    setIsAuthenticated(false);
+  };
 
   return (
     <AuthContext.Provider
-      value={{
-        isAuthenticated,
-        login: () => setIsAuthenticated(true),
-        logout: () => setIsAuthenticated(false),
-      }}
+      value={{ isAuthenticated, loading, refreshAuth, logout }}
     >
       {children}
     </AuthContext.Provider>
   );
 }
 
-export function useAuth() {
-  const ctx = React.useContext(AuthContext);
-  if (!ctx) throw new Error("useAuth must be used inside AuthProvider");
+export const useAuth = () => {
+  const ctx = useContext(AuthContext);
+  if (!ctx) {
+    throw new Error("useAuth must be used inside AuthProvider");
+  }
   return ctx;
-}
+};

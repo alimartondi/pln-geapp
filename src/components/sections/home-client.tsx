@@ -12,17 +12,14 @@ import Overview from "./overview";
 import About from "./about";
 import Register from "./register";
 import Contact from "./contact";
+import ClusterItemRegular from "./cluster/cluster-item-regular";
 
 export default function HomeClient() {
   const [open, setOpen] = React.useState(false);
 
   return (
-    <AuthProvider>
-      <AuthDialog
-        trigger={<button className="hidden" />}
-        open={open}
-        onOpenChange={setOpen}
-      />
+    <>
+      <AuthDialog open={open} onOpenChange={setOpen} />
 
       <Hero />
       <Overview />
@@ -35,6 +32,6 @@ export default function HomeClient() {
 
       <Register />
       <Contact />
-    </AuthProvider>
+    </>
   );
 }

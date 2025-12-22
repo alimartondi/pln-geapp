@@ -7,34 +7,33 @@ import {
   DialogTitle,
   DialogDescription,
   DialogContent,
-  DialogTrigger,
 } from "@/components/ui/dialog";
 
-import SignInForm from "@/components/auth/sign-in-form";
-import SignUpForm from "@/components/auth/sign-up-form";
+import SignInForm from "./sign-in-form";
+import SignUpForm from "./sign-up-form";
 
 type Mode = "signin" | "signup";
 
 type AuthDialogProps = {
-  trigger?: React.ReactNode;
   open: boolean;
   onOpenChange: (open: boolean) => void;
 };
 
-export default function AuthDialog({
-  trigger,
-  open,
-  onOpenChange,
-}: AuthDialogProps) {
+export default function AuthDialog({ open, onOpenChange }: AuthDialogProps) {
   const [mode, setMode] = React.useState<Mode>("signin");
   const [showPassword, setShowPassword] = React.useState(false);
 
-  const togglePasswordVisibility = () => setShowPassword((prev) => !prev);
-
   return (
-    <Dialog open={open} onOpenChange={onOpenChange}>
-      {trigger && <DialogTrigger asChild>{trigger}</DialogTrigger>}
-
+    <Dialog
+      open={open}
+      onOpenChange={(open) => {
+        onOpenChange(open);
+        if (open) {
+          setMode("signin");
+          setShowPassword(false); // 🔥 reset
+        }
+      }}
+    >
       <DialogContent>
         <DialogHeader>
           <DialogTitle>
@@ -44,22 +43,24 @@ export default function AuthDialog({
           </DialogTitle>
           <DialogDescription>
             {mode === "signin"
-              ? "Enter your email below to sign in to your account"
-              : "Enter your information below to create your account"}
+              ? "Enter your email below to sign in"
+              : "Enter your information below to create an account"}
           </DialogDescription>
         </DialogHeader>
 
         {mode === "signin" ? (
           <SignInForm
             showPassword={showPassword}
-            onTogglePassword={togglePasswordVisibility}
+            onTogglePassword={() => setShowPassword((p) => !p)}
             onSwitch={() => setMode("signup")}
+            onSuccess={() => onOpenChange(false)} // 🔥 CLOSE
           />
         ) : (
           <SignUpForm
             showPassword={showPassword}
-            onTogglePassword={togglePasswordVisibility}
+            onTogglePassword={() => setShowPassword((p) => !p)}
             onSwitch={() => setMode("signin")}
+            // onSuccess={() => onOpenChange(false)} // 🔥
           />
         )}
       </DialogContent>
