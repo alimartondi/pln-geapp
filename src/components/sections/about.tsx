@@ -14,7 +14,7 @@ export default function About() {
         className="container-wrapper grid md:grid-cols-2 gap-16"
       >
         <div className="max-w-xl">
-          <div className="sticky top-[130px] space-y-4">
+          <div className="sticky top-32.5 space-y-4">
             <h2 className="text-4xl lg:text-5xl font-semibold text-pretty">
               Accelerating Indonesia&apos;s Clean Energy Transition
             </h2>

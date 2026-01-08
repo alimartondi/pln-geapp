@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <section className="py-1">
       <div className="container-wrapper h-full grid gap-6">
-        <div className="relative bg-[url('/images/Hero-Image-by-Kindel-Media.webp')] h-[calc(100dvh-110px)] max-h-[650px] rounded-lg after:absolute after:inset-0 bg-cover bg-center after:bg-gradient-to-t after:from-secondary/95 after:to-secondary/30 overflow-hidden">
+        <div className="relative bg-[url('/images/Hero-Image-by-Kindel-Media.webp')] h-[calc(100dvh-110px)] max-h-162.5 rounded-lg after:absolute after:inset-0 bg-cover bg-center after:bg-linear-to-t after:from-secondary/95 after:to-secondary/30 overflow-hidden">
           <div className="absolute inset-0 flex flex-col items-center justify-center px-4 z-10">
             <div className="max-w-3xl space-y-4 text-white md:text-center">
               <h1 className="text-4xl lg:text-5xl lg:leading-tight font-bold">
@@ -37,7 +37,7 @@ export default function Hero() {
             smooth={true}
             offset={-130}
             duration={500}
-            className="relative w-full h-[200px] rounded-lg overflow-hidden bg-[url('/images/indonesia-map.png')] bg-center bg-[#C4E7ED] after:absolute after:inset-0 after:bg-gradient-to-tr after:from-primary after:from-35% cursor-pointer"
+            className="relative w-full h-50 rounded-lg overflow-hidden bg-[url('/images/indonesia-map.png')] bg-center bg-[#C4E7ED] after:absolute after:inset-0 after:bg-linear-to-tr after:from-primary after:from-35% cursor-pointer"
           >
             <div className="absolute inset-0 flex items-center justify-center z-10">
               <div className="p-6 space-y-2 w-full text-white">
@@ -55,7 +55,7 @@ export default function Hero() {
             smooth={true}
             offset={-130}
             duration={500}
-            className="relative w-full h-[200px] rounded-lg overflow-hidden bg-[url('/images/solar-panel.png')] bg-cover after:absolute after:inset-0 after:bg-gradient-to-tr after:from-tertiary after:from-30% cursor-pointer"
+            className="relative w-full h-50 rounded-lg overflow-hidden bg-[url('/images/solar-panel.png')] bg-cover after:absolute after:inset-0 after:bg-linear-to-tr after:from-tertiary after:from-30% cursor-pointer"
           >
             <div className="absolute inset-0 flex items-center justify-center z-10">
               <div className="p-6 space-y-2 w-full text-gray-900">
@@ -73,7 +73,7 @@ export default function Hero() {
             smooth={true}
             offset={-130}
             duration={500}
-            className="relative w-full h-[200px] p-4 rounded-lg overflow-hidden bg-[url('/images/BESS-Solar-PV.webp')] bg-cover bg-right bg-no-repeat bg-secondary bg-end after:absolute after:inset-0 after:bg-gradient-to-tr after:from-secondary after:from-10% cursor-pointer"
+            className="relative w-full h-50 p-4 rounded-lg overflow-hidden bg-[url('/images/BESS-Solar-PV.webp')] bg-cover bg-right bg-no-repeat bg-secondary bg-end after:absolute after:inset-0 after:bg-linear-to-tr after:from-secondary after:from-10% cursor-pointer"
           >
             <div className="absolute inset-0 flex items-center justify-center z-10">
               <div className="p-6 space-y-2 w-full text-white">

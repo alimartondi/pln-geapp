@@ -247,7 +247,7 @@ export function DataTable<TData extends { clusterId: number }, TValue>({
               value={String(table.getState().pagination.pageSize)}
               onValueChange={(value) => table.setPageSize(Number(value))}
             >
-              <SelectTrigger className="w-[80px]">
+              <SelectTrigger className="w-20">
                 {table.getState().pagination.pageSize}
               </SelectTrigger>
               <SelectContent>

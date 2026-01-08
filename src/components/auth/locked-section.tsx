@@ -29,14 +29,14 @@ export function LockedSection({
             "absolute inset-0 z-20",
             "bg-background/40",
             "backdrop-blur-lg",
-            "flex items-center justify-center",
+            "flex justify-center pt-16 lg:pt-32",
             "pointer-events-auto"
           )}
         >
           <Button
             size="lg"
             onClick={onLockedClick}
-            className="sticky top-[120px]"
+            className="sticky top-30 lg:top-45"
           >
             Login to View Data
           </Button>
