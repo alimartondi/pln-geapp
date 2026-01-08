@@ -42,9 +42,8 @@ export default function SignInForm({
   onSwitch,
   onSuccess,
 }: SignInFormProps) {
-
   const { setAuthenticated } = useAuth();
-  
+
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
@@ -152,7 +151,7 @@ export default function SignInForm({
             disabled={form.formState.isSubmitting}
             className="w-full lg:w-auto"
           >
-            Sign In
+            {form.formState.isSubmitting ? "Signing in..." : "Sign In"}
           </Button>
           <FieldDescription>
             Don&apos;t have an account?{" "}
